@@ -1,8 +1,20 @@
 baseURL = "https://chrisk91.me/Checklists/"
-languageCode = "en-us"
+languageCode = "en"
+defaultContentLanguage = "en"
 title = "Checklists"
 theme = "tailwind-theme"
 author = "Christian J."
 
+[languages]
+  [languages.en]
+    title = "Checklists"
+    languageName = "English"
+    weight = 1
+
+  [languages.de]
+    title = "Checklisten"
+    languageName = "German"
+    weight = 2
+
 [build]
-  writeStats = true
+writeStats = true

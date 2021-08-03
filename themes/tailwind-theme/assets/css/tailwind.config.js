@@ -2,7 +2,18 @@ module.exports = {
   theme: {
     fontFamily: {
     },
-    extend: {}
+    listStyleType: {
+      none: 'none'
+    },
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            'ul > li::before': ''
+          },
+        },
+      }
+    },
   },
   variants: {},
   plugins: [
