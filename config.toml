@@ -1,4 +1,4 @@
-baseURL = "http://checklists.chrisk91.me/"
+baseURL = "https://chrisk91.me/Checklists/"
 languageCode = "en-us"
 title = "Checklists"
 theme = "tailwind-theme"
