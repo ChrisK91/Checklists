@@ -3,7 +3,7 @@ title: Willkommen
 date: 2021-08-03
 ---
 
-Hier sammle ich eine Reihe von Checklisten, die ich im Alltag nutze. Die Informationen kommen von verschiedenen Artiekln, Büchern und praktischer Erfahrung.
+Hier sammle ich eine Reihe von Checklisten, die ich im Alltag nutze. Die Informationen kommen von verschiedenen Artikeln, Büchern und praktischer Erfahrung.
 Natürlich kann die Genauigkeit nicht garantiert werden, weswegen die Listen den Nutzer nicht von seiner Sorgfalt entbinden können.
 Der Quellcode dieser Seite ist auf GitHub und über den unten stehenden Link zu erreichen.
 

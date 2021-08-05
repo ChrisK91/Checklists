@@ -1,5 +1,5 @@
 {{ if .Site.IsMultiLingual }}
-<div>
+<div class="items-flex">
   {{ $siteLanguages := .Site.Languages}}
   {{ $pageLang := .Page.Lang}}
   {{ range .Page.AllTranslations }}
@@ -8,9 +8,9 @@
           {{ if eq $translation.Lang .Lang }}
             {{ $selected := false }}
             {{ if eq $pageLang .Lang}}
-                <div class="inline"><a href="{{ $translation.Permalink }}" class="active">{{ .LanguageName }}</a></div>
+                <div class="inline text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none border-b-2 border-blue-300"><a href="{{ $translation.Permalink }}">{{ .LanguageName }}</a></div>
             {{ else }}
-                <div class="inline"><a href="{{ $translation.Permalink }}">{{ .LanguageName }}</a></div>
+                <div class="inline text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none"><a href="{{ $translation.Permalink }}">{{ .LanguageName }}</a></div>
             {{ end }}
           {{ end }}
       {{ end }}
