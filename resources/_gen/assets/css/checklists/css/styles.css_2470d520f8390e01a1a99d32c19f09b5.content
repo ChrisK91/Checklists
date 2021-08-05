@@ -2067,10 +2067,6 @@ select {
 
 /* Site Specific */
 
-.starter {
-  color: blue;
-}
-
 /* Tailwind's utility classes - generated based on config file */
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {

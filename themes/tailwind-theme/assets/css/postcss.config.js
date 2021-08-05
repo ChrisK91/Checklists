@@ -7,6 +7,12 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
         themeDir + '/hugo_stats.json',
         'exampleSite/hugo_stats.json',
     ],
+    safelist: [
+      "[type='checkbox']",
+      "input",
+      "input[type=*]",
+      "[type]"
+    ],
     defaultExtractor: (content) => {
         let els = JSON.parse(content).htmlElements;
         return els.tags.concat(els.classes, els.ids);
@@ -23,14 +29,8 @@ module.exports = {
         require('autoprefixer')({
             path: [themeDir]
         }),
-        ...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
-    ],
-    purge: {
-        options: {
-          safelist: [
-            "type", // [type='checkbox']
-          ],
-        },
-        preserveHtmlElements: true,
-      },
+        //...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
+        //TODO: reenable purgecss once this is fixed: https://discourse.gohugo.io/t/tailwindcss-tailwindcss-forms-plugin-purge-issue-writestats-does-not-capture-attribute-selector/31968
+        //https://github.com/gohugoio/hugo/issues/7560
+    ]
 }
