@@ -19,9 +19,18 @@ module.exports = {
             path: [themeDir]
             }), 
         require('tailwindcss')(themeDir + 'assets/css/tailwind.config.js'),
+        require("@tailwindcss/forms"),
         require('autoprefixer')({
             path: [themeDir]
         }),
-        //...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
-    ]
+        ...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
+    ],
+    purge: {
+        options: {
+          safelist: [
+            "type", // [type='checkbox']
+          ],
+        },
+        preserveHtmlElements: true,
+      },
 }
