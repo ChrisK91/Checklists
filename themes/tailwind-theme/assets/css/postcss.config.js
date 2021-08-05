@@ -22,6 +22,6 @@ module.exports = {
         require('autoprefixer')({
             path: [themeDir]
         }),
-        ...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
+        //...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
     ]
 }
