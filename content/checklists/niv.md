@@ -42,6 +42,6 @@ tags: [checklist, general]
 - {{< checkbox text="Tidal volume 6 - 8 ml/kg" id="pH" >}}
   - Rule of thumb: 400 - 500 ml
   - Dyspnoea might cause initial high volumes
-- {{< checkbox text="backup frequency 10 - 15" id="bf" >}} 
+- {{< checkbox text="backup frequency 10 - 15" id="bf" >}}
 - {{< checkbox text="fIO: aim for SpO2 >= 90 %, usually fIO 30-35 %" id="pH" >}}
 - {{< checkbox text="I:E 1:2 to 1:25" id="ie" >}}

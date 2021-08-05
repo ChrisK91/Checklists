@@ -1,9 +1,14 @@
 {{ define "main" }}
 <article class="px-6 mx-auto mb-16 prose text-gray-700 justify-self-center sm:px-4 md:px-0 lg:prose-lg">
-<ul>
-{{ range .Pages }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-{{ end }}
-</ul>
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+    <p>{{ .Content }}</p>
+    {{ end }}
+
+    <ul>
+    {{ range .RegularPages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    </ul>
 </article>
 {{ end }}

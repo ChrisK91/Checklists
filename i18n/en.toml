@@ -1,0 +1,10 @@
+[checklist]
+other = 'checklist'
+[checklists]
+other = 'checklists'
+[tags]
+other = 'tags'
+[categories]
+other = 'categories'
+[general]
+other = 'general'

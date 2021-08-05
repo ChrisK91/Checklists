@@ -2,5 +2,15 @@
 <article class="px-6 mx-auto mb-16 prose text-gray-700 justify-self-center sm:px-4 md:px-0 lg:prose-lg">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
+
+    {{ if .Params.tags }}
+        <hr>
+        <h5>Tags</h5>
+        <div class="flex">
+        {{ range .Params.tags }}
+            <a class="bg-blue-200 px-2 py-1 rounded text-center mr-1 ml-1" href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . | humanize | lower | i18n }}</a>
+        {{ end }}
+        </div>
+    {{ end }}
 </article>
 {{ end }}

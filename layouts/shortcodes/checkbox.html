@@ -1,4 +1,7 @@
-<input type="checkbox" id="{{ .Get "id" }}" name="{{ .Get "name" }}"
-{{ if .Get "checked" }}checked{{ end }}
->
-  <label for="{{ .Get "id" }}">{{ .Get "text" }}</label>
+<label for="{{ .Get "id" }}" class="inline-flex items-center">
+  <input type="checkbox" id="{{ .Get "id" }}" name="{{ .Get "name" }}"
+  {{ if .Get "checked" }}checked{{ end }}
+  class="rounded bg-gray-200 border-transparent hover:bg-blue-200 focus:bg-gray-200 text-gray-700"
+  >
+  <span class="ml-2">{{ .Get "text" }}</span>
+</label>

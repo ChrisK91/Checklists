@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Checklists</title>
+    <link>https://chrisk91.me/Checklists/checklists/</link>
+    <description>Recent content on Checklists</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://chrisk91.me/Checklists/checklists/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fever checklist</title>
+      <link>https://chrisk91.me/Checklists/checklists/fever/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://chrisk91.me/Checklists/checklists/fever/</guid>
+      <description>Diagnostic  CRP, Leukocytes, ggf. Procalcitonin Blood cultures (two pairs) Urine sample, sputum samples, swabs Ultrasound X-Ray/CT  Therapy  Paracetamol Antibiotics  </description>
+    </item>
+    
+    <item>
+      <title>NIV Checklist</title>
+      <link>https://chrisk91.me/Checklists/checklists/niv/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://chrisk91.me/Checklists/checklists/niv/</guid>
+      <description>Contraindications  Missing spontaneous breathing Gasping Obstructed airway Gastrointestinal bleeding Ileus non-hypercapnic coma  Relative contraindications  Coma Agitation Interface incompatibility/not tolerated by patient/anatomical difficulties Severe hypoxemia Severe acidosis (pH &amp;lt; 7,1)  Success criteria  Dyspnea reduced Conciousnedd improved Breathing frequency reduced pCO2 reduced pH normalizing arterial SaO2 &amp;gt; 85% Heart frequency normalizing  Settings  initial PEEP 5 - 8 mmHg  Below 5: re-check indication Increase up to 10 mmHg, depending on need   Pinsp below 20 - 25 mbar driving pressure &amp;lt; 15 mbar Tidal volume 6 - 8 ml/kg  Rule of thumb: 400 - 500 ml Dyspnoea might cause initial high volumes   backup frequency 10 - 15 fIO: aim for SpO2 &amp;gt;= 90 %, usually fIO 30-35 % I:E 1:2 to 1:25  </description>
+    </item>
+    
+  </channel>
+</rss>
