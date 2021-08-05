@@ -28,7 +28,7 @@ module.exports = {
     purge: {
         options: {
           safelist: [
-            "type", // [type='checkbox']
+            //"type", // [type='checkbox']
           ],
         },
         preserveHtmlElements: true,
