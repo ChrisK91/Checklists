@@ -25,12 +25,10 @@ module.exports = {
             path: [themeDir]
             }), 
         require('tailwindcss')(themeDir + 'assets/css/tailwind.config.js'),
-        require("@tailwindcss/forms"),
         require('autoprefixer')({
             path: [themeDir]
         }),
-        //...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
-        //TODO: reenable purgecss once this is fixed: https://discourse.gohugo.io/t/tailwindcss-tailwindcss-forms-plugin-purge-issue-writestats-does-not-capture-attribute-selector/31968
-        //https://github.com/gohugoio/hugo/issues/7560
+        ...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
+        //...[purgecss]
     ]
 }
