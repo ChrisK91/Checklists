@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="px-6 mx-auto mb-16 prose text-gray-700 justify-self-center sm:px-4 md:px-0 lg:prose-lg">
+    <h1>{{ i18n "tags" }} &raquo; {{ .Name }}</h1>
+
+    <p class="mt-2">
+        {{ with .Site.GetPage "/tags" }}
+        <a href="{{ .Permalink }}">{{ i18n "backToAllTags"}}</a>
+        {{ end }}
+    </p>
+
+
+    <p>{{ i18n "browseTag" .}}</p>
+    <ul>
+    {{ range .Data.Pages }}
+        <li><a href="{{ .Page.Permalink }}" class="font-medium">{{ .Page.Title }}</a></li>
+    {{ end }}
+    </ul>
+</article>
+{{ end }}

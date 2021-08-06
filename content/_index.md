@@ -3,7 +3,7 @@ title: Welcome
 date: 2021-08-03
 ---
 
-Here I collect a variety of checklists. The come from a variety of sources, including articles, books, and personal experience.
+Here I collect a variety of checklists. They come from a variety of sources, including articles, books, and personal experience.
 For obvious reasons, you should not rely on these lists alone, as I cannot guarantee that the will always be correct. This page is very much a work in progress. If you are interested in the source code used to generate these files, you can find them via the button below.
 
 Use the "Checklists"-Button in the top right to get started.

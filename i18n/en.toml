@@ -8,3 +8,9 @@ other = 'tags'
 other = 'categories'
 [general]
 other = 'general'
+[browseByTag]
+other = 'Browse content by tag'
+[browseTag]
+other = 'All checklists tagged with "{{ .Name }}":'
+[backToAllTags]
+other = 'Back to all tags'
