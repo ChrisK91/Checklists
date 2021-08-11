@@ -16,3 +16,5 @@ other = 'Browse content by tag'
 other = 'All checklists tagged with "{{ .Name }}":'
 [backToAllTags]
 other = 'Back to all tags'
+[lastupdatedposts]
+other = 'Recently changed posts'

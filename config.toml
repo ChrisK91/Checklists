@@ -4,17 +4,28 @@ defaultContentLanguage = "en"
 title = "Checklists"
 theme = "tailwind-theme"
 author = "Christian J."
+enableGitInfo = true
+mainSections = ['checklists', 'calculators']
+googleAnalytics = 'G-30MHG4HNXJ'
 
 [languages]
   [languages.en]
+    languageCode = "en"
     title = "Checklists"
     languageName = "English"
     weight = 1
 
   [languages.de]
+    languageCode = "de"
     title = "Checklisten"
     languageName = "German"
     weight = 2
 
 [build]
 writeStats = true
+
+[frontmatter]
+date = ['date', 'publishDate', 'lastmod']
+expiryDate = ['expiryDate']
+lastmod = [':git', 'lastmod', 'date', 'publishDate']
+publishDate = ['publishDate', 'date']

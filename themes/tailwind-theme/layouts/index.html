@@ -3,5 +3,15 @@
     <h1 class="font-serif font-extralight text-5xl text-gray-500 lg:mb-8">{{ .Title }}</h1>
 
     <div class="max-w-prose text-left container mx-auto mt-5 lg:prose-lg">{{ .Content }}</div>
+
+    <div class="max-w-prose text-left container mx-auto mt-5 lg:prose-lg mt-12">
+        <h3>{{ i18n "lastupdatedposts"}}</h3>
+        <ul>
+            {{ range first 5 (where .Site.RegularPages.ByLastmod.Reverse "Params.hidden" "ne" "true") }}
+                    
+                <li><a href="{{ .Page.Permalink }}" class="font-medium">{{ .Page.Title }} <span class="font-regular text-gray-400">(<time>{{ .Lastmod.Format "2 January 2006" }}</time>)</span></a></li>
+            {{ end }}
+        </ul>
+    </div>
 </article>
 {{ end }}

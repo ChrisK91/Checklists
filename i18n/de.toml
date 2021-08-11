@@ -16,3 +16,5 @@ other = 'Inhalt nach Tags durchsuchen'
 other = 'Alle Checklisten mit "{{ .Name }}":'
 [backToAllTags]
 other = 'Zurück zu allen Tags'
+[lastupdatedposts]
+other = 'Vor kurzem aktualisiert'
