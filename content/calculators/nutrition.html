@@ -1,0 +1,131 @@
+---
+title: Nutrition Calculators
+date: 2021-08-11
+description: General purpose calculators 
+tags: [calculators, general]
+vue: true
+---
+<div id='app'>
+    <h2>Ideal weight</h2>
+    Calculate the ideal weight, based on the formula <i>48,4 + 77 * (height - 150 cm)</i>. The conversion to lb uses the factor <i>1 kg = 2.2 lb</i>.
+    <form class="border p-2 rounded shadow">
+        <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center col-span-2">
+                <span class="flex-none font-light px-2">height (cm)</span>
+                <input class="flex-grow" type="number" placeholder="height" v-model="height" />
+            </label>
+
+            <label class="flex col-span-2 lg:col-span-1 items-center">
+                <span class="flex-none font-light px-2">weight (kg)</span>
+                <input class="flex-grow" type="number" placeholder="weight" v-model="weightKg" disabled />
+            </label>
+
+            <label class="flex col-span-2 lg:col-span-1 items-center">
+                <span class="flex-none font-light px-2">weight (lb)</span>
+                <input class="flex-grow" type="number" placeholder="weight in lb" v-model="weightLb" disabled />
+            </label>
+        </div>
+    </form>
+    <hr>
+    <h2>Caloric intake (acute phase)</h2>
+    Calculates the caloric requirements for the given weight and height, stratified by the resulting BMI. Hyperhydration will be subtracted from the weight.
+    <form class="border p-2 rounded shadow">
+        <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center col-span-2">
+                <span class="flex-none font-light px-2">height (cm)</span>
+                <input class="flex-grow" type="number" placeholder="height" v-model="height" />
+            </label>
+
+            <label class="flex col-span-2 items-center">
+                <span class="flex-none font-light px-2">weight (kg)</span>
+                <input class="flex-grow" type="number" placeholder="weight" v-model="weightKgIntake" />
+            </label>
+            <label class="flex col-span-2 items-center">
+                <span class="flex-none font-light px-2">hyperhydration (kg)</span>
+                <input class="flex-grow" type="number" placeholder="weight in lb" v-model="hyperhydrationKg" />
+            </label>
+            <label class="flex col-span-2 items-center">
+                <span class="flex-none font-light px-2">BMI (kg/m2)</span>
+                <input class="flex-grow" type="number" placeholder="weight in lb" v-model="bmi" disabled />
+            </label>
+            <label class="flex col-span-2 items-center">
+                <span class="flex-none font-light px-2">kcal/d per kg</span>
+                <input class="flex-grow" type="text" placeholder="weight in lb" v-model="caloricPerKgText" disabled />
+            </label>
+            <label class="flex col-span-2 items-center">
+                <span class="flex-none font-light px-2">kcal/d</span>
+                <input class="flex-grow" type="text" placeholder="weight in lb" v-model="totalCaloriesText" disabled />
+            </label>
+            <label class="flex col-span-2 items-center">
+                <span class="flex-none font-light px-2">75 % of kcal/d</span>
+                <input class="flex-grow" type="text" placeholder="weight in lb" v-model="totalCaloriesText75" disabled />
+            </label>
+        </div>
+    </form>
+</div>
+
+<script>
+new Vue({
+    el:'#app',
+    data : {
+            height : 165,
+            weightKgIntake : 80,
+            hyperhydrationKg : 0
+     },
+    computed: {
+            weightKg: function(){
+                // 48,4 + 77,0 × (Körpergröße 1,50 m)
+                val = (48.4 + 77 * ((this.height - 150) / 100)).toFixed(2);
+                return val;
+            },
+            weightLb: function(){
+                val = (this.weightKg * 2.2).toFixed(2);
+                return val;
+            },
+            bmi: function(){
+                return ((this.weightKgIntake - this.hyperhydrationKg)/((this.height/100)**2)).toFixed(2);
+            },
+            caloricPerKgText: function(){
+                if(this.bmi < 30)
+                {
+                    return "24";
+                }
+                else if(this.bmi >= 30 && this.bmi < 50){
+                    return "11 - 14";
+                }
+                else if(this.bmi >= 50)
+                {
+                    return "22 - 25";
+                }
+            },
+            totalCaloriesText: function(){
+                if(this.bmi < 30)
+                {
+                    return (24 * (this.weightKgIntake - this.hyperhydrationKg)) + " kcal/d, based on acutal weight";
+                }
+                else if(this.bmi >= 30 && this.bmi < 50){
+                    return (11 * (this.weightKgIntake - this.hyperhydrationKg)) + " to " + (24 * (this.weightKgIntake - this.hyperhydrationKg))  + "kcal/d, based on actual weight";
+                }
+                else if(this.bmi >= 50)
+                {
+                    weight = (48.4 + 77 * ((this.height - 150) / 100)).toFixed(2);
+                    return 22 * weight + " to " + 25 * weight + "kcal/d, based on ideal weight";
+                }
+            },
+            totalCaloriesText75: function(){
+                if(this.bmi < 30)
+                {
+                    return (24 * (this.weightKgIntake - this.hyperhydrationKg)) * 0.75 + " kcal/d, based on acutal weight";
+                }
+                else if(this.bmi >= 30 && this.bmi < 50){
+                    return (11 * (this.weightKgIntake - this.hyperhydrationKg)) * 0.75 + " to " + (24 * (this.weightKgIntake - this.hyperhydrationKg)) * 0.75  + "kcal/d, based on actual weight";
+                }
+                else if(this.bmi >= 50)
+                {
+                    weight = (48.4 + 77 * ((this.height - 150) / 100)).toFixed(2);
+                    return 22 * weight * 0.75 + " to " + 25 * weight * 0.75 + "kcal/d, based on ideal weight";
+                }
+            }
+        }
+});
+</script>

@@ -2,6 +2,8 @@
 other = 'Checkliste'
 [checklists]
 other = 'Checklisten'
+[calculators]
+other = 'Rechner'
 [tags]
 other = 'Tags'
 [categories]

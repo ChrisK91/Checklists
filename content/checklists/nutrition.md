@@ -48,3 +48,14 @@ tags: [checklist, general]
   - some articles recommend higher substitution depending on need
 - albumine: will be metabolized, use for volume stabilization
 - use bcaa (amino hepa, etc. for volume substitution)
+
+## Laboratory checks
+
+- Blood glucose every few hours
+- Triglycerides 2x/week
+- Phosphate 1-2/day
+- BUN (= Urea concentration * 0.467 [mg/dl]), increase without corresponding increase in creatinin might indicate too high protein intake. Recommended by some societies for BMI > 30.
+- Lactate, increase can indicate thiamine deficiencie (e.g. in alcoholism)
+- liver enzymes, increase might indiciate refeeding syndrome
+- albumine, low albumine might indicate protein deficiency.
+- vitamin D and calcium

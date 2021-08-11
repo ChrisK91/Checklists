@@ -22,4 +22,8 @@
         {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ end -}}
+
+    {{- if .Params.Vue }}
+    <script src="{{ .Site.BaseURL }}vue.min.js"></script>
+    {{ end -}}
 </head>
