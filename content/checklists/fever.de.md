@@ -5,15 +5,17 @@ description: General checklist for management of fever
 tags: [checklist, general]
 ---
 
+Temperatur >= 38,3 °C, bei Immunkompromittierung/Neutropenie >= 38,0 °C
+
 ## Diagnostik
 
-- {{< checkbox text="CRP, Leukozyten, ggf. Procalcitonin" id="lab" >}}
-- {{< checkbox text="Blutkulturen (zwei Paar)" id="bk" >}}
-- {{< checkbox text="U-Status, Sputum, Abstriche" id="samples" >}}
-- {{< checkbox text="Abdomen-Sonographie" id="sono" >}}
-- {{< checkbox text="Röntgen/CT" id="xray" >}}
+- Anamnese: Infektzeichen, postoperatives Fieber, Arzneimittelfiever
+- CRP, Leukozyten, ggf. Procalcitonin
+- Blutkulturen (zwei Paar an unterschiedlichen Abnahmestellen)
+- U-Status, Sputum, Abstriche
+- Sonographie, Röntgen falls kein CT geplant
 
 ## Therapie
 
-- {{< checkbox text="Paracetamol" id="pcm" >}}
-- {{< checkbox text="Antibiotika" id="ab" >}}
+- Paracetamol
+- Antibiotika nach vermutetem Fokus

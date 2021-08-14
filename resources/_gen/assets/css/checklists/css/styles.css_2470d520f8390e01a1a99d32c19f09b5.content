@@ -831,8 +831,15 @@ select {
   padding-left: 1.75em;
 }
 
-.prose {
-  ul > li::before: ;
+.prose ul > li::before {
+  content: "";
+  position: absolute;
+  background-color: #d1d5db;
+  border-radius: 50%;
+  width: 0.375em;
+  height: 0.375em;
+  top: calc(0.875em - 0.1875em);
+  left: 0.25em;
 }
 
 .prose hr {
@@ -13257,10 +13264,6 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
 
 .list-outside {
   list-style-position: outside;
-}
-
-.list-none {
-  list-style-type: none;
 }
 
 .m-0 {
@@ -33581,8 +33584,15 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
     padding-left: 1.75em;
   }
 
-  .sm\:prose {
-    ul > li::before: ;
+  .sm\:prose ul > li::before {
+    content: "";
+    position: absolute;
+    background-color: #d1d5db;
+    border-radius: 50%;
+    width: 0.375em;
+    height: 0.375em;
+    top: calc(0.875em - 0.1875em);
+    left: 0.25em;
   }
 
   .sm\:prose hr {
@@ -45830,10 +45840,6 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
 
   .sm\:list-outside {
     list-style-position: outside;
-  }
-
-  .sm\:list-none {
-    list-style-type: none;
   }
 
   .sm\:m-0 {
@@ -65984,8 +65990,15 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
     padding-left: 1.75em;
   }
 
-  .md\:prose {
-    ul > li::before: ;
+  .md\:prose ul > li::before {
+    content: "";
+    position: absolute;
+    background-color: #d1d5db;
+    border-radius: 50%;
+    width: 0.375em;
+    height: 0.375em;
+    top: calc(0.875em - 0.1875em);
+    left: 0.25em;
   }
 
   .md\:prose hr {
@@ -78233,10 +78246,6 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
 
   .md\:list-outside {
     list-style-position: outside;
-  }
-
-  .md\:list-none {
-    list-style-type: none;
   }
 
   .md\:m-0 {
@@ -98387,8 +98396,15 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
     padding-left: 1.75em;
   }
 
-  .lg\:prose {
-    ul > li::before: ;
+  .lg\:prose ul > li::before {
+    content: "";
+    position: absolute;
+    background-color: #d1d5db;
+    border-radius: 50%;
+    width: 0.375em;
+    height: 0.375em;
+    top: calc(0.875em - 0.1875em);
+    left: 0.25em;
   }
 
   .lg\:prose hr {
@@ -110636,10 +110652,6 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
 
   .lg\:list-outside {
     list-style-position: outside;
-  }
-
-  .lg\:list-none {
-    list-style-type: none;
   }
 
   .lg\:m-0 {
@@ -130790,8 +130802,15 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
     padding-left: 1.75em;
   }
 
-  .xl\:prose {
-    ul > li::before: ;
+  .xl\:prose ul > li::before {
+    content: "";
+    position: absolute;
+    background-color: #d1d5db;
+    border-radius: 50%;
+    width: 0.375em;
+    height: 0.375em;
+    top: calc(0.875em - 0.1875em);
+    left: 0.25em;
   }
 
   .xl\:prose hr {
@@ -143039,10 +143058,6 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
 
   .xl\:list-outside {
     list-style-position: outside;
-  }
-
-  .xl\:list-none {
-    list-style-type: none;
   }
 
   .xl\:m-0 {
@@ -163193,8 +163208,15 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
     padding-left: 1.75em;
   }
 
-  .\32xl\:prose {
-    ul > li::before: ;
+  .\32xl\:prose ul > li::before {
+    content: "";
+    position: absolute;
+    background-color: #d1d5db;
+    border-radius: 50%;
+    width: 0.375em;
+    height: 0.375em;
+    top: calc(0.875em - 0.1875em);
+    left: 0.25em;
   }
 
   .\32xl\:prose hr {
@@ -175442,10 +175464,6 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
 
   .\32xl\:list-outside {
     list-style-position: outside;
-  }
-
-  .\32xl\:list-none {
-    list-style-type: none;
   }
 
   .\32xl\:m-0 {

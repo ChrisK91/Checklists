@@ -39,6 +39,17 @@ tags: [checklist, general]
   - low phostphate: lower intake to 25 %, substitue phosphate
 - aim for 100 % intake on day 7
 
+## Enteral Nutrition
+
+- aim for enteral nutrition to reduce risk for catheter associated infections
+- if nasogastric/orogastric tube is not feasible, consider PEG
+- Contraindications:
+  - disruptions of enteral motility (ileus, etc.)
+  - disruption of gastric emptying (consider pospyloric tube)
+  - severe uncontrolled hypoxemia, hypercapnea, azidosis
+  - absorption deficency
+- consider starting with water, use low flow rate in the beginning (start with 10-20 ml/h)
+
 ## Protein deficiency
 
 - causes: malnutrition, alcoholism, nephrotic syndrome, etc.

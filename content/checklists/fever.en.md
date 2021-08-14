@@ -5,15 +5,17 @@ description: General checklist for management of fever
 tags: [checklist, general]
 ---
 
+Temperature >= 38.3 °C (100.9 °F), in immunocompromised/neutropenia >= 38.0 ° (100.4 °F)
+
 ## Diagnostic
 
-- {{< checkbox text="CRP, Leukocytes, ggf. Procalcitonin" id="lab" >}}
-- {{< checkbox text="Blood cultures (two pairs)" id="bk" >}}
-- {{< checkbox text="Urine sample, sputum samples, swabs" id="samples" >}}
-- {{< checkbox text="Ultrasound" id="sono" >}}
-- {{< checkbox text="X-Ray/CT" id="xray" >}}
+- History: signs of infection, post-surgery, drug induced fever
+- CRP, Leukocytes, ggf. Procalcitonin
+- Blood cultures (two pairs from to sites)
+- Urine sample, sputum samples, swabs
+- Ultrasound, X-Ray if CT is planned
 
 ## Therapy
 
-- {{< checkbox text="Paracetamol" id="pcm" >}}
-- {{< checkbox text="Antibiotics" id="ab" >}}
+- Paracetamol
+- Antibiotics depending on focus

@@ -3,13 +3,13 @@ module.exports = {
     fontFamily: {
     },
     listStyleType: {
-      none: 'none'
+      //none: 'none'
     },
     extend: {
       typography: {
         DEFAULT: {
           css: {
-            'ul > li::before': ''
+            //'ul > li::before': ''
           },
         },
       }
