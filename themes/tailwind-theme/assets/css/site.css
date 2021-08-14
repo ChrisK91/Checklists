@@ -1,0 +1,5 @@
+@layer components {
+    form label {
+      @apply uppercase tracking-wide text-black text-xs font-bold mb-2;
+    }
+  }

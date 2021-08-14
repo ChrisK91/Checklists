@@ -2065,6 +2065,17 @@ select {
   color: #db2777;
 }
 
+form label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
 /* Site Specific */
 
 /*! purgecss start ignore */
