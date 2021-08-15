@@ -3,6 +3,7 @@ title: Fieber Checkliste
 date: 2021-08-03
 description: General checklist for management of fever
 tags: [checklist, general]
+toc: True
 ---
 
 Temperatur >= 38,3 °C, bei Immunkompromittierung/Neutropenie >= 38,0 °C

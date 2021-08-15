@@ -3,6 +3,7 @@ title: NIV Checklist
 date: 2021-08-03
 description: General checklist for non-invasive ventilation
 tags: [checklist, general]
+toc: True
 ---
 
 ## Contraindications
@@ -25,7 +26,7 @@ tags: [checklist, general]
 ## Success criteria
 
 - Dyspnea reduced
-- Conciousnedd improved
+- Conciousness improved
 - Breathing frequency reduced
 - pCO2 reduced
 - pH normalizing

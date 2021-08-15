@@ -1,4 +1,10 @@
 {{ define "main" }}
+{{- if .Params.toc }}
+<aside class="invisible lg:visible fixed right-0 top-0 bottom-0 pt-28 pr-8 xl:pr-40">
+    <h1 class="text-gray-700 font-bold text-xl">{{ i18n "toc" }}</h1>
+    {{ .TableOfContents }}
+</aside>
+{{ end -}}
 <article class="px-6 mx-auto mb-16 prose text-gray-700 justify-self-center sm:px-4 md:px-0 lg:prose-lg">
     <h1>{{ .Title }}</h1>
     {{ .Content }}

@@ -3,11 +3,13 @@ title: Sepsis
 date: 2021-08-14
 description: Notes on Sepsis
 tags: [checklist, general]
+toc: True
 ---
 
 ## qSOFA
 
 high score = high risk
+
 - GCS < 15
 - breathing frequency >= 22/min
 - systolic bp <= 100 mmHg

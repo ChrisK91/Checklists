@@ -3,6 +3,7 @@ title: Nutrition
 date: 2021-08-06
 description: Notes on nutrition/feeding
 tags: [checklist, general]
+toc: True
 ---
 
 ## Phases of ciritcal illness

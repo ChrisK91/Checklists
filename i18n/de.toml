@@ -18,3 +18,5 @@ other = 'Alle Checklisten mit "{{ .Name }}":'
 other = 'Zurück zu allen Tags'
 [lastupdatedposts]
 other = 'Vor kurzem aktualisiert'
+[toc]
+other = 'Inhalt'
