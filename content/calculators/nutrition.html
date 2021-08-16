@@ -31,8 +31,8 @@ layout: noprose
         <p class="m-2 text-gray-600">Calculates the ideal weight, based on the Devine formula <i>50 kg (female 45.5 kg) + 0.9 kg * (height - 152 cm)</i>. The conversion to lb uses the factor <i>1 kg = 2.2 lb</i>.</p>
         <div class="md:grid md:grid-cols-2 xl:grid-cols-4">
             <div class="m-2">
-                <label for="height">height (cm)</label>
-                <input class="w-full" id="heigth" type="number" placeholder="height" v-model="height" />
+                <label for="height2">height (cm)</label>
+                <input class="w-full" id="heigth2" type="number" placeholder="height" v-model="height" />
             </div>
             <div class="m-2">
                 <span class="label">Sex</label>
@@ -49,13 +49,13 @@ layout: noprose
             </div>
 
             <div class="m-2">
-                <label for="weightKg">weight (kg)</label>
-                <input class="w-full bg-indigo-200" id="weightKg" type="number" placeholder="weight" v-model="weightDevineKg" disabled />
+                <label for="weightKg2">weight (kg)</label>
+                <input class="w-full bg-indigo-200" id="weightKg2" type="number" placeholder="weight" v-model="weightDevineKg" disabled />
             </div>
 
             <div class="m-2">
-                <label for="weightLb">weight (lb)</label>
-                <input class="w-full bg-indigo-200" id="weightLb" type="number" placeholder="weight in lb" v-model="weightDevineLb" disabled />
+                <label for="weightLb2">weight (lb)</label>
+                <input class="w-full bg-indigo-200" id="weightLb2" type="number" placeholder="weight in lb" v-model="weightDevineLb" disabled />
             </div>
         </div>
     </form>
