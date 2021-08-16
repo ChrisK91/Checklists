@@ -13,7 +13,7 @@ layout: noprose
         <div class="md:grid md:grid-cols-2 xl:grid-cols-3">
             <div class="m-2 md:col-span-2 xl:col-span-1">
                 <label for="height">Größe (cm)</label>
-                <input class="w-full" id="heigth" type="number" placeholder="height" v-model="height" />
+                <input class="w-full" id="heigth" type="number" placeholder="height" v-model.number="height" />
             </div>
 
             <div class="m-2">
@@ -32,7 +32,7 @@ layout: noprose
         <div class="md:grid md:grid-cols-2 xl:grid-cols-4">
             <div class="m-2">
                 <label for="height2">Größe (cm)</label>
-                <input class="w-full" id="heigth2" type="number" placeholder="height" v-model="height" />
+                <input class="w-full" id="heigth2" type="number" placeholder="height" v-model.number="height" />
             </div>
             <div class="m-2">
                 <span class="label">Geschlecht</label>
@@ -66,17 +66,17 @@ layout: noprose
         <div class="md:grid md:grid-cols-2 xl:grid-cols-4">
             <div class="m-2 md:col-span-2 xl:col-span-2">
                 <label for="height2">Größe (cm)</label>
-                <input id="height2" class="w-full" type="number" placeholder="height" v-model="height" />
+                <input id="height2" class="w-full" type="number" placeholder="height" v-model.number="height" />
             </div>
 
             <div class="m-2">
                 <label for="weightKgIntake">Gewicht (kg)</label>
-                <input id="weightKgIntake" class="w-full" type="number" placeholder="weight" v-model="weightKgIntake" />
+                <input id="weightKgIntake" class="w-full" type="number" placeholder="weight" v-model.number="weightKgIntake" />
             </div>
 
             <div class="m-2">
                 <label for="hyperhydration">Hyperhydration (kg)</label>
-                <input id="hyperhydration" class="w-full" type="number" placeholder="weight in lb" v-model="hyperhydrationKg" />
+                <input id="hyperhydration" class="w-full" type="number" placeholder="weight in lb" v-model.number="hyperhydrationKg" />
             </div>
 
             <div class="m-2 md:col-span-2">
