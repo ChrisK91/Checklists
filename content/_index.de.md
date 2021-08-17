@@ -7,6 +7,8 @@ Hier sammle ich eine Reihe von Checklisten, die ich im Alltag nutze. Die Informa
 Natürlich kann die Genauigkeit nicht garantiert werden, weswegen die Listen den Nutzer nicht von seiner Sorgfalt entbinden können.
 Der Quellcode dieser Seite ist auf GitHub und über den unten stehenden Link zu erreichen.
 
+Der Name der Seite stammt aus dem Englischen: **med**ical checkl**ist**.
+
 Nutze den "Checklisten"-Link oben rechts für eine Übersicht
 
 {{< html >}}

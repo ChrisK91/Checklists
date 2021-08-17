@@ -1,23 +1,23 @@
-baseURL = "https://chrisk91.me/Checklists/"
+baseURL = "https://medist.org"
 languageCode = "en"
 defaultContentLanguage = "en"
-title = "Checklists"
+title = "medist.org | medical checklists"
 theme = "tailwind-theme"
 author = "Christian J."
 enableGitInfo = true
 mainSections = ['checklists', 'calculators']
-googleAnalytics = 'G-30MHG4HNXJ'
+googleAnalytics = 'G-R39L27N49K'
 
 [languages]
   [languages.en]
     languageCode = "en"
-    title = "Checklists"
+    title = "medist.org"
     languageName = "English"
     weight = 1
 
   [languages.de]
     languageCode = "de"
-    title = "Checklisten"
+    title = "medist.org"
     languageName = "German"
     weight = 2
 
