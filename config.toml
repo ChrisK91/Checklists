@@ -1,4 +1,4 @@
-baseURL = "https://medist.org"
+baseURL = "https://medist.org/"
 languageCode = "en"
 defaultContentLanguage = "en"
 title = "medist.org | medical checklists"
