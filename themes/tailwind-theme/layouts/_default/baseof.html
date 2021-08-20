@@ -54,7 +54,7 @@
         {{- end -}}
 
         <script>
-            const searchSource = "{{.Site.BaseURL}}{{ .Site.Params.searchUrl }}";
+            const searchSource = "{{ .Site.Params.searchUrl | relURL }}";
             const language = "{{ .Site.Language.Lang }}";
             const noResult = "{{ i18n "noresult"}}";
             const oneResult = "{{ i18n "oneresult"}}";
