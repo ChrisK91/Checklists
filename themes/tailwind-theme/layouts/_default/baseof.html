@@ -6,78 +6,65 @@
         {{- partial "dev-size-indicator.html" . -}}
         */}}
         {{- partial "header.html" . -}}
-        <main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-4 sm:mt-16">
+        <main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-4 sm:mt-16" id="main-content">
         {{- block "main" . }}{{- end }}
+        </main>
+
+        <main class="hidden flex-1 mx-4 md:mx-12 lg:mx-24 mt-4 sm:mt-16 max-w-prose mx-auto" id="search-container">           
+            <h1 class="font-bold text-3xl text-gray-700">{{i18n "searchresults"}}</h1>
+            <p class="font-light my-2 text-gray-500" id="result-text"></p>
+            <p class="font-light text-xs my-2 mb-4 text-gray-500">{{ i18n "gsearch" }}</p>
+
+            <div id="search-inner">
+
+            </div>
+
+            <div class="gcse-search"></div>
         </main>
         
         {{- partial "dev-parameters.html" . -}}
         
         {{- partial "footer.html" . -}}
 
+        <template id="search-result" hidden>
+            <article class="my-2 md:my-4 shadow p-4 bg-gray-50">
+              <h2 class="post-title text-xl"><span class="summary-breadcrumb text-gray-500 capitalize"></span><span class="text-gray-400 font-light"> » </span><a class="summary-title-link p-0 hover:text-blue-500"></a></h2>
+              <div class="summary py-2"></div>
+              <div class="read-more-container">
+                <a class="read-more-link">{{ i18n "readmore"}} »</a>
+              </div>
+            </article>
+        </template>
+
         {{ template "_internal/google_analytics.html" . }}
 
-        <script>
-        //    if('serviceWorker' in navigator) {
-        
-        //         /**
-        //          * Define if <link rel='next|prev|prefetch'> should
-        //          * be preloaded when accessing this page
-        //          */
-        //         const PREFETCH = true;
-        
-        //         /**
-        //          * Define which link-rel's should be preloaded if enabled.
-        //          */
-        //         const PREFETCH_LINK_RELS = ['index','next', 'prev', 'prefetch'];
-        
-        //         /**
-        //          * prefetchCache
-        //          */
-        //         function prefetchCache() {
-        //             if(navigator.serviceWorker.controller) {
-        
-        //                 let links = document.querySelectorAll(
-        //                     PREFETCH_LINK_RELS.map((rel) => {
-        //                         return 'link[rel='+rel+']';
-        //                     }).join(',')
-        //                 );
-        
-        //                 if(links.length > 0) {
-        //                     Array.from(links)
-        //                         .map((link) => {
-        //                             let href = link.getAttribute('href');
-        //                             navigator.serviceWorker.controller.postMessage({
-        //                                 action : 'cache',
-        //                                 url : href,
-        //                             });
-        //                         });
-        //                 }
-        
-        
-        //             }
-        //         }
-        
-        //         /**
-        //          * Register Service Worker
-        //          */
-        //         navigator.serviceWorker
-        //             .register('/Checklists/sw.js', { scope: '/Checklists/' })
-        //             .then(() => {
-        //                 console.log('Service Worker Registered');
-        //             });
-        
-        //         /**
-        //          * Wait if ServiceWorker is ready
-        //          */
-        //         navigator.serviceWorker
-        //             .ready
-        //             .then(() => {
-        //                 if(PREFETCH) {
-        //                     prefetchCache();
-        //                 }
-        //             });
+       
+        {{- $scripts := slice "https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" -}}
+        {{- if ne .Site.Language.Lang "en" -}}
+            {{- $supported := slice "ar" "da" "de" "du" "es" "fi" "fr" "hu" "it" "ja" "nl" "no" "pt" "ro" "ru" "sv" "tr" "vi" -}}
+            {{- if in $supported .Site.Language.Lang -}}
+                {{- if eq .Site.Language.Lang "ja" -}}
+                    {{- $scripts = union $scripts (slice "https://cdn.jsdelivr.net/npm/lunr-languages@1.9.0/tinyseg.js") -}}
+                {{- end -}}
+                {{- $scripts = union $scripts (slice "https://cdn.jsdelivr.net/npm/lunr-languages@1.9.0/min/lunr.stemmer.support.min.js") -}}
+                {{- $scripts = union $scripts (slice (printf "https://cdn.jsdelivr.net/npm/lunr-languages@1.9.0/min/lunr.%s.min.js" .Site.Language.Lang)) -}}
+            {{- else -}}
+                {{- warnf "The site language %q isn't supported by lunr, the search results might be suboptimal. Supported languages are: %q" .Site.Language.Lang $supported -}}
+            {{- end -}}
+        {{- end -}}
 
-        //     } 
-        // </script>
+        <script>
+            const searchSource = "{{.Site.BaseURL}}{{ .Site.Params.searchUrl }}";
+            const language = "{{ .Site.Language.Lang }}";
+            const noResult = "{{ i18n "noresult"}}";
+            const oneResult = "{{ i18n "oneresult"}}";
+            const twoResult = "{{ i18n "tworesults"}}";
+            const xResult = "{{ i18n "xresults"}}";
+        </script>
+        {{- range $scripts -}}
+        <script src="{{ . }}" defer></script>
+        <script src="/lunr.js"></script>
+        {{- end }}
+        <script async src="https://cse.google.com/cse.js?cx=459be57b2ce5a0bbe"></script>
     </body>
 </html>

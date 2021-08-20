@@ -20,3 +20,21 @@ other = 'Back to all tags'
 other = 'Recently changed posts'
 [toc]
 other = 'Content'
+[language]
+other = 'language:'
+[searchplaceholder]
+other = 'search something...'
+[searchresults]
+other = 'search results'
+[noresult]
+other = '''Search didn't find anything... You can try to search in a different language.'''
+[oneresult]
+other = 'one result'
+[tworesults]
+other = 'two results'
+[xresults]
+other = '%number% results'
+[readmore]
+other = 'Read more'
+[gsearch]
+other = '''Use * as wildcard. If you can't find what you're looking for, there is a search powered by google embedded at the bottom of the page.'''

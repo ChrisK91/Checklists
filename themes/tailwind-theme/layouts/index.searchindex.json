@@ -1,0 +1,14 @@
+[
+    {{- range $index, $page := .Site.RegularPages -}}
+    {{- with $page.Params.Hidden -}}
+    {{- else -}}
+      {{- if gt $index 0 -}} , {{- end -}}
+      {{- $entry := dict "uri" $page.RelPermalink "title" $page.Title -}}
+      {{- $entry = merge $entry (dict "description" $page.Description) -}}
+      {{- $entry = merge $entry (dict "type" (i18n $page.Type)) -}}
+      {{- $entry = merge $entry (dict "categories" $page.Params.categories) -}} 
+      {{- $entry = merge $entry (dict "tags" $page.Params.tags) -}}
+      {{- $entry | jsonify -}}
+    {{- end -}}
+    {{- end -}}
+]

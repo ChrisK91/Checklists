@@ -1,7 +1,7 @@
 ---
 title: Sepsis
 date: 2021-08-14
-description: Notes on Sepsis
+description: General approach to sepsis with qSOFA score, early management and notes on volume management.
 tags: [checklist, general]
 toc: True
 ---
@@ -44,4 +44,4 @@ high score = high risk
 - transfusion with Hb < 7 g/dl
 - nutrition
   - start when haemidynamic stability is reached
-  - don't lower blood glucose too aggressively, aim for 140 - 180 mg/dl
+  - don't lower blood glucose too aggressively, aim for 140 - 180 mg/dl,

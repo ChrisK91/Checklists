@@ -20,3 +20,21 @@ other = 'Zurück zu allen Tags'
 other = 'Vor kurzem aktualisiert'
 [toc]
 other = 'Inhalt'
+[language]
+other = 'Sprache:'
+[searchplaceholder]
+other = 'suche etwas...'
+[searchresults]
+other = 'Suchergebnisse'
+[noresult]
+other = 'Die Suche hat keine Ergebnisse gefunden... Du kannst versuchen, in einer anderen Sprache zu suchen...'
+[oneresult]
+other = 'ein Ergebnis'
+[tworesults]
+other = 'zwei Ergebnisse'
+[xresults]
+other = '%number% Ergebnisse'
+[readmore]
+other = 'Mehr lesen'
+[gsearch]
+other = '''Mit * kannst du auch Wortteile suchen. Wenn die gesuchte Seite nicht dabei ist, kannst du auch die Google-Suche am Ende nutzen.'''

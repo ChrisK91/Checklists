@@ -1,4 +1,4 @@
-<header class="w-full px-4 pt-4 pb-4 sticky top-0 shadow bg-indigo-50 z-40">
+<header class="w-full px-4 pt-2 pb-2 sticky top-0 shadow bg-indigo-50 z-40">
     {{/*  CSS functionality for menu toggle  */}}
     <style type="text/css">
         input#nav-toggle:checked~label#show-button {
@@ -15,11 +15,12 @@
     </style>
 
     <nav class="flex items-center justify-between flex-wrap">
-        <a href="{{ .Site.Home.Permalink }}" class="flex items-center text-gray-700 font-semibold hover:text-blue-500">
-            {{ .Site.Title }}
-        </a>
-
-        {{ partial "langswitcher.html" . }}
+        <div class="items-center">
+            <a href="{{ .Site.Home.Permalink }}" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold leading-none">
+                {{ .Site.Title }}
+            </a><br>
+            <span class="text-xs text-indigo-500 leading-none">medical checklists</span>
+        </div>
 
         <input id="nav-toggle" type=checkbox class="hidden">
         <label id="show-button" for="nav-toggle"
@@ -38,21 +39,52 @@
         </label>
 
         <ul id="nav-menu" class="sm:flex w-full sm:w-auto hidden sm:block mt-2 sm:mt-0 sm:space-x-2">
+            <div class="self-center hidden" id="loadingspinner">
+                <svg fill='none' class="w-10 h-10 animate-spin" viewBox="0 0 32 32" xmlns='http://www.w3.org/2000/svg'>
+                    <path clip-rule='evenodd'
+                        d='M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z'
+                        fill='currentColor' fill-rule='evenodd' />
+                </svg>
+            </div>
+
+            <!-- Search inspired by https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/#the-javascript-code -->
+            <form id="search" class="search" role="search">
+                <input type="search" id="search-input" class="px-4 py-2 m-2 sm:m-0 block w-full sm:w-auto border-b-1 bg-gray-50 rounded focus:placeholder-gray-400" placeholder="{{i18n "searchplaceholder"}}">
+            </form>
+
             {{ with .Site.GetPage "/about" }}
-            <li>
-                <a href="{{ .Permalink }}" class="text-gray-500 hover:text-blue-400">{{ .Title }}</a>
+            <li class="self-center">
+                <a href="{{ .Permalink }}" class="p-2 m-2 sm:p-0 sm:m-0 block text-gray-500 hover:text-blue-400">{{ .Title }}</a>
             </li>
             {{ end }}
             {{ range .Site.Sections }}
-            <li>
-                <a href="{{ .Permalink }}" class="text-gray-500 hover:text-blue-400">{{ .Title }}</a>
+            <li class="self-center">
+                <a href="{{ .Permalink }}" class="p-2 m-2 sm:p-0 sm:m-0 block text-gray-500 hover:text-blue-400">{{ .Title }}</a>
             </li>
             {{ end }}
             {{ with .Site.GetPage "/tags" }}
-            <li>
-                <a href="{{ .Permalink }}" class="text-gray-500 hover:text-blue-400">{{ .Title }}</a>
+            <li class="self-center">
+                <a href="{{ .Permalink }}" class="p-2 m-2 sm:p-0 sm:m-0 block text-gray-500 hover:text-blue-400">{{ .Title }}</a>
             </li>
             {{ end }}
+
+            {{ if .Site.IsMultiLingual }}
+            {{ $siteLanguages := .Site.Languages}}
+            {{ $pageLang := .Page.Lang}}
+            {{ range .Page.AllTranslations }}
+                {{ $translation := .}}
+                {{ range $siteLanguages }}
+                    {{ if eq $translation.Lang .Lang }}
+                        {{ $selected := false }}
+                        {{ if eq $pageLang .Lang}}
+                            <div class="self-center text-gray-600 p-2 m-2 sm:p-0 sm:m-0 hover:text-blue-500 focus:outline-none border-b-2 border-indigo-500"><a href="{{ $translation.Permalink }}">{{ .LanguageName }}</a></div>
+                        {{ else }}
+                            <div class="self-center text-gray-600 p-2 m-2 sm:p-0 sm:m-0 hover:text-blue-500 focus:outline-none"><a href="{{ $translation.Permalink }}">{{ .LanguageName }}</a></div>
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            {{end}}
         </ul>
     </nav>
 </header>

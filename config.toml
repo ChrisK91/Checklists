@@ -14,12 +14,25 @@ googleAnalytics = 'G-R39L27N49K'
     title = "medist.org"
     languageName = "English"
     weight = 1
+    [languages.en.params]
+    searchUrl = "search.json"
 
   [languages.de]
     languageCode = "de"
     title = "medist.org"
     languageName = "German"
     weight = 2
+    [languages.de.params]
+    searchUrl = "de/search.json"
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "search"
+
+[outputs]
+home = ['HTML', 'SearchIndex']
+page = ['HTML']
 
 [build]
 writeStats = true

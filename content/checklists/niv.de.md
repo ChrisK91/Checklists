@@ -1,7 +1,7 @@
 ---
 title: NIV Checkliste
 date: 2021-08-03
-description: Allgemeine Checkliste für NIV
+description: Kontraindikationen, Erfolgskriterien und Einstellungsmöglichkeiten für die nichtinvasive Beatmung.
 tags: [checklist, general]
 toc: True
 ---

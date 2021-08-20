@@ -1,7 +1,7 @@
 ---
 title: Acute Kidney Injury
 date: 2021-08-17
-description: General checklist for aki
+description: Diagnostic criteria, diagnostic approaches and a brief overview of the treatment of acute kidney injury (AKI)
 tags: [checklist, general]
 toc: True
 ---
