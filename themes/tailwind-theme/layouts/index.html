@@ -1,15 +1,16 @@
 {{ define "main" }}
 <article class="text-center text-gray-700">
-    <h1 class="font-serif font-extralight text-5xl text-gray-500 lg:mb-8">{{ .Title }}</h1>
+    <div class="container mx-auto mt-5 text-left max-w-prose lg:prose-lg">
+        <h1 class="mb-4 font-serif text-5xl font-bold text-left text-gray-900 border-b-2 border-gray-200 lg:mb-8">{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
 
-    <div class="max-w-prose text-left container mx-auto mt-5 lg:prose-lg">{{ .Content }}</div>
-
-    <div class="max-w-prose text-left container mx-auto mt-5 lg:prose-lg mt-12">
+    <div class="container mx-auto mt-5 mt-12 text-left max-w-prose lg:prose-lg">
         <h3>{{ i18n "lastupdatedposts"}}</h3>
         <ul>
             {{ range first 5 (where .Site.RegularPages.ByLastmod.Reverse "Params.hidden" "ne" "true") }}
                     
-                <li><a href="{{ .Page.Permalink }}" class="font-medium">{{ .Page.Title }} <span class="font-regular text-gray-400">(<time>{{ .Lastmod.Format "2 January 2006" }}</time>)</span></a></li>
+                <li><a href="{{ .Page.Permalink }}" class="font-medium">{{ .Page.Title }} <span class="text-gray-400 font-regular">(<time>{{ .Lastmod.Format "2 January 2006" }}</time>)</span></a></li>
             {{ end }}
         </ul>
     </div>

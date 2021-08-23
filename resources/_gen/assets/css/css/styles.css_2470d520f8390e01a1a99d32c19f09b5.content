@@ -2085,6 +2085,11 @@ form label, span.label {
 
 /* Site Specific */
 
+.gsc-control-cse {
+  background:transparent !important;
+  border-color:transparent !important;
+}
+
 /*! purgecss start ignore */
 
 /* Reset Code to enable checkboxes */

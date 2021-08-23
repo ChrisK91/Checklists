@@ -1,5 +1,10 @@
 @layer components {
     form label, span.label {
-      @apply uppercase tracking-wide text-black text-xs font-bold mb-2;
+      @apply mb-2 text-xs font-bold tracking-wide text-black uppercase;
     }
   }
+
+.gsc-control-cse {
+  background:transparent !important;
+  border-color:transparent !important;
+}

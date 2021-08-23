@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang='{{ .Site.LanguageCode }}'>
     {{ partial "head.html" . }}
-    <body class="flex flex-col min-h-screen">
+    <body class="flex flex-col min-h-screen bg-gray-50">
         {{/*
         {{- partial "dev-size-indicator.html" . -}}
         */}}
         {{- partial "header.html" . -}}
-        <main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-4 sm:mt-16" id="main-content">
+        <main class="flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16" id="main-content">
         {{- block "main" . }}{{- end }}
         </main>
 
-        <main class="hidden flex-1 mx-4 md:mx-12 lg:mx-24 mt-4 sm:mt-16 max-w-prose mx-auto" id="search-container">           
-            <h1 class="font-bold text-3xl text-gray-700">{{i18n "searchresults"}}</h1>
-            <p class="font-light my-2 text-gray-500" id="result-text"></p>
-            <p class="font-light text-xs my-2 mb-4 text-gray-500">{{ i18n "gsearch" }}</p>
+        <main class="flex-1 hidden mx-auto mt-4 md:mx-12 lg:mx-24 sm:mt-16 max-w-prose" id="search-container">           
+            <h1 class="text-3xl font-bold text-gray-700">{{i18n "searchresults"}}</h1>
+            <p class="my-2 font-light text-gray-500" id="result-text"></p>
+            <p class="my-2 mb-4 text-xs font-light text-gray-500">{{ i18n "gsearch" }}</p>
 
             <div id="search-inner">
 
@@ -27,9 +27,9 @@
         {{- partial "footer.html" . -}}
 
         <template id="search-result" hidden>
-            <article class="my-2 md:my-4 shadow p-4 bg-gray-50">
-              <h2 class="post-title text-xl"><span class="summary-breadcrumb text-gray-500 capitalize"></span><span class="text-gray-400 font-light"> » </span><a class="summary-title-link p-0 hover:text-blue-500"></a></h2>
-              <div class="summary py-2"></div>
+            <article class="p-4 my-2 bg-gray-100 shadow md:my-4">
+              <h2 class="text-xl post-title"><span class="text-gray-500 capitalize summary-breadcrumb"></span><span class="font-light text-gray-400"> » </span><a class="p-0 summary-title-link hover:text-blue-500"></a></h2>
+              <div class="py-2 summary"></div>
               <div class="read-more-container">
                 <a class="read-more-link">{{ i18n "readmore"}} »</a>
               </div>
