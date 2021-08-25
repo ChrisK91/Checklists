@@ -2,9 +2,17 @@
     form label, span.label {
       @apply mb-2 text-xs font-bold tracking-wide text-black uppercase;
     }
+
+    nav#TableOfContents ul > li {
+      @apply ml-2;
+    }
   }
 
 .gsc-control-cse {
   background:transparent !important;
   border-color:transparent !important;
+}
+
+html {
+  scroll-padding-top: 5rem;  
 }

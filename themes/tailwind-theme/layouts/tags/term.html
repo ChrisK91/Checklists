@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article class="px-6 mx-auto mb-16 prose text-gray-700 justify-self-center sm:px-4 md:px-0 lg:prose-lg">
-    <h1>{{ i18n "tags" }} &raquo; {{ .Name }}</h1>
+    <h1>{{ i18n "tags" }} &raquo; {{ .Name | i18n }}</h1>
 
     <p class="mt-2">
         {{ with .Site.GetPage "/tags" }}
@@ -9,10 +9,26 @@
     </p>
 
 
-    <p>{{ i18n "browseTag" .}}</p>
+    <p>{{ i18n "browseTag" (.Name | i18n)}}</p>
     <ul>
     {{ range .Data.Pages }}
-        <li><a href="{{ .Page.Permalink }}" class="font-medium">{{ .Page.Title }}</a></li>
+        <li><a href="{{ .Page.Permalink }}" class="font-medium">{{ .Page.Title }}</a>
+        {{- if (eq .Page.Type "calculators") }}
+        <div class="inline-flex items-center px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-blue-900 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            {{- .Page.Type | i18n -}}
+        </div>
+        {{- else if (eq .Page.Type "checklists") }}
+        <div class="inline-flex items-center px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-green-900 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+            {{- .Page.Type | i18n -}}
+        </div>
+        {{ end -}}
+        </li>
     {{ end }}
     </ul>
 </article>

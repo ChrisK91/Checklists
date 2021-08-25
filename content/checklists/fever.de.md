@@ -2,7 +2,7 @@
 title: Fieber Checkliste
 date: 2021-08-03
 description: Grundsätzliche Herangehensweisen für Fieber mit Diagnostik- und Therapiemöglichkeiten
-tags: [checklist, general]
+tags: [checklist, general, infectiology]
 toc: True
 ---
 

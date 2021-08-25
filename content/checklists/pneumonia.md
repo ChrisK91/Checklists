@@ -2,7 +2,7 @@
 title: Pneumonia
 date: 2021-08-23
 description: Initial management of pneumonia
-tags: [checklist, general]
+tags: [checklist, general, infectiology]
 toc: True
 ---
 
@@ -19,7 +19,7 @@ Therapeutic decisions are futher guided by immunocompetence, with immunocompromi
 
 - history with fever, cough, dyspnea and sputum production
 - vital signs including blood pressure, breathing rate, SpO2, mental state (GCS)
-  - calculate qSOFA score
+  - calculate [qSOFA]({{< relref "sepsis#qsofa">}}) score
 - laboratory findings
   - leukocytosis, early sign
   - elevated CRP, can lag behind leukocytes

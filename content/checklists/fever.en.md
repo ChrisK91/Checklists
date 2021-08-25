@@ -2,7 +2,7 @@
 title: Fever checklist
 date: 2021-08-03
 description: General diagnostic approach for fever
-tags: [checklist, general]
+tags: [checklist, general, infectiology]
 toc: true
 ---
 

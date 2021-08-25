@@ -2,6 +2,8 @@
 other = 'checklist'
 [checklists]
 other = 'checklists'
+[infectiology]
+other = 'infectiology'
 [calculators]
 other = 'calculators'
 [tags]
@@ -13,7 +15,7 @@ other = 'general'
 [browseByTag]
 other = 'Browse content by tag'
 [browseTag]
-other = 'All checklists tagged with "{{ .Name }}":'
+other = 'All checklists tagged with "{{ . }}":'
 [backToAllTags]
 other = 'Back to all tags'
 [lastupdatedposts]

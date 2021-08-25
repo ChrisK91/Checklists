@@ -2,7 +2,7 @@
 title: Sepsis
 date: 2021-08-14
 description: General approach to sepsis with qSOFA score, early management and notes on volume management.
-tags: [checklist, general]
+tags: [checklist, general, infectiology]
 toc: True
 ---
 
