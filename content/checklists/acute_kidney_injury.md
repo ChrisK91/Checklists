@@ -20,7 +20,7 @@ AKI = acute kidney injury is classified further intp prerenal, renal, postrenal
   - postrenal obstruction
   - prerenal: low volume
 - Blood
-  - Na, K (and pH can easily be tested with BGA)
+  - Na, K (and pH can easily be tested with ABG)
   - Creatinine, BUN/Urea
   - Cystatin C
   - specific antibodies in autoimmune AKI
