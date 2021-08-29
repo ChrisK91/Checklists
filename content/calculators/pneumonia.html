@@ -1,0 +1,353 @@
+---
+title: Pneumonia
+date: 2021-08-29
+description: Calculators related to pneumonie, currently containing the PSI-Score-Calculator
+tags: [calculators, general, infectiology]
+vue: true
+layout: noprose
+---
+<div id='app'>
+    <h2 class="mt-4 mb-2 text-2xl">Pneumonia Severity Index (PSI)</h2>
+    <form class="p-2 border shadow">
+        <div class="grid md:grid-cols-2">
+            <div class="p-0 m-2">
+                <p class="m-2 text-gray-600">Calculates the PSI-Score based on <a class="underline" target="_blank"
+                        href="https://pubmed.ncbi.nlm.nih.gov/8995086/">this article</a>.</p>
+            </div>
+
+            <div class="flex flex-col items-end w-full pr-4 m-2">
+                <button
+                    class="inline-flex items-center h-10 px-8 text-gray-100 bg-gray-900 border-b-4 border-indigo-500 hover:bg-gray-200 hover:text-gray-900"
+                    type="button" v-on:click="resetForm">
+                    <span class="mr-2">Reset</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+                <span class="text-lg text-gray-600 label">Demographic factors</span>
+
+                <div class="m-2">
+                    <label for="age">age</label>
+                    <input class="w-full" id="age" type="number" placeholder="age" v-model.number="age" />
+                </div>
+
+                <div class="m-2">
+                    <span class="label">Sex</label>
+                        <div class="flex content-center w-full h-12">
+                            <label class="inline-flex items-center">
+                                <input type="radio" class="form-radio" name="sex" value="male" checked v-model="sex">
+                                <span class="ml-2 text-base font-normal">male</span>
+                            </label>
+                            <label class="inline-flex items-center ml-6">
+                                <input type="radio" class="form-radio" name="sex" value="female" v-model="sex">
+                                <span class="ml-2 text-base font-normal">female</span>
+                            </label>
+                        </div>
+                        <div class="flex content-center w-full h-12">
+                            <label class="inline-flex items-center ml-0">
+                                <input id="nhr" type="checkbox" v-model="nhr" />
+                                <span class="ml-2 text-base font-normal">Nursing home resident</span>
+                            </label>
+                        </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+                <span class="text-lg text-gray-600 label">Coexisting illness</span>
+                <div class="m-2">
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="neoplDis" type="checkbox" v-model="neoplDis" />
+                            <span class="ml-2 text-base font-normal">Neoplastic disease</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="livDis" type="checkbox" v-model="livDis" />
+                            <span class="ml-2 text-base font-normal">Liver disease</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="congHf" type="checkbox" v-model="congHf" />
+                            <span class="ml-2 text-base font-normal">Congestive heart failure</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="cerebrDis" type="checkbox" v-model="cerebrDis" />
+                            <span class="ml-2 text-base font-normal">Cerebrovascular disease</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="renDis" type="checkbox" v-model="renDis" />
+                            <span class="ml-2 text-base font-normal">Renal disease</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+                <span class="text-lg text-gray-600 label">Physical-examination findings</span>
+
+                <div class="m-2">
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="altGCS" type="checkbox" v-model="altGCS" />
+                            <span class="ml-2 text-base font-normal">Altered mental status</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="respRate" type="checkbox" v-model="respRate" />
+                            <span class="ml-2 text-base font-normal">Respiratory rate &ge; 30/min</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="sysBp" type="checkbox" v-model="sysBp" />
+                            <span class="ml-2 text-base font-normal">Systolic blood pressure &lt; 90 mmHg</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="temp" type="checkbox" v-model="temp" />
+                            <span class="ml-2 text-base font-normal">Temperature &lt; 35&deg;C or &ge; 40&deg;C</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="pulse" type="checkbox" v-model="pulse" />
+                            <span class="ml-2 text-base font-normal">Pulse &ge; 125/min</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+                <span class="text-lg text-gray-600 label">Laboratory and radiographic findings</span>
+
+                <div class="m-2">
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="artPh" type="checkbox" v-model="artPh" />
+                            <span class="ml-2 text-base font-normal">Arterial pH &lt; 7.35</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-16">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="bun" type="checkbox" v-model="bun" />
+                            <span class="ml-2 text-base font-normal">Blood urea nitrogen &ge; 30 mg/dl (11
+                                mmol/l)<br>&asymp; Urea &ge; 64,2 mg/dl</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="sodium" type="checkbox" v-model="sodium" />
+                            <span class="ml-2 text-base font-normal">Sodium &lt; 130 mmol/l</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="glucose" type="checkbox" v-model="glucose" />
+                            <span class="ml-2 text-base font-normal">Glucose &ge; 250 mg/dl (14 mmol/l)</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="hematocrit" type="checkbox" v-model="hematocrit" />
+                            <span class="ml-2 text-base font-normal">Hematocris &lt; 20 %</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="pao2" type="checkbox" v-model="pao2" />
+                            <span class="ml-2 text-base font-normal">p<sub>a</sub>O<sub>2</sub> &lt; 60 mmHg</span>
+                        </label>
+                    </div>
+
+                    <div class="flex content-center w-full h-12">
+                        <label class="inline-flex items-center ml-0">
+                            <input id="pleuraleff" type="checkbox" v-model="pleuraleff" />
+                            <span class="ml-2 text-base font-normal">Pleural effusion</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex w-auto p-0 m-2 bg-gray-200 border">
+            <div class="flex items-center flex-none w-24 h-24 bg-gray-900">
+                <div class="w-full text-center">
+                    <span class="text-5xl font-light text-gray-200">{{ psi }}</span>
+                </div>
+            </div>
+            <div class="flex items-center w-full p-2">
+                <span class="font-bold">Risk Class {{ riskClass }}:&nbsp;</span> {{ riskClassText }}
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            age: 60,
+            sex: "male",
+            nhr: false,
+            neoplDis: false,
+            livDis: false,
+            congHf: false,
+            cerebrDis: false,
+            renDis: false,
+            altGCS: false,
+            respRate: false,
+            sysBp: false,
+            temp: false,
+            pulse: false,
+            artPh: false,
+            bun: false,
+            sodium: false,
+            glucose: false,
+            hematocrit: false,
+            pao2: false,
+            pleuraleff: false
+        },
+        computed: {
+            psi: function () {
+                psiScore = this.age;
+
+                if (this.sex == "female") {
+                    psiScore -= 10;
+                }
+
+                if (this.nhr) { psiScore += 10 }
+                if (this.neoplDis) { psiScore += 30 }
+                if (this.livDis) { psiScore += 20 }
+                if (this.congHf) { psiScore += 10 }
+                if (this.cerebrDis) { psiScore += 10 }
+                if (this.renDis) { psiScore += 10 }
+
+                if (this.altGCS) { psiScore += 20 }
+                if (this.respRate) { psiScore += 20 }
+                if (this.sysBp) { psiScore += 20 }
+                if (this.temp) { psiScore += 15 }
+                if (this.pulse) { psiScore += 10 }
+
+                if (this.artPh) { psiScore += 30 }
+                if (this.bun) { psiScore += 20 }
+                if (this.sodium) { psiScore += 20 }
+                if (this.glucose) { psiScore += 10 }
+                if (this.hematocrit) { psiScore += 10 }
+                if (this.pao2) { psiScore += 10 }
+                if (this.pleuraleff) { psiScore += 10 }
+
+                return psiScore;
+            },
+            riskClass: function () {
+                if (this.age <= 50 &&
+                    !this.neoplDis && 
+                    !this.livDis && 
+                    !this.congHf && 
+                    !this.cerebrDis && 
+                    !this.renDis && 
+                    !this.altGCS && 
+                    !this.respRate && 
+                    !this.sysBp && 
+                    !this.temp && 
+                    !this.pulse            
+                )
+                {
+                    return "I";
+                }
+                else if(this.psi <= 70)
+                {
+                    return "II";
+                }
+                else if(this.psi <= 90)
+                {
+                    return "III";
+                }
+                else if(this.psi <= 130)
+                {
+                    return "IV";
+                }
+                else
+                {
+                    return "V";
+                }
+
+                return "Nope";
+            },
+            riskClassText: function () {
+                switch (this.riskClass) {
+                    case "I":
+                        return "People up to 50 years without complicating disease and a normal examination are assigned to risk class I. Mortality 0.1 - 0.5 %";
+                        break;
+
+                    case "II":
+                        return "Mortality 0.4 - 0.6 %";
+                        break;
+                        
+                    case "III":
+                        return "Mortality 0.9 - 2.8 %. Consider admission.";
+                        break;
+                        
+                    case "IV":
+                        return "Mortality 8.2 - 9.3 %. Consider hospitalization for treatment.";
+                        break;
+                        
+                    case "V":
+                        return "Mortality 27 - 29.2 %. Consider hospitalization for treatment.";
+                        break;
+                
+                    default:
+                        break;
+                }
+            }
+        },
+        methods: {
+            resetForm: function (event) {
+                this.nhr = false;
+                this.neoplDis = false;
+                this.livDis = false;
+                this.congHf = false;
+                this.cerebrDis = false;
+                this.renDis = false;
+                this.altGCS = false;
+                this.respRate = false;
+                this.sysBp = false;
+                this.temp = false;
+                this.pulse = false;
+                this.artPh = false;
+                this.bun = false;
+                this.sodium = false;
+                this.glucose = false;
+                this.hematocrit = false;
+                this.pao2 = false;
+                this.pleuraleff = false;
+            }
+        }
+    });
+</script>

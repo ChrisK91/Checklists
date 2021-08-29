@@ -51,7 +51,7 @@ Therapeutic decisions are futher guided by immunocompetence, with immunocompromi
   - R = respiratory rate >= 30/min
   - B = blood pressure, diastolic <= 60 mmHg/systolic < 90 mmHg
   - 65 = age >= 65
-- PSI-Score
+- [PSI-Score]({{< relref "calculators/pneumonia">}})
 
 - CURB-65 > 1 or PSI-Score >= III: hospitalize patient
 - CURB-65 >= 3 or PSI-Score V consider intensive care
