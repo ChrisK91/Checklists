@@ -16,3 +16,5 @@
 html {
   scroll-padding-top: 5rem;  
 }
+
+[x-cloak] { display: none !important; }

@@ -1,54 +1,37 @@
-<header class="sticky top-0 z-40 w-full px-4 pt-2 pb-2 bg-gray-900">
-    {{/*  CSS functionality for menu toggle  */}}
-    <style type="text/css">
-        input#nav-toggle:checked~label#show-button {
-            display: none;
-        }
-
-        input#nav-toggle:checked~label#hide-button {
-            display: flex;
-        }
-
-        input#nav-toggle:checked~#nav-menu {
-            display: block;
-        }
-    </style>
-
+<header class="sticky top-0 z-40 w-full px-4 pt-2 pb-2 bg-gray-900" x-data="{ isOpen: false }"
+    @keydown.escape="isOpen = false" :class="{ 'shadow-lg bg-indigo-900' : isOpen , 'bg-gray-900' : !isOpen}">
     <nav class="flex flex-wrap items-center justify-between">
         <div class="flex flex-row items-stretch">
             <div>
-                <a href="{{ .Site.Home.Permalink }}" class="font-sans text-2xl font-bold leading-none text-gray-200 no-underline">
+                <a href="{{ .Site.Home.Permalink }}"
+                    class="font-sans text-2xl leading-none text-gray-200 no-underline lg:font-bold">
                     {{ .Site.Title }}
                 </a><br>
                 <span class="text-xs leading-none text-indigo-300">medical checklists</span>
             </div>
             <div class="flex items-center mx-2 my-0 border-l-2 border-gray-600">
-                <p class="flex p-0 mx-2 my-0 text-4xl font-light text-gray-200 uppercase">
-                {{- if .Params.Title }}
-                {{ .Params.Title }}
-                {{ end -}}
+                <p
+                    class="flex p-0 mx-2 my-0 text-4xl font-light tracking-tight text-gray-200 uppercase lg:tracking-normal">
+                    {{- if .Params.Title }}
+                    {{ .Params.Title }}
+                    {{ end -}}
                 </p>
             </div>
         </div>
 
-        <input id="nav-toggle" type=checkbox class="hidden">
-        <label id="show-button" for="nav-toggle"
-            class="flex items-center text-gray-500 sm:hidden hover:text-blue-500">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <title>Menu Open</title>
-                <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z" />
+        <button @click="isOpen = !isOpen" type="button"
+            class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white">
+            <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path x-show="isOpen" x-cloak fill-rule="evenodd" clip-rule="evenodd"
+                    d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                <path x-show="!isOpen" fill-rule="evenodd"
+                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
             </svg>
-        </label>
-        <label id="hide-button" for="nav-toggle" class="flex items-center hidden text-gray-700 hover:text-blue-500">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <title>Menu Close</title>
-                <polygon points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-                    transform="rotate(45 10 10)" />
-            </svg>
-        </label>
+        </button>
 
-        <ul id="nav-menu" class="items-stretch hidden w-full mt-2 sm:flex sm:w-auto sm:block sm:mt-0 sm:space-x-2">
-            <div class="self-center hidden" id="loadingspinner">
+        <ul id="nav-menu" class="items-stretch hidden w-full mt-2 lg:flex lg:w-auto lg:mt-0 lg:space-x-2"
+            :class="{ 'block shadow-3xl border-t-2 border-gray-500': isOpen, 'hidden': !isOpen }">
+            <div class="self-center hidden text-gray-200" id="loadingspinner">
                 <svg fill='none' class="w-10 h-10 animate-spin" viewBox="0 0 32 32" xmlns='http://www.w3.org/2000/svg'>
                     <path clip-rule='evenodd'
                         d='M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z'
@@ -58,41 +41,100 @@
 
             <!-- Search inspired by https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/#the-javascript-code -->
             <form id="search" class="search" role="search">
-                <input type="search" id="search-input" class="block w-full p-1 m-2 bg-gray-300 rounded sm:m-0 sm:w-auto border-b-1 focus:placeholder-gray-400" placeholder="{{i18n "searchplaceholder"}}">
+                <input type="search" id="search-input"
+                    class="block w-full p-1 my-2 bg-gray-300 rounded lg:m-0 lg:w-auto border-b-1 focus:placeholder-gray-400"
+                    placeholder="{{i18n "searchplaceholder"}}">
             </form>
 
             {{ with .Site.GetPage "/about" }}
             <li class="self-center">
-                <a href="{{ .Permalink }}" class="block p-2 m-2 text-gray-300 sm:p-0 sm:m-0 hover:text-blue-400">{{ .Title }}</a>
+                <a href="{{ .Permalink }}" class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">{{
+                    .Title }}</a>
             </li>
             {{ end }}
             {{ range .Site.Sections }}
             <li class="self-center">
-                <a href="{{ .Permalink }}" class="block p-2 m-2 text-gray-300 sm:p-0 sm:m-0 hover:text-blue-400">{{ .Title }}</a>
+                <a href="{{ .Permalink }}" class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">{{
+                    .Title }}</a>
             </li>
             {{ end }}
             {{ with .Site.GetPage "/tags" }}
             <li class="self-center">
-                <a href="{{ .Permalink }}" class="block p-2 m-2 text-gray-300 sm:p-0 sm:m-0 hover:text-blue-400">{{ .Title }}</a>
+                <a href="{{ .Permalink }}" class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">{{
+                    .Title }}</a>
             </li>
             {{ end }}
 
             {{ if .Site.IsMultiLingual }}
-            {{ $siteLanguages := .Site.Languages}}
-            {{ $pageLang := .Page.Lang}}
-            {{ range .Page.AllTranslations }}
-                {{ $translation := .}}
-                {{ range $siteLanguages }}
-                    {{ if eq $translation.Lang .Lang }}
+
+            <!-- Language selection for small screens -->
+            <div class="flex visible p-2 m-0 bg-gray-700 rounded-sm lg:hidden">
+                <div class="self-center m-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
+                            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                    </svg>
+                </div>
+                <li class="flex-grow visible block lg:hidden">
+                    <ul class="w-full">
+                        {{ $siteLanguages := .Site.Languages}}
+                        {{ $pageLang := .Page.Lang}}
+                        {{ range .Page.AllTranslations }}
+                        {{ $translation := .}}
+                        {{ range $siteLanguages }}
+                        {{ if eq $translation.Lang .Lang }}
                         {{ $selected := false }}
                         {{ if eq $pageLang .Lang}}
-                            <div class="box-border self-center p-2 m-2 border-b-2 border-indigo-500 text-indigo-50 sm:p-0 sm:m-0 hover:text-blue-500 focus:outline-none"><a href="{{ $translation.Permalink }}">{{ .LanguageName }}</a></div>
+                        <li>
+                            <a class="block p-2 m-2 my-auto border-b-2 border-indigo-500 text-indigo-50 lg:p-0 lg:m-0 hover:text-blue-400" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
+                        </li>
                         {{ else }}
-                            <div class="self-center p-2 m-2 text-gray-300 sm:p-0 sm:m-0 hover:text-blue-500 focus:outline-none"><a href="{{ $translation.Permalink }}">{{ .LanguageName }}</a></div>
+                        <li>
+                            <a class="block p-2 m-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
+                        </li>
                         {{ end }}
+                        {{ end }}
+                        {{ end }}
+                        {{ end }}
+                    </ul>
+                </li>
+            </div>
+
+            <!-- language selection for large screens with popup -->
+            <li x-data="{ open: false }" class="self-center" x-on:click.outside="open = false">
+                <button x-on:click="open = !open" class="hidden p-2 m-2 text-gray-300 lg:block sm:p-0 sm:m-0 hover:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
+                            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                    </svg>
+                </button>
+
+                <ul x-cloak x-show="open" class="absolute p-2 text-gray-300 bg-gray-700 shadow lg:right-2"
+                    x-transition.opacity>
+                    {{ $siteLanguages := .Site.Languages}}
+                    {{ $pageLang := .Page.Lang}}
+                    {{ range .Page.AllTranslations }}
+                    {{ $translation := .}}
+                    {{ range $siteLanguages }}
+                    {{ if eq $translation.Lang .Lang }}
+                    {{ $selected := false }}
+                    {{ if eq $pageLang .Lang}}
+                    <li
+                        class="box-border self-center p-3 m-2 border-b-2 border-indigo-500 text-indigo-50 sm:p-0 sm:m-0 hover:text-blue-300 focus:outline-none">
+                        <a class="block m-2 xl:mx-6" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
+                    </li>
+                    {{ else }}
+                    <li class="self-center p-3 m-2 text-gray-300 sm:p-0 sm:m-0 hover:text-blue-300 focus:outline-none">
+                        <a class="block m-2 xl:mx-6" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
+                    </li>
                     {{ end }}
-                {{ end }}
-            {{ end }}
+                    {{ end }}
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </li>
             {{end}}
         </ul>
     </nav>
