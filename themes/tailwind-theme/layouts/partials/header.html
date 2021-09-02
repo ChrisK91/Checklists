@@ -4,14 +4,14 @@
         <div class="flex flex-row items-stretch">
             <div>
                 <a href="{{ .Site.Home.Permalink }}"
-                    class="font-sans text-2xl leading-none text-gray-200 no-underline lg:font-bold">
+                    class="font-sans leading-none tracking-tighter text-gray-200 no-underline sm:tracking-tight text-s sm:text-2xl lg:font-bold">
                     {{ .Site.Title }}
                 </a><br>
-                <span class="text-xs leading-none text-indigo-300">medical checklists</span>
+                <span class="text-xs leading-none tracking-tighter text-indigo-300">medical checklists</span>
             </div>
             <div class="flex items-center mx-2 my-0 border-l-2 border-gray-600">
                 <p
-                    class="flex p-0 mx-2 my-0 text-4xl font-light tracking-tight text-gray-200 uppercase lg:tracking-normal">
+                    class="flex p-0 mx-2 my-0 text-xl font-light tracking-tight text-gray-200 uppercase sm:text-2xl md:text-4xl lg:tracking-normal">
                     {{- if .Params.Title }}
                     {{ .Params.Title }}
                     {{ end -}}
