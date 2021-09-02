@@ -4,6 +4,8 @@ other = 'Checkliste'
 other = 'Checklisten'
 [infectiology]
 other = 'Infektiologie'
+[ventilation]
+other = 'Beatmung'
 [calculators]
 other = 'Rechner'
 [tags]
