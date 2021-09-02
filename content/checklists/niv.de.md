@@ -2,7 +2,7 @@
 title: NIV Checkliste
 date: 2021-08-03
 description: Kontraindikationen, Erfolgskriterien und Einstellungsmöglichkeiten für die nichtinvasive Beatmung.
-tags: [checklist, general]
+tags: [checklist, general, ventilation]
 toc: True
 ---
 

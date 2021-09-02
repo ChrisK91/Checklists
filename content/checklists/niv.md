@@ -2,7 +2,7 @@
 title: NIV Checklist
 date: 2021-08-03
 description: Contraindication, success criteria and an overview of settings for non-invasive ventilation
-tags: [checklist, general]
+tags: [checklist, general, ventilation]
 toc: True
 ---
 
