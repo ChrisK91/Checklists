@@ -13,7 +13,7 @@ toc: True
 - Obstructed airway
 - Gastrointestinal bleeding
 - Ileus
-- non-hypercapnic coma
+- Non-hypercapnic coma
 
 ## Relative contraindications
 
@@ -26,7 +26,7 @@ toc: True
 ## Success criteria
 
 - Dyspnea reduced
-- Conciousness improved
+- Consciousness improved
 - Breathing frequency reduced
 - pCO2 reduced
 - pH normalizing
@@ -42,7 +42,7 @@ toc: True
 - driving pressure < 15 mbar
 - Tidal volume 6 - 8 ml/kg
   - Rule of thumb: 400 - 500 ml
-  - Dyspnoea might cause initial high volumes
+  - Dyspnea might cause initial high volumes
 - backup frequency 10 - 15
 - fIO: aim for SpO2 >= 90 %, usually fIO 30-35 %
 - I:E 1:2 to 1:25

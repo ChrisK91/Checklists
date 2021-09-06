@@ -5,6 +5,7 @@ description: Kontraindikationen, Erfolgskriterien und Einstellungsmöglichkeiten
 tags: [checklist, general, ventilation]
 toc: True
 ---
+<!-- LTeX: language=de-DE -->
 
 ## Kontraindikationen
 
@@ -18,7 +19,7 @@ toc: True
 
 - hyperkapnisches Koma
 - Agitation
-- Unpassendes Interface/schlechte Toleranz/anatomische EInschränkungen
+- unpassendes Interface/schlechte Toleranz/anatomische EInschränkungen
 - schwere Hypoxämie
 - schwere Azidose (pH < 7,1)
 
@@ -35,7 +36,7 @@ toc: True
 ## Einstellungen
 
 - initialer PEEP 5 - 8 mbar
-  - Unter 5: Indikation überprüfen
+  - < 5: Indikation überprüfen
   - Erhöhung auf bis zu 10 mbar, nach Bedarf
 - Pinsp unter 20 - 25 mbar
 - driving pressure < 15 mbar

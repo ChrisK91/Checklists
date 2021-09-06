@@ -7,8 +7,8 @@ vue: true
 layout: noprose
 ---
 <div id='app'>
-    <h2 class="text-2xl mb-2 mt-4">Ideal weight</h2>
-    <form class="border p-2 shadow">
+    <h2 class="mt-4 mb-2 text-2xl">Ideal weight</h2>
+    <form class="p-2 border shadow">
         <p class="m-2 text-gray-600">Calculate the ideal weight, based on the formula <i>48,4 + 77 * (height - 150 cm)</i> (German Society for Nutrition). The conversion to lb uses the factor <i>1 kg = 2.2 lb</i>.</p>
         <div class="md:grid md:grid-cols-2 xl:grid-cols-3">
             <div class="m-2 md:col-span-2 xl:col-span-1">
@@ -27,7 +27,7 @@ layout: noprose
             </div>
         </div>
     </form>
-    <form class="border p-2 shadow mt-2">
+    <form class="p-2 mt-2 border shadow">
         <p class="m-2 text-gray-600">Calculates the ideal weight, based on the Devine formula <i>50 kg (female 45.5 kg) + 0.9 kg * (height - 152 cm)</i>. The conversion to lb uses the factor <i>1 kg = 2.2 lb</i>.</p>
         <div class="md:grid md:grid-cols-2 xl:grid-cols-4">
             <div class="m-2">
@@ -36,7 +36,7 @@ layout: noprose
             </div>
             <div class="m-2">
                 <span class="label">Sex</label>
-                <div class="w-full flex content-center h-12">
+                <div class="flex content-center w-full h-12">
                     <label class="inline-flex items-center">
                         <input type="radio" class="form-radio" name="sex" value="male" checked v-model="sex">
                         <span class="ml-2 text-base font-normal">male</span>
@@ -60,9 +60,9 @@ layout: noprose
         </div>
     </form>
 
-    <h2 class="text-2xl mb-2 mt-4 lg:mt-12">Caloric intake (acute phase)</h2>
+    <h2 class="mt-4 mb-2 text-2xl lg:mt-12">Caloric intake (acute phase)</h2>
     <p class="mb-2 text-gray-600">Calculates the caloric requirements for the given weight and height, stratified by the resulting BMI. Hyperhydration will be subtracted from the weight.</p>
-    <form class="border p-2 shadow">
+    <form class="p-2 border shadow">
         <div class="md:grid md:grid-cols-2 xl:grid-cols-4">
             <div class="m-2 md:col-span-2 xl:col-span-2">
                 <label for="height2">height (cm)</label>
@@ -175,7 +175,7 @@ new Vue({
             totalCaloriesText75: function(){
                 if(this.bmi < 30)
                 {
-                    return (24 * (this.weightKgIntake - this.hyperhydrationKg)) * 0.75 + " kcal/d, based on acutal weight";
+                    return (24 * (this.weightKgIntake - this.hyperhydrationKg)) * 0.75 + " kcal/d, based on actual weight";
                 }
                 else if(this.bmi >= 30 && this.bmi < 50){
                     return (11 * (this.weightKgIntake - this.hyperhydrationKg)) * 0.75 + " to " + (24 * (this.weightKgIntake - this.hyperhydrationKg)) * 0.75  + "kcal/d, based on actual weight";

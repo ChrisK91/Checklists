@@ -6,7 +6,7 @@
     </div>
 
     <div class="container mx-auto mt-5 text-left lg:mt-12 max-w-prose lg:prose-lg">
-        <h1 class="text-xl font-semibold">{{ i18n "lastupdatedposts"}}</h3>
+        <h2 class="text-xl font-semibold">{{ i18n "lastupdatedposts"}}</h2>
         <ul>
             {{ range first 5 (where .Site.RegularPages.ByLastmod.Reverse "Params.hidden" "ne" "true") }}
                     

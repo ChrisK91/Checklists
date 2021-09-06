@@ -12,7 +12,7 @@ Temperature >= 38.3 °C (100.9 °F), in immunocompromised/neutropenia >= 38.0 °
 
 - respiratory: coughing, dyspnea, pleuritic pain
 - gastrointestinal: vomiting, diarrhea, abdominal pain with location
-- post-surgery: time of surgey, protheses, etc.
+- post-surgery: time of surgery, protheses, etc.
 - urinary: dysuria, polyuria
 - previous medications (think drug induced fever)
   - previous antibiotics can influence future therapy
@@ -21,9 +21,9 @@ Temperature >= 38.3 °C (100.9 °F), in immunocompromised/neutropenia >= 38.0 °
 
 ## Diagnostic
 
-- CRP, Leukocytes, ggf. Procalcitonin
+- CRP, Leukocytes, Procalcitonin
 - blood count, if needed differential blood count
-  - fever in neutropenia: absolute neutrophile count < 500 to 1.000/µl (= neutrophils (%) * leucocytes count)
+  - fever in neutropenia: absolute neutrophil count < 500 to 1.000/µl (= neutrophils (%) * leukocytes count)
 - Blood cultures (two pairs from to sites)
 - Urine sample, sputum samples, swabs
 - Ultrasound, X-Ray if CT is planned

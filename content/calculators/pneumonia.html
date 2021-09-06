@@ -175,7 +175,7 @@ layout: noprose
                     <div class="flex content-center w-full h-12">
                         <label class="inline-flex items-center ml-0">
                             <input id="hematocrit" type="checkbox" v-model="hematocrit" />
-                            <span class="ml-2 text-base font-normal">Hematocris &lt; 20 %</span>
+                            <span class="ml-2 text-base font-normal">Hematocrit &lt; 20 %</span>
                         </label>
                     </div>
 
@@ -303,23 +303,23 @@ layout: noprose
             riskClassText: function () {
                 switch (this.riskClass) {
                     case "I":
-                        return "People up to 50 years without complicating disease and a normal examination are assigned to risk class I. Mortality 0.1 - 0.5 %";
+                        return "People up to 50 years without complicating disease and a normal examination are assigned to risk class I. Mortality 0.1 – 0.5 %";
                         break;
 
                     case "II":
-                        return "Mortality 0.4 - 0.6 %";
+                        return "Mortality 0.4 – 0.6 %";
                         break;
                         
                     case "III":
-                        return "Mortality 0.9 - 2.8 %. Consider admission.";
+                        return "Mortality 0.9 – 2.8 %. Consider admission.";
                         break;
                         
                     case "IV":
-                        return "Mortality 8.2 - 9.3 %. Consider hospitalization for treatment.";
+                        return "Mortality 8.2 – 9.3 %. Consider hospitalization for treatment.";
                         break;
                         
                     case "V":
-                        return "Mortality 27 - 29.2 %. Consider hospitalization for treatment.";
+                        return "Mortality 27 – 29.2 %. Consider hospitalization for treatment.";
                         break;
                 
                     default:

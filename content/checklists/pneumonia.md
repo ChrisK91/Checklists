@@ -13,7 +13,7 @@ toc: True
   - hospital-acquired pneumonia (HAP), acquired >= 48 hours after admission
   - ventilator-associated pneumonia (VAP), acquired >= 48 hours after intubation
 
-Therapeutic decisions are futher guided by immunocompetence, with immunocompromised patients having different potential pathogens, including fungal infections, parasites and uncommon viral/bacterial species.
+Therapeutic decisions are further guided by immunocompetence, with immunocompromised patients having different potential pathogens, including fungal infections, parasites and uncommon viral/bacterial species.
 
 ## Diagnosis
 
@@ -32,13 +32,13 @@ Therapeutic decisions are futher guided by immunocompetence, with immunocompromi
   - CT can provide further clarification in inconclusive or negative radiographs
   - ultrasound can identify pleural effusions  
 
-### Microbiologic testing
+### Microbiological testing
 
 - blood cultures
 - sputum cultures/stain
 - urinary testing for S. pneumoniae
 - testing for Legionella spp. (PCR or urinary antigen test)
-- viral testing (SARS-CoV-2, influenca and other seasonal viruses depending on season)
+- viral testing (SARS-CoV-2, influenza and other seasonal viruses depending on season)
 - *severe pneumonia:* bronchoscopic samples
 - tuberculosis and fungi in cavitary pneumonia
 - *consider extended spectrum of pathogens (including fungi, uncommon viruses, Pneumocystis jirovecii, etc.) in immunocompromised patients*
@@ -65,7 +65,7 @@ Therapeutic decisions are futher guided by immunocompetence, with immunocompromi
   - hospitalized patients:
     - beta-lactam antibiotic, addition of macrolide is sometimes recommended. Alternatively fluoroquinolones can be considered (monotherapy)
     - check history for recent antibiotics or prior infections with Pseudomonas, consider antipseudomonal beta-lactam (piperacillin-tazobactam, etc.)
-    - in known/supected MRSA infection consider vancomycin or linezolid
+    - in known/suspected MRSA infection consider vancomycin or linezolid
 - HAP/VAP
   - therapeutic decisions should be guided by local distribution of pathogens, use local guidelines for antibiotic therapy
   - account for risk for multi drug resistant pathogens

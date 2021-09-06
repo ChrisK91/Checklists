@@ -5,6 +5,7 @@ description: Eine Kurze beschreibung über mich.
 keywords: [about, creator]
 type: about
 ---
+<!-- LTeX: language=de-DE -->
 
 Ich arbeite als Arzt in der Inneren Medizin, mit aktueller Rotation in der Intensivmedizin. Ich mag Dinge, die man "abhaken" kann. In meinen eigenen Notizen habe ich bisher einiges an persönlichen Checklisten zusammengesammelt. Um ein bisschen Ordnung zu schaffen, erstand diese Seite.
 
@@ -12,7 +13,7 @@ Die Links unten führen zu anderen Seiten von mir.
 
 {{< html >}}
 <div class="inline-flex space-x-3">
-    <a class="bg-gray-200 hover:bg-gray-300 py-1 px-2 inline-flex items-center rounded mt-6" href="https://github.com/ChrisK91/">
+    <a class="inline-flex items-center px-2 py-1 mt-6 bg-gray-200 rounded hover:bg-gray-300" href="https://github.com/ChrisK91/">
         <span class="pr-2">ChrisK91</span>
 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline">
@@ -20,7 +21,7 @@ Die Links unten führen zu anderen Seiten von mir.
         </svg>
     </a>
 
-    <a class="bg-gray-200 hover:bg-gray-300 py-1 px-2 inline-flex items-center rounded mt-6" href="https://twitter.com/ChrisK91/">
+    <a class="inline-flex items-center px-2 py-1 mt-6 bg-gray-200 rounded hover:bg-gray-300" href="https://twitter.com/ChrisK91/">
         <span class="pr-2">@ChrisK91</span>
 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline">
@@ -28,7 +29,7 @@ Die Links unten führen zu anderen Seiten von mir.
         </svg>
     </a>
 
-    <a class="bg-gray-200 hover:bg-gray-300 py-1 px-2 inline-flex items-center rounded mt-6" href="https://chrisk91.me">
+    <a class="inline-flex items-center px-2 py-1 mt-6 bg-gray-200 rounded hover:bg-gray-300" href="https://chrisk91.me">
         <span class="pr-2">chrisk91.me</span>
 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline">
@@ -36,7 +37,7 @@ Die Links unten führen zu anderen Seiten von mir.
         </svg>
     </a>
 
-    <a class="bg-gray-200 hover:bg-gray-300 py-1 px-2 inline-flex items-center rounded mt-6" href="https://christian-j.com">
+    <a class="inline-flex items-center px-2 py-1 mt-6 bg-gray-200 rounded hover:bg-gray-300" href="https://christian-j.com">
         <span class="pr-2">christian-j.com</span>
 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline">

@@ -6,7 +6,7 @@ tags: [checklist, general]
 toc: True
 ---
 
-## Phases of ciritcal illness
+## Phases of critical illness
 
 - early acute, day 1-2: catabolism
 - late acute, day 4-7: lower catabolism
@@ -22,7 +22,7 @@ toc: True
   - BMI > 50: 22-25 kcal/kg weight (= ideal weight)
 - caloric need (reconvalescence)
   - BMI < 30: 36 kcal/kg
-  - BMI > 30: inidivdual goal, consult nutritionist  
+  - BMI > 30: individual goal, consult nutritionist  
 - caloric need (special cases)
   - sever burns: 40 kcal/kg
   - liver failure: 35-40 kcal/kg
@@ -37,7 +37,7 @@ toc: True
 - check triglycerides twice per week, high tg increase risk of pancreatitis
 - check phosphate in severe malnutrition or in alcoholism
   - normal phosphate: increase intake to 100 %
-  - low phostphate: lower intake to 25 %, substitue phosphate
+  - low phosphate: lower intake to 25 %, substitute phosphate
 - aim for 100 % intake on day 7
 
 ## Enteral Nutrition
@@ -46,19 +46,19 @@ toc: True
 - if nasogastric/orogastric tube is not feasible, consider PEG
 - Contraindications:
   - disruptions of enteral motility (ileus, etc.)
-  - disruption of gastric emptying (consider pospyloric tube)
-  - severe uncontrolled hypoxemia, hypercapnea, azidosis
-  - absorption deficency
+  - disruption of gastric emptying (consider postpyloric tube)
+  - severe uncontrolled hypoxemia, hypercapnia, acidosis
+  - absorption deficiency
 - consider starting with water, use low flow rate in the beginning (start with 10-20 ml/h)
 
 ## Protein deficiency
 
 - causes: malnutrition, alcoholism, nephrotic syndrome, etc.
 - protein-intake:
-  - BMI < 30: 1.0 g protein (= 1.2 g aminoacids)/kg weight (= current weight - hyperhydration)
-  - BMI > 30: 1.5 g protein (= 1.8 g aminoacids)/kg weight (= ideal weight)
+  - BMI < 30: 1.0 g protein (= 1.2 g amino acids)/kg weight (= current weight — hyperhydration)
+  - BMI > 30: 1.5 g protein (= 1.8 g amino acids)/kg weight (= ideal weight)
   - some articles recommend higher substitution depending on need
-- albumine: will be metabolized, use for volume stabilization
+- albumin: will be metabolized, use for volume stabilization
 - use bcaa (amino hepa, etc. for volume substitution)
 
 ## Laboratory checks
@@ -66,8 +66,8 @@ toc: True
 - Blood glucose every few hours
 - Triglycerides 2x/week
 - Phosphate 1-2/day
-- BUN (= Urea concentration * 0.467 [mg/dl]), increase without corresponding increase in creatinin might indicate too high protein intake. Recommended by some societies for BMI > 30.
-- Lactate, increase can indicate thiamine deficiencie (e.g. in alcoholism)
-- liver enzymes, increase might indiciate refeeding syndrome
-- albumine, low albumine might indicate protein deficiency.
+- BUN (= Urea concentration * 0.467 [mg/dl]), increase without corresponding increase in creatinine might indicate too high protein intake. Recommended by some societies for BMI > 30.
+- Lactate, increase can indicate thiamine deficiency (e.g. in alcoholism)
+- liver enzymes, increase might indicate refeeding syndrome
+- albumin, low albumin might indicate protein deficiency.
 - vitamin D and calcium

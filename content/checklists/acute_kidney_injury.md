@@ -6,7 +6,7 @@ tags: [checklist, general]
 toc: True
 ---
 
-AKI = acute kidney injury is classified further intp prerenal, renal, postrenal
+AKI = acute kidney injury is classified further into prerenal, renal, postrenal
 
 ## Diagnostic criteria
 
@@ -32,7 +32,7 @@ AKI = acute kidney injury is classified further intp prerenal, renal, postrenal
     - low Na indicates prerenal cause
     - Used to calculate fractional excretion of sodium or urea
       - fractional excretion of sodium < 1 %: prerenal, > 2 % renal, cannot be used with diuretics
-      - fractional excretion of urea < 35 % prernal, > 50 % renal, not influenced by diuretics
+      - fractional excretion of urea < 35 % prerenal, > 50 % renal, not influenced by diuretics
 
 ## Therapy
 
