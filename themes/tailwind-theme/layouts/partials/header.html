@@ -1,84 +1,125 @@
 <header class="sticky top-0 z-40 w-full px-4 pt-2 pb-2 bg-gray-900" x-data="{ isOpen: false }"
     @keydown.escape="isOpen = false" :class="{ 'shadow-lg' : isOpen}">
-    <nav class="flex items-center justify-between flex-nowrap">
-        <div class="flex flex-row items-stretch truncate">
-            <div>
-                <a href="{{ .Site.Home.Permalink }}"
-                    class="font-sans leading-none tracking-tighter text-gray-200 no-underline sm:tracking-tight text-s sm:text-2xl lg:font-bold">
-                    {{ .Site.Title }}
-                </a><br>
-                <span class="text-xs leading-none tracking-tighter text-indigo-300">medical checklists</span>
+    <nav class="flex flex-col md:flex-row">
+        <div class="flex items-center justify-between flex-1 truncate flex-nowrap">
+            <div class="flex flex-row items-stretch flex-1 truncate">
+                <div>
+                    <a href="{{ .Site.Home.Permalink }}"
+                        class="font-sans leading-none tracking-tighter text-gray-200 no-underline sm:tracking-tight text-s sm:text-2xl lg:font-bold">
+                        {{ .Site.Title }}
+                    </a><br>
+                    <span class="text-xs leading-none tracking-tighter text-indigo-300">medical checklists</span>
+                </div>
+                <div class="flex items-center mx-2 my-0 border-l-2 border-gray-600">
+                    <p
+                        class="flex p-0 mx-2 my-0 text-xl font-light tracking-tight text-gray-200 uppercase sm:text-2xl md:text-4xl lg:tracking-normal">
+                        {{- if .Params.Title }}
+                        {{ .Params.Title }}
+                        {{ end -}}
+                    </p>
+                </div>
             </div>
-            <div class="flex items-center mx-2 my-0 border-l-2 border-gray-600">
-                <p
-                    class="flex p-0 mx-2 my-0 text-xl font-light tracking-tight text-gray-200 uppercase sm:text-2xl md:text-4xl lg:tracking-normal">
-                    {{- if .Params.Title }}
-                    {{ .Params.Title }}
-                    {{ end -}}
-                </p>
-            </div>
+
+            <button @click="isOpen = !isOpen" type="button"
+                class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white"
+                aria-label="open navigation">
+                <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path x-show="isOpen" x-cloak fill-rule="evenodd" clip-rule="evenodd"
+                        d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                    <path x-show="!isOpen" fill-rule="evenodd"
+                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                </svg>
+            </button>
         </div>
 
-        <button @click="isOpen = !isOpen" type="button"
-            class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white"
-            aria-label="open navigation">
-            <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path x-show="isOpen" x-cloak fill-rule="evenodd" clip-rule="evenodd"
-                    d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
-                <path x-show="!isOpen" fill-rule="evenodd"
-                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-            </svg>
-        </button>
-
-        <ul id="nav-menu" class="items-stretch hidden w-full mt-2 lg:flex lg:w-auto lg:mt-0 lg:space-x-2"
-            :class="{ 'block shadow-3xl border-t-2 border-gray-500': isOpen, 'hidden': !isOpen }">
-            <div class="self-center hidden text-gray-200" id="loadingspinner">
-                <svg fill='none' class="w-10 h-10 animate-spin" viewBox="0 0 32 32" xmlns='http://www.w3.org/2000/svg'>
-                    <path clip-rule='evenodd'
-                        d='M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z'
-                        fill='currentColor' fill-rule='evenodd' />
-                </svg>
-            </div>
-
-            <!-- Search inspired by https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/#the-javascript-code -->
-            <form id="search" class="search" role="search">
-                <input type="search" id="search-input"
-                    class="block w-full p-1 my-2 bg-gray-300 rounded lg:m-0 lg:w-auto border-b-1 focus:placeholder-gray-400"
-                    placeholder="{{i18n "searchplaceholder"}}">
-            </form>
-
-            {{ with .Site.GetPage "/about" }}
-            <li class="self-center">
-                <a href="{{ .Permalink }}" class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">{{
-                    .Title }}</a>
-            </li>
-            {{ end }}
-            {{ range .Site.Sections }}
-            <li class="self-center">
-                <a href="{{ .Permalink }}" class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">{{
-                    .Title }}</a>
-            </li>
-            {{ end }}
-            {{ with .Site.GetPage "/tags" }}
-            <li class="self-center">
-                <a href="{{ .Permalink }}" class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">{{
-                    .Title }}</a>
-            </li>
-            {{ end }}
-
-            {{ if .Site.IsMultiLingual }}
-
-            <!-- Language selection for small screens -->
-            <div class="flex visible p-2 m-0 bg-gray-700 rounded-sm lg:hidden">
-                <div class="self-center m-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-                            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+        <ul id="nav-menu" class="items-center hidden w-full mt-2 lg:flex lg:w-auto lg:mt-0 lg:space-x-2"
+                :class="{ 'visible shadow-3xl border-t-2 border-gray-500': isOpen, 'hidden': !isOpen }">
+                <div class="self-center hidden text-gray-200" id="loadingspinner">
+                    <svg fill='none' class="w-10 h-10 animate-spin" viewBox="0 0 32 32"
+                        xmlns='http://www.w3.org/2000/svg'>
+                        <path clip-rule='evenodd'
+                            d='M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z'
+                            fill='currentColor' fill-rule='evenodd' />
                     </svg>
                 </div>
-                <li class="flex-grow visible block lg:hidden">
-                    <ul class="w-full">
+
+                <!-- Search inspired by https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/#the-javascript-code -->
+                <form id="search" class="search" role="search">
+                    <input type="search" id="search-input"
+                        class="block w-full p-1 my-2 bg-gray-300 rounded lg:m-0 lg:w-auto border-b-1 focus:placeholder-gray-400"
+                        placeholder="{{i18n "searchplaceholder"}}">
+                </form>
+
+                {{ with .Site.GetPage "/about" }}
+                <li class="self-center">
+                    <a href="{{ .Permalink }}" class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">{{
+                        .Title }}</a>
+                </li>
+                {{ end }}
+                {{ range .Site.Sections }}
+                <li class="self-center">
+                    <a href="{{ .Permalink }}" class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">{{
+                        .Title }}</a>
+                </li>
+                {{ end }}
+                {{ with .Site.GetPage "/tags" }}
+                <li class="self-center">
+                    <a href="{{ .Permalink }}" class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">{{
+                        .Title }}</a>
+                </li>
+                {{ end }}
+
+                {{ if .Site.IsMultiLingual }}
+
+                <!-- Language selection for small screens -->
+                <div class="flex visible p-2 m-0 bg-gray-700 rounded-sm lg:hidden">
+                    <div class="self-center m-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
+                                d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                        </svg>
+                    </div>
+                    <li class="flex-grow visible block lg:hidden">
+                        <ul class="w-full">
+                            {{ $siteLanguages := .Site.Languages}}
+                            {{ $pageLang := .Page.Lang}}
+                            {{ range .Page.AllTranslations }}
+                            {{ $translation := .}}
+                            {{ range $siteLanguages }}
+                            {{ if eq $translation.Lang .Lang }}
+                            {{ $selected := false }}
+                            {{ if eq $pageLang .Lang}}
+                            <li>
+                                <a class="block p-2 m-2 my-auto border-b-2 border-indigo-500 text-indigo-50 lg:p-0 lg:m-0 hover:text-blue-400"
+                                    href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
+                            </li>
+                            {{ else }}
+                            <li>
+                                <a class="block p-2 m-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400"
+                                    href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
+                            </li>
+                            {{ end }}
+                            {{ end }}
+                            {{ end }}
+                            {{ end }}
+                        </ul>
+                    </li>
+                </div>
+
+                <!-- language selection for large screens with popup -->
+                <li x-data="{ open: false }" class="self-center" x-on:click.outside="open = false">
+                    <button x-on:click="open = !open"
+                        class="hidden p-2 m-2 text-gray-300 lg:block sm:p-0 sm:m-0 hover:text-blue-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
+                                d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                        </svg>
+                    </button>
+
+                    <ul x-cloak x-show="open" class="absolute p-2 text-gray-300 bg-gray-700 shadow lg:right-2"
+                        x-transition.opacity>
                         {{ $siteLanguages := .Site.Languages}}
                         {{ $pageLang := .Page.Lang}}
                         {{ range .Page.AllTranslations }}
@@ -87,12 +128,14 @@
                         {{ if eq $translation.Lang .Lang }}
                         {{ $selected := false }}
                         {{ if eq $pageLang .Lang}}
-                        <li>
-                            <a class="block p-2 m-2 my-auto border-b-2 border-indigo-500 text-indigo-50 lg:p-0 lg:m-0 hover:text-blue-400" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
+                        <li
+                            class="box-border self-center p-3 m-2 border-b-2 border-indigo-500 text-indigo-50 sm:p-0 sm:m-0 hover:text-blue-300 focus:outline-none">
+                            <a class="block m-2 xl:mx-6" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
                         </li>
                         {{ else }}
-                        <li>
-                            <a class="block p-2 m-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
+                        <li
+                            class="self-center p-3 m-2 text-gray-300 sm:p-0 sm:m-0 hover:text-blue-300 focus:outline-none">
+                            <a class="block m-2 xl:mx-6" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
                         </li>
                         {{ end }}
                         {{ end }}
@@ -100,43 +143,7 @@
                         {{ end }}
                     </ul>
                 </li>
-            </div>
-
-            <!-- language selection for large screens with popup -->
-            <li x-data="{ open: false }" class="self-center" x-on:click.outside="open = false">
-                <button x-on:click="open = !open" class="hidden p-2 m-2 text-gray-300 lg:block sm:p-0 sm:m-0 hover:text-blue-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-                            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                    </svg>
-                </button>
-
-                <ul x-cloak x-show="open" class="absolute p-2 text-gray-300 bg-gray-700 shadow lg:right-2"
-                    x-transition.opacity>
-                    {{ $siteLanguages := .Site.Languages}}
-                    {{ $pageLang := .Page.Lang}}
-                    {{ range .Page.AllTranslations }}
-                    {{ $translation := .}}
-                    {{ range $siteLanguages }}
-                    {{ if eq $translation.Lang .Lang }}
-                    {{ $selected := false }}
-                    {{ if eq $pageLang .Lang}}
-                    <li
-                        class="box-border self-center p-3 m-2 border-b-2 border-indigo-500 text-indigo-50 sm:p-0 sm:m-0 hover:text-blue-300 focus:outline-none">
-                        <a class="block m-2 xl:mx-6" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
-                    </li>
-                    {{ else }}
-                    <li class="self-center p-3 m-2 text-gray-300 sm:p-0 sm:m-0 hover:text-blue-300 focus:outline-none">
-                        <a class="block m-2 xl:mx-6" href="{{ $translation.Permalink }}">{{ .LanguageName }}</a>
-                    </li>
-                    {{ end }}
-                    {{ end }}
-                    {{ end }}
-                    {{ end }}
-                </ul>
-            </li>
-            {{end}}
-        </ul>
+                {{end}}
+            </ul>
     </nav>
 </header>
