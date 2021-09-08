@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang='{{ .Site.LanguageCode }}'>
-    {{ partial "head.html" . }}
-    <body class="flex flex-col min-h-screen bg-gray-50">
-        {{/*
-        {{- partial "dev-size-indicator.html" . -}}
-        */}}
-        {{- partial "header.html" . -}}
-        <main class="flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-6" id="main-content">
+{{ partial "head.html" . }}
+
+<body class="flex flex-col min-h-screen bg-gray-50">
+    {{/*
+    {{- partial "dev-size-indicator.html" . -}}
+    */}}
+    {{- partial "header.html" . -}}
+    <main class="flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-6" id="main-content">
         {{- block "main" . }}{{- end }}
-        </main>
+    </main>
 
-        <main class="flex-1 hidden mx-auto mt-4 md:mx-12 lg:mx-24 sm:mt-16 max-w-prose" id="search-container">           
-            <h1 class="text-3xl font-bold text-gray-700">{{i18n "searchresults"}}</h1>
-            <p class="my-2 font-light text-gray-500" id="result-text"></p>
-            <p class="my-2 mb-4 text-xs font-light text-gray-500">{{ i18n "gsearch" }}</p>
+    <main class="flex-1 hidden mx-auto mt-4 md:mx-12 lg:mx-24 sm:mt-16 max-w-prose" id="search-container">
+        <h1 class="text-3xl font-bold text-gray-700">{{i18n "searchresults"}}</h1>
+        <p class="my-2 font-light text-gray-500" id="result-text"></p>
+        <p class="my-2 mb-4 text-xs font-light text-gray-500">{{ i18n "gsearch" }}</p>
 
-            <div id="search-inner">
+        <div id="search-inner">
 
-            </div>
+        </div>
 
-            <div class="gcse-search"></div>
-        </main>
-        
-        {{- partial "dev-parameters.html" . -}}
-        
-        {{- partial "footer.html" . -}}
+        <div class="gcse-search"></div>
+    </main>
 
-        <template id="search-result" hidden>
-            <article class="p-4 my-2 bg-gray-100 shadow md:my-4">
-              <h2 class="text-xl post-title"><span class="text-gray-500 capitalize summary-breadcrumb"></span><span class="font-light text-gray-400"> » </span><a class="p-0 summary-title-link hover:text-blue-500"></a></h2>
-              <div class="py-2 summary"></div>
-              <div class="read-more-container">
+    {{- partial "dev-parameters.html" . -}}
+
+    {{- partial "footer.html" . -}}
+
+    <template id="search-result" hidden>
+        <article class="p-4 my-2 bg-gray-100 shadow md:my-4">
+            <h2 class="text-xl post-title"><span class="text-gray-500 capitalize summary-breadcrumb"></span><span
+                    class="font-light text-gray-400"> » </span><a
+                    class="p-0 summary-title-link hover:text-blue-500"></a></h2>
+            <div class="py-2 summary"></div>
+            <div class="read-more-container">
                 <a class="read-more-link">{{ i18n "readmore"}} »</a>
-              </div>
-            </article>
-        </template>
+            </div>
+        </article>
+    </template>
 
-        {{ template "_internal/google_analytics.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
 
-       
-        {{- $scripts := slice "/lunr/lunr.min.js" -}}
-        {{- if ne .Site.Language.Lang "en" -}}
-            {{- $supported := slice "ar" "da" "de" "du" "es" "fi" "fr" "hu" "it" "ja" "nl" "no" "pt" "ro" "ru" "sv" "tr" "vi" -}}
-            {{- if in $supported .Site.Language.Lang -}}
-                {{- if eq .Site.Language.Lang "ja" -}}
-                    {{- $scripts = union $scripts (slice "/lunr/tinyseg.min.js") -}}
-                {{- end -}}
-                {{- $scripts = union $scripts (slice "/lunr/lunr.stemmer.support.min.js") -}}
-                {{- $scripts = union $scripts (slice (printf "/lunr/lunr.%s.min.js" .Site.Language.Lang)) -}}
-            {{- else -}}
-                {{- warnf "The site language %q isn't supported by lunr, the search results might be suboptimal. Supported languages are: %q" .Site.Language.Lang $supported -}}
-            {{- end -}}
-        {{- end -}}
 
-        <script>
-            const searchSource = "{{ .Site.Params.searchUrl | relURL }}";
-            const language = "{{ .Site.Language.Lang }}";
-            const noResult = "{{ i18n "noresult"}}";
-            const oneResult = "{{ i18n "oneresult"}}";
-            const twoResult = "{{ i18n "tworesults"}}";
-            const xResult = "{{ i18n "xresults"}}";
-        </script>
-        {{- range $scripts -}}
-        <script src="{{ . }}" defer></script>
-        <script src="/lunr.js"></script>
-        {{- end }}
-        <script async src="https://cse.google.com/cse.js?cx=459be57b2ce5a0bbe"></script>
-    </body>
+    {{- $scripts := slice "/lunr/lunr.min.js" -}}
+    {{- if ne .Site.Language.Lang "en" -}}
+    {{- $supported := slice "ar" "da" "de" "du" "es" "fi" "fr" "hu" "it" "ja" "nl" "no" "pt" "ro" "ru" "sv" "tr" "vi"
+    -}}
+    {{- if in $supported .Site.Language.Lang -}}
+    {{- if eq .Site.Language.Lang "ja" -}}
+    {{- $scripts = union $scripts (slice "/lunr/tinyseg.min.js") -}}
+    {{- end -}}
+    {{- $scripts = union $scripts (slice "/lunr/lunr.stemmer.support.min.js") -}}
+    {{- $scripts = union $scripts (slice (printf "/lunr/lunr.%s.min.js" .Site.Language.Lang)) -}}
+    {{- else -}}
+    {{- warnf "The site language %q isn't supported by lunr, the search results might be suboptimal. Supported languages are: %q" .Site.Language.Lang $supported -}}
+    {{- end -}}
+    {{- end -}}
+
+    <script>
+        const searchSource = "{{ .Site.Params.searchUrl | relURL }}";
+        const language = "{{ .Site.Language.Lang }}";
+        const noResult = "{{ i18n "noresult"}}";
+        const oneResult = "{{ i18n "oneresult"}}";
+        const twoResult = "{{ i18n "tworesults"}}";
+        const xResult = "{{ i18n "xresults"}}";
+    </script>
+    {{- range $scripts -}}
+    <script src="{{ . }}" defer></script>
+    <script src="/lunr.js"></script>
+    {{- end }}
+    <script async src="https://cse.google.com/cse.js?cx=459be57b2ce5a0bbe"></script>
+</body>
+
 </html>
