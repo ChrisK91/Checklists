@@ -4,6 +4,8 @@ other = 'checklist'
 other = 'checklists'
 [infectiology]
 other = 'infectiology'
+[endocrinology]
+other = 'endocrinology'
 [ventilation]
 other = 'ventilation'
 [calculators]
@@ -40,5 +42,7 @@ other = 'two results'
 other = '%number% results'
 [readmore]
 other = 'Read more'
+[404]
+other = 'The requested document was not found. You can try using the search below to find it.'
 [gsearch]
 other = '''Use * as wildcard. If you can't find what you're looking for, there is a search powered by google embedded at the bottom of the page.'''

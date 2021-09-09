@@ -4,6 +4,8 @@ other = 'Checkliste'
 other = 'Checklisten'
 [infectiology]
 other = 'Infektiologie'
+[endocrinology]
+other = 'Endokrinologie'
 [ventilation]
 other = 'Beatmung'
 [calculators]
@@ -40,5 +42,7 @@ other = 'zwei Ergebnisse'
 other = '%number% Ergebnisse'
 [readmore]
 other = 'Mehr lesen'
+[404]
+other = 'Das gesuchte Dokument wurde nicht gefunden. Du kannst die Suche unten nutzen, und es vielleicht finden.'
 [gsearch]
 other = '''Mit * kannst du auch Wortteile suchen. Wenn die gesuchte Seite nicht dabei ist, kannst du auch die Google-Suche am Ende nutzen.'''

@@ -1,3 +1,8 @@
 {{ define "main" }}
-    <p>404 - page not found</p>
+<article class="mt-12 mb-16 text-gray-700 sm:mx-12">
+    <h1 class="mb-3 text-3xl font-bold text-gray-700 lg:text-5xl">{{ .Title }}</h1>
+    <p>{{ i18n "404" }}</p>
+
+    <div class="gcse-search"></div>
+</article>
 {{ end }}
