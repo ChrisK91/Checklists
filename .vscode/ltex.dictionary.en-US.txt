@@ -16,3 +16,12 @@ non-oliguric
 Cystatin
 oliguric
 alkalosis
+euglycemic
+UpToDate
+ketonuria
+glucosuria
+JBDS
+dl
+euvolemia
+hypovolemia
+hypovolemic

@@ -46,3 +46,22 @@ other = 'Mehr lesen'
 other = 'Das gesuchte Dokument wurde nicht gefunden. Du kannst die Suche unten nutzen, und es vielleicht finden.'
 [gsearch]
 other = '''Mit * kannst du auch Wortteile suchen. Wenn die gesuchte Seite nicht dabei ist, kannst du auch die Google-Suche am Ende nutzen.'''
+[comments]
+other = 'Kommentare'
+[nocomments]
+other = 'Keine Kommentare...'
+[thankyoucomment]
+other = 'Danke für deinen Kommentar. Nach einer manuellen Überprüfung wird er auf der Webseite erscheinen. Das kann etwas dauern...'
+[thankyoucommenttitle]
+other = 'Danke!'
+[commenthint]
+other = '''*: erforderliches Feld. Du kannst Markdown-Formatierung im Kommentar benutzen.
+Die Kommentare werden manuell geprüft, bevor sie auf der Seite erscheinen.'''
+[name]
+other = 'Name'
+[email]
+other = 'E-Mail'
+[message]
+other = 'Kommentar'
+[submit]
+other = 'Absenden'

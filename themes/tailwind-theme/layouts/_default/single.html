@@ -1,21 +1,28 @@
 {{ define "main" }}
-{{- if .Params.toc }}
-<aside class="fixed top-0 bottom-0 right-0 invisible pr-8 lg:visible pt-28 xl:pr-40">
-    <h1 class="text-xl font-bold text-gray-700">{{ i18n "toc" }}</h1>
-    {{ .TableOfContents }}
-</aside>
-{{ end -}}
-<article class="px-6 mx-auto mb-16 prose text-gray-700 justify-self-center sm:px-4 md:px-0 lg:prose-lg">
-    <h1>{{ .Title }}</h1>
-    {{ if .Params.tags }}
-    <hr class="mt-2 mb-1">
-    <div class="flex my-0">
-    {{ range .Params.tags }}
-        <a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded shadow" href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . | humanize | lower | i18n }}</a>
-    {{ end }}
-    </div>
-    <hr class="mt-1 mb-2">
-    {{ end }}
-    {{ .Content }}
-</article>
+    {{- if .Params.toc }}
+    <aside class="fixed top-0 bottom-0 right-0 invisible pr-8 lg:visible pt-28 xl:pr-40">
+        <h1 class="text-xl font-bold text-gray-700">{{ i18n "toc" }}</h1>
+        {{ .TableOfContents }}
+        {{- if .Params.comments }}
+        <a href="#comments" class="pl-2">{{ i18n "comments" }}</a>
+        {{ end -}}
+    </aside>
+    {{ end -}}
+    <article class="px-6 mx-auto mb-16 prose text-gray-700 justify-self-center sm:px-4 md:px-0 lg:prose-lg">
+        <h1>{{ .Title }}</h1>
+        {{ if .Params.tags }}
+        <hr class="mt-2 mb-1">
+        <div class="flex my-0">
+        {{ range .Params.tags }}
+            <a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded shadow" href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . | humanize | lower | i18n }}</a>
+        {{ end }}
+        </div>
+        <hr class="mt-1 mb-2">
+        {{ end }}
+        {{ .Content }}
+
+        {{- if .Params.comments }}
+        {{- partial "comment-partial.html" . -}}
+        {{ end -}}
+    </article>
 {{ end }}

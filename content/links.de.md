@@ -3,6 +3,8 @@ title: Links und Literatur
 date: 2021-09-02
 hidden: True
 toc: true
+comments: true
+postid: 48d6648691204fb3979bc055faa34034
 ---
 <!-- LTeX: language=de-DE -->
 Hier ist eine Sammlung an nützlichen Links, Büchern und Apps, die ich im Klinikalltag und für Recherchen nutze.

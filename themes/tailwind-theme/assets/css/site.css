@@ -17,4 +17,14 @@ html {
   scroll-padding-top: 5rem;  
 }
 
+div#comment-submitted {
+  visibility: hidden;
+  display: none;
+}
+
+div#comment-submitted:target {
+  visibility: visible !important;
+  display: block;
+}
+
 [x-cloak] { display: none !important; }

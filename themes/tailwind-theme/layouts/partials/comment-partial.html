@@ -1,0 +1,69 @@
+<hr class="m-4">
+<h2 class="border-b" id="comments">{{ i18n "comments" }}</h2>
+
+{{ $path := path.Join "data/comments/"}}
+{{ $comments := readDir $path }}
+{{ $.Scratch.Add "hasComments" 0 }}
+{{ $entryId := .Params.PostId }}
+
+{{ range $comments }}
+  {{ if eq .Name $entryId }}
+    {{ $.Scratch.Add "hasComments" 1 }}
+    {{ range $index, $comments := (index $.Site.Data.comments $entryId ) }}
+      <div class="flex-col p-1 border-l-2 border-indigo-700">
+        <div class="flex flex-row">
+          <img class="flex w-16 h-16 p-0 m-0" alt="Avatar" src="https://www.gravatar.com/avatar/{{ .email }}?s=64&d=identicon">
+          <div class="flex flex-col ml-2">
+              <div class="flex font-bold text-gray-900">{{ .name }}</div>
+              <div class="flex text-sm text-gray-700">{{ dateFormat "2. January 2006" .date }}</div>
+            </div>
+        </div>
+        <div class="p-2">
+            {{ .message | htmlEscape | safeHTML  | markdownify }}
+        </div>
+      </div>
+    {{ end }}       
+  {{ end }}
+{{ end }}
+
+{{ if eq ($.Scratch.Get "hasComments") 0 }}
+  <p class="text-gray-700">{{ i18n "nocomments" }}</p>
+{{ end }}
+
+<hr class="m-2">
+
+<form method="POST" action="https://staticman-medist.herokuapp.com/v3/entry/github/ChrisK91/Checklists/main/comments">
+    <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
+    <input type="hidden" name="options[entryId]" value="{{ .Params.PostId }}">
+    <div class="grid grid-cols-1 gap-0 md:grid-cols-2 md:gap-2">
+            <div>
+                <label>{{i18n "name"}} *</label>
+                <input class="w-full" name="fields[name]" type="text">
+            </div>
+
+            <div>
+                <label>{{i18n "email"}} *</label>
+                <input class="w-full" name="fields[email]" type="email">
+            </div>
+
+            <div class="col-span-1 md:col-span-2">
+                <label>{{i18n "message"}} *</label>
+                <textarea class="w-full" name="fields[message]"></textarea>
+            </div>
+
+            <div class="col-span-1 md:col-span-2">
+                <p class="text-sm text-gray-500">{{i18n "commenthint"}}</p>
+            </div>
+            
+            <div>
+                <button class="relative right-0 items-center block w-full h-10 px-8 text-gray-100 bg-gray-900 border-b-4 border-indigo-500 md:w-auto hover:bg-gray-200 hover:text-gray-900" type="submit">{{i18n "submit"}}</button>
+            </div>
+    </div>
+</form>
+
+<div id="comment-submitted">
+    <div class="px-2 py-2 mt-2 border shadow">
+        <h4 class="mt-0 border-b">{{i18n "thankyoucommenttitle"}}</h4>
+        <p class="mb-0 text-base text-gray-700">{{i18n "thankyoucomment"}}</p>
+    </div>
+</div>

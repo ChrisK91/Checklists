@@ -46,3 +46,22 @@ other = 'Read more'
 other = 'The requested document was not found. You can try using the search below to find it.'
 [gsearch]
 other = '''Use * as wildcard. If you can't find what you're looking for, there is a search powered by google embedded at the bottom of the page.'''
+[comments]
+other = 'Comments'
+[nocomments]
+other = 'No comments yet...'
+[thankyoucomment]
+other = 'Thank you for your comment! It will be visible after a manual review. This can take a few days.'
+[thankyoucommenttitle]
+other = 'Thank you!'
+[commenthint]
+other = '''*: required fields. You can use Markdown formatting in the message.
+Comments will be reviewed manually before being visible on this page.'''
+[name]
+other = 'Name'
+[email]
+other = 'E-Mail'
+[message]
+other = 'Message'
+[submit]
+other = 'Submit'

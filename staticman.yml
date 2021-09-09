@@ -10,7 +10,7 @@ comments:
   allowedFields: ["name", "email", "message"]
 
 
-  allowedOrigins: ["localhost", "medist.org"]
+  allowedOrigins: ["medist.org"]
 
   # (*) REQUIRED
   #
@@ -19,7 +19,7 @@ comments:
   branch: "main"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Add Staticman data"
+  commitMessage: "New comment"
 
   # (*) REQUIRED
   #
@@ -45,6 +45,13 @@ comments:
 
   # Name of the site. Used in notification emails.
   name: "medist.org"
+
+  # akitsmet antispam configuration
+  akismet.enabled: true
+  akismet.author: "name"
+  akismet.authorEmail: "email"
+  akismet.content: "content"
+  akismet.type: "comment"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account

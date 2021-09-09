@@ -1,0 +1,1 @@
+{"rule":"CAUSE_BECAUSE","sentence":"^\\QIn non insulin-dependent patients however (i.e. d.m. type 2 with remaining insulin production) the DKA has often an underlying cause that needs to be identified, including infection, trauma, mediation, etc.\\E$"}
