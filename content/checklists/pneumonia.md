@@ -4,6 +4,8 @@ date: 2021-08-23
 description: Initial management of pneumonia
 tags: [checklist, general, infectiology]
 toc: True
+comments: true
+postid: de795d0a852c41c4bee332ec5b7e594b
 ---
 
 ## Classification

@@ -4,6 +4,8 @@ date: 2021-08-03
 description: General diagnostic approach for fever in the clinical setting
 tags: [checklist, general, infectiology]
 toc: true
+comments: true
+postid: 407db5567ebb466aab4a701ed20d16f8
 ---
 
 Temperature >= 38.3 °C (100.9 °F), in immunocompromised/neutropenia >= 38.0 ° (100.4 °F)

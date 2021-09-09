@@ -4,6 +4,8 @@ date: 2021-08-17
 description: Diagnostic criteria, diagnostic approaches and a brief overview of the treatment of acute kidney injury (AKI)
 tags: [checklist, general]
 toc: True
+comments: True
+postid: e564a95ded414e74b84854f8c7db5bb1
 ---
 
 AKI = acute kidney injury is classified further into prerenal, renal, postrenal

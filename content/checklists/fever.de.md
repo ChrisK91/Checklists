@@ -4,6 +4,8 @@ date: 2021-08-03
 description: grundsätzliche Herangehensweisen für Fieber mit Diagnostik- und Therapiemöglichkeiten
 tags: [checklist, general, infectiology]
 toc: True
+comments: true
+postid: 8f18bb06c7db45aca100e9d02127e6fb
 ---
 <!-- LTeX: language=de-DE -->
 

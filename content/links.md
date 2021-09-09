@@ -3,6 +3,8 @@ title: Link and literature collection
 date: 2021-09-02
 hidden: True
 toc: true
+comments: true
+postid: 51235dbd1e0b465982b27130dafc448a
 ---
 
 This page contains a list of links and books that I use to research stuff. Not everything here is free.

@@ -4,6 +4,8 @@ date: 2021-09-02
 description: Protective lung ventilation is an established standard for ventilated patients. This checklist outlines settings and management.
 tags: [checklist, general, ventilation]
 toc: True
+comments: true
+postid: 39f24a2e3b654b86b163fdbb0e6d1c80
 ---
 
 ## General

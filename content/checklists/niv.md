@@ -4,6 +4,8 @@ date: 2021-08-03
 description: Contraindication, success criteria and an overview of settings for non-invasive ventilation
 tags: [checklist, general, ventilation]
 toc: True
+comments: true
+postid: 0754d15557ee45beb827299e480a50af
 ---
 
 ## Contraindications

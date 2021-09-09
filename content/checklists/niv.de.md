@@ -4,6 +4,8 @@ date: 2021-08-03
 description: Kontraindikationen, Erfolgskriterien und Einstellungsmöglichkeiten für die nichtinvasive Beatmung.
 tags: [checklist, general, ventilation]
 toc: True
+comments: true
+postid: b149e613b94940e8aba474da013563a8
 ---
 <!-- LTeX: language=de-DE -->
 
