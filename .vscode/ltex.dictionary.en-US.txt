@@ -25,3 +25,6 @@ dl
 euvolemia
 hypovolemia
 hypovolemic
+pPlat
+cmH₂O
+PaCO₂
