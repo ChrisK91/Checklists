@@ -6,8 +6,17 @@
     {{ end }}
 
     <ul>
-    {{ range .RegularPages }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ range .RegularPages.ByTitle }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ if .Params.tags }}
+            <div class="inline-flex my-0">
+            {{ range .Params.tags }}
+                <a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded shadow" href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . | humanize | lower | i18n }}</a>
+            {{ end }}
+            </div>
+            {{ end }}
+        </li>
     {{ end }}
     </ul>
 </article>
