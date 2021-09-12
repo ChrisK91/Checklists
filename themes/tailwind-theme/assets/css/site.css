@@ -26,6 +26,7 @@
     }
 }
 
+/*! purgecss start ignore */
 .gsc-control-cse {
   background:transparent !important;
   border-color:transparent !important;
@@ -47,3 +48,4 @@ div#comment-submitted:target {
 }
 
 [x-cloak] { display: none !important; }
+/*! purgecss end ignore */
