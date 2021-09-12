@@ -5,11 +5,12 @@
 <title>Fieber Checkliste
 - medist.org</title>
 <meta name=description content="grundsätzliche Herangehensweisen für Fieber mit Diagnostik- und Therapiemöglichkeiten">
-<meta name=generator content="Hugo 0.88.1"><link rel=stylesheet href="https://medist.org/css/styles.min.f548cf997673479e2414cd63e537887caee0b940275c8af50074699e1dbc099f.css" integrity="sha256-9UjPmXZzR54kFM1j5TeIfK7guUAnXIr1AHRpnh28CZ8=">
+<meta name=generator content="Hugo 0.88.1"><link rel=stylesheet href="https://medist.org/css/styles.min.32881028bd7175bf26b188634c51bc8fa918105146626600c3b5dcc18664d6a4.css" integrity="sha256-MogQKL1xdb8msYhjTFG8j6kYEFFGYmYAw7XcwYZk1qQ=">
 <link rel=icon type=image/svg+xml href=/favicon.svg><script src=https://medist.org//alpine.min.js defer></script>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50">
-<header class="sticky top-0 z-40 w-full px-4 pt-2 pb-2 bg-gray-900" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" :class="{ 'shadow-lg' : isOpen}">
+<div id=toc-bg-div></div>
+<header class="sticky top-0 z-40 w-full px-4 pt-2 pb-2 bg-gray-900 lg:shadow-xl" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" :class="{ 'shadow-lg' : isOpen}">
 <nav class="flex flex-col md:flex-row">
 <div class="flex items-center justify-between flex-1 truncate flex-nowrap">
 <div class="flex flex-row items-stretch flex-1 truncate">
@@ -25,7 +26,7 @@ Fieber Checkliste
 </p>
 </div>
 </div>
-<button @click="isOpen = !isOpen" type=button class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white" aria-label="open navigation"><svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"/><path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"/></svg>
+<button @click="isOpen = !isOpen" type=button class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white" aria-label="open navigation" alt="open navigation"><svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"/><path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"/></svg>
 </button>
 </div>
 <ul id=nav-menu class="items-center hidden w-full mt-2 lg:flex lg:w-auto lg:mt-0 lg:space-x-2" :class="{ 'visible shadow-3xl border-t-2 border-gray-500': isOpen, 'hidden': !isOpen }">
@@ -75,8 +76,8 @@ Fieber Checkliste
 </ul>
 </nav>
 </header><main class="flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-6" id=main-content>
-<aside class="fixed top-0 bottom-0 invisible right-2 2xl:mr-12 w-52 2xl:w-aut lg:visible pt-28">
-<h1 class="text-xl font-bold text-gray-700">Inhalt</h1>
+<aside class="box-border fixed invisible w-64 p-4 overflow-y-auto border border-solid rounded shadow-md bg-gray-50 bg-opacity-95 top-28 right-4 2xl:right-11 2xl:w-72 lg:visible">
+<h1 class="mt-0 mb-2 text-xl font-bold text-gray-700 border-b border-gray-500">Inhalt</h1>
 <nav id=TableOfContents>
 <ul>
 <li><a href=#anamnese>Anamnese</a></li>
