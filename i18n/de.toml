@@ -10,6 +10,8 @@ other = 'Endokrinologie'
 other = 'Beatmung'
 [calculators]
 other = 'Rechner'
+[links]
+other = 'Links'
 [tags]
 other = 'Tags'
 [categories]
@@ -65,3 +67,5 @@ other = 'E-Mail'
 other = 'Kommentar'
 [submit]
 other = 'Absenden'
+[browse]
+other = 'Stöbern'

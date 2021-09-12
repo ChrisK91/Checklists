@@ -1,0 +1,19 @@
+{{- if .Page.Params.Comments }}
+{{ if .Page.Params.PostId }}
+
+{{ $list := index $.Site.Data.comments .Page.Params.PostId }}
+{{ if $list }}
+<div class="flex flex-row items-center self-center w-auto px-2 my-auto ml-2 text-base text-gray-500 bg-gray-200 border border-gray-200 border-solid rounded"
+alt="{{ print (len $list) }} comments"
+>
+{{ print (len $list) }}
+
+<svg xmlns="http://www.w3.org/2000/svg" class="self-center w-6 h-6 pl-1 m-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" alt="{{ print (len $list) }} comments">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+  </svg>
+</div>
+{{ else }}
+<!-- no comments -->
+{{ end}}
+{{ end }}
+{{ end -}}

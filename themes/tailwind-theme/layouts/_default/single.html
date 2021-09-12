@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{- if .Params.toc }}
-    <aside class="fixed top-0 bottom-0 right-2 2xl:mr-12 invisible w-52 2xl:w-aut lg:visible pt-28">
+    <aside class="fixed top-0 bottom-0 invisible right-2 2xl:mr-12 w-52 2xl:w-aut lg:visible pt-28">
         <h1 class="text-xl font-bold text-gray-700">{{ i18n "toc" }}</h1>
         {{ .TableOfContents }}
         {{- if .Params.comments }}
@@ -8,7 +8,7 @@
         {{ end -}}
     </aside>
     {{ end -}}
-    <article class="px-6 mx-auto lg:ml-auto lg:mr-56 2xl:mx-auto mb-16 prose text-gray-700 justify-self-center sm:px-4 md:px-0 lg:prose-lg">
+    <article class="px-6 mx-auto mb-16 prose text-gray-700 lg:ml-auto lg:mr-56 2xl:mx-auto justify-self-center sm:px-4 md:px-0 lg:prose-lg">
         <h1>{{ .Title }}</h1>
         {{ if .Params.tags }}
         <hr class="mt-2 mb-1">
