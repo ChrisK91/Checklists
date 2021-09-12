@@ -1,0 +1,270 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Diabetic Ketoacidosis
+- medist.org</title>
+<meta name=description content="Management of diabetic ketoacidosis.">
+<meta name=generator content="Hugo 0.88.1"><link rel=stylesheet href="https://medist.org/css/styles.min.f548cf997673479e2414cd63e537887caee0b940275c8af50074699e1dbc099f.css" integrity="sha256-9UjPmXZzR54kFM1j5TeIfK7guUAnXIr1AHRpnh28CZ8=">
+<link rel=icon type=image/svg+xml href=/favicon.svg><script src=https://medist.org//alpine.min.js defer></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+<header class="sticky top-0 z-40 w-full px-4 pt-2 pb-2 bg-gray-900" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" :class="{ 'shadow-lg' : isOpen}">
+<nav class="flex flex-col md:flex-row">
+<div class="flex items-center justify-between flex-1 truncate flex-nowrap">
+<div class="flex flex-row items-stretch flex-1 truncate">
+<div>
+<a href=https://medist.org/ class="font-sans leading-none tracking-tighter text-gray-200 no-underline sm:tracking-tight text-s sm:text-2xl lg:font-bold">
+medist.org
+</a><br>
+<span class="text-xs leading-none tracking-tighter text-indigo-300">medical checklists</span>
+</div>
+<div class="flex items-center mx-2 my-0 border-l-2 border-gray-600">
+<p class="flex p-0 mx-2 my-0 text-xl font-light tracking-tight text-gray-200 uppercase sm:text-2xl md:text-4xl lg:tracking-normal">
+Diabetic Ketoacidosis
+</p>
+</div>
+</div>
+<button @click="isOpen = !isOpen" type=button class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white" aria-label="open navigation"><svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"/><path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"/></svg>
+</button>
+</div>
+<ul id=nav-menu class="items-center hidden w-full mt-2 lg:flex lg:w-auto lg:mt-0 lg:space-x-2" :class="{ 'visible shadow-3xl border-t-2 border-gray-500': isOpen, 'hidden': !isOpen }">
+<div class="self-center hidden text-gray-200" id=loadingspinner><svg fill="none" class="w-10 h-10 animate-spin" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M15.165 8.53a.5.5.0 01-.404.58A7 7 0 1023 16a.5.5.0 011 0 8 8 0 11-9.416-7.874.5.5.0 01.58.404z" fill="currentcolor" fill-rule="evenodd"/></svg>
+</div>
+<form id=search class=search role=search>
+<input type=search id=search-input class="block w-full p-1 my-2 bg-gray-300 rounded lg:m-0 lg:w-auto border-b-1 focus:placeholder-gray-400" placeholder="search something...">
+</form>
+<li class=self-center>
+<a href=https://medist.org/about/ class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">About</a>
+</li>
+<li class=self-center>
+<a href=https://medist.org/calculators/ class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">Calculators</a>
+</li>
+<li class=self-center>
+<a href=https://medist.org/checklists/ class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">Checklists</a>
+</li>
+<li class=self-center>
+<a href=https://medist.org/tags/ class="block p-2 my-2 text-gray-300 lg:p-0 lg:m-0 hover:text-blue-400">Tags</a>
+</li>
+<div class="flex visible p-2 m-0 bg-gray-700 rounded-sm lg:hidden">
+<div class="self-center m-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentcolor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022.0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+</div>
+<li class="flex-grow visible block lg:hidden">
+<ul class=w-full>
+<li>
+<a class="block p-2 m-2 my-auto border-b-2 border-indigo-500 text-indigo-50 lg:p-0 lg:m-0 hover:text-blue-400" href=https://medist.org/checklists/dka/>English</a>
+</li>
+</ul>
+</li>
+</div>
+<li x-data="{ open: false }" class=self-center x-on:click.outside="open = false">
+<button x-on:click="open = !open" class="hidden p-2 m-2 text-gray-300 lg:block sm:p-0 sm:m-0 hover:text-blue-400"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentcolor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022.0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+</button>
+<ul x-cloak x-show=open class="absolute p-2 text-gray-300 bg-gray-700 shadow lg:right-2" x-transition.opacity>
+<li class="box-border self-center p-3 m-2 border-b-2 border-indigo-500 text-indigo-50 sm:p-0 sm:m-0 hover:text-blue-300 focus:outline-none">
+<a class="block m-2 xl:mx-6" href=https://medist.org/checklists/dka/>English</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</header><main class="flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-6" id=main-content>
+<aside class="fixed top-0 bottom-0 invisible right-2 2xl:mr-12 w-52 2xl:w-aut lg:visible pt-28">
+<h1 class="text-xl font-bold text-gray-700">Content</h1>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#diagnosis>Diagnosis</a></li>
+<li><a href=#management>Management</a></li>
+<li><a href=#fluids-and-electrolytes>Fluids and Electrolytes</a></li>
+<li><a href=#insulin-and-glucose>Insulin and Glucose</a></li>
+<li><a href=#additional-links>Additional links</a></li>
+</ul>
+</nav>
+<a href=#comments class=pl-2>Comments</a>
+</aside>
+<article class="px-6 mx-auto mb-16 prose text-gray-700 lg:ml-auto lg:mr-56 2xl:mx-auto justify-self-center sm:px-4 md:px-0 lg:prose-lg">
+<h1>Diabetic Ketoacidosis</h1>
+<hr class="mt-2 mb-1">
+<div class="flex my-0">
+<a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded shadow" href=/tags/checklist>checklist</a>
+<a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded shadow" href=/tags/general>general</a>
+<a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded shadow" href=/tags/endocrinology>endocrinology</a>
+</div>
+<hr class="mt-1 mb-2">
+<p>Diabetic ketoacidosis is a severe and potential life-threatening complication of diabetic mellitus. Glucose levels are usually moderately elevated, however they can range from normal/slightly increased levels (euglycemic states) to high levels exceeding 900 mg/dl in comatose patients. The treatment relies on fluid & electrolyte replacement, insulin administration and glucose administration.</p>
+<p>Guidelines of from different regions have variations in therapy, for instance the ADA suggests half-isotonic (0.45 %) saline in the fluid replacement regime, the Joint British Diabetes Society and the German guideline recommend 0.9 % in almost all cases. In the European pediatric guidelines, the use of &ldquo;a solution with
+a tonicity ≥0.45 %&rdquo; is recommended, stating that 0.9 % or 0.45 % with added potassium can be used. Due to the various recommendations, the reader is advised to also consult local hospital guidelines on fluid therapy.</p>
+<h2 id=diagnosis>Diagnosis</h2>
+<ul>
+<li><strong>D</strong>: elevated blood glucose levels or known diabetes mellitus</li>
+<li><strong>K</strong>: elevated blood ketone concentration or significant ketonuria</li>
+<li><strong>A</strong>: low bicarbonate (&lt; 15 mmol/l) and/or pH &lt; 7.3</li>
+</ul>
+<p>When treated with SGLT2 inhibitors, the resulting glucosuria can minimize the developing hyperglycemia.</p>
+<p>DKA can develop due to insulin deficiency. In non insulin-dependent patients however (i.e. d.m. type 2 with remaining insulin production) the DKA has often an underlying cause that needs to be identified, including infection, trauma, mediation, etc.</p>
+<h2 id=management>Management</h2>
+<ul>
+<li>regular monitoring of blood pressure, heart rate, GCS</li>
+<li>regular monitoring of glucose, venous or arterial BG (pH, bicarbonate, base excess, anion gap), Na, K</li>
+<li>central line if needed, peripheral lines might have a larger diameter depending on available equipment</li>
+<li>urinary catheter for measuring urinary output reliably</li>
+</ul>
+<h2 id=fluids-and-electrolytes>Fluids and Electrolytes</h2>
+<ul>
+<li>first hour:
+<ul>
+<li>in hypovolemic shock: isotonic saline or balanced crystalloid as fast as possible (e.g. 500 ml/10 min), involve critical care</li>
+<li>in hypovolemia (RR > 90 mmHg): 1,000 ml/60min of isotonic saline or balanced crystalloid</li>
+<li>in euvolemia: guide volume by clinical assessment</li>
+</ul>
+</li>
+<li>after second or third hour:
+<ul>
+<li>further infusion with 200 to 500 ml/h depending on hemodynamics
+<ul>
+<li>Success criteria: improved blood pressure, improved urinary output</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Potassium:
+<ul>
+<li>&lt; 3.3 mmol/l: <strong>don&rsquo;t give insulin</strong>, correct potassium, e.g. with 20 to 40 mEq/l of fluid</li>
+<li>3.3 – 5.3 mmol/l: add 20 to 40 mEq to each liter, aim for 4–5 mmol/l</li>
+<li>5.3 mmol/l: delay potassium until values fall below this level</li>
+</ul>
+</li>
+</ul>
+<h2 id=insulin-and-glucose>Insulin and Glucose</h2>
+<ul>
+<li>Patients with existing insulin medication:
+<ul>
+<li>Insulin pumps should be stopped and removed, it might not work correctly</li>
+<li>Long acting insulin (glargine, detemir, deglutec) should continue at usual dose and time</li>
+</ul>
+</li>
+<li>Insulin infusion
+<ul>
+<li>If patient is not hypokalemic, start insulin immediately</li>
+<li>initial bolus is <em>generally not recommended</em>, can be considered if patient severly acidotic or continuous infusion not immediately available
+<ul>
+<li>10 units i.v.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fixed rate intravenous insulin infusion
+<ul>
+<li>start with 0.1 U/kg/h (max. 15 U/kg/h)</li>
+<li><strong>Stay on target</strong>:
+<ul>
+<li>decrease glucose by 50 mg/dl/hour</li>
+<li>increase bicarbonate by 3 mmol/l/hr</li>
+<li>decrease blood ketones by 0.5 mmol/l/hr</li>
+<li>potassium between 4.0 and 5.5 mmol/l</li>
+</ul>
+</li>
+<li>if correction too slow: increase rate by 1 U/h
+<ul>
+<li>check connections to be sure, that insulin is delivered. Remove IV filters that may bind insulin.</li>
+<li>UpToDate states a doubling of infusion rate can be used</li>
+</ul>
+</li>
+<li>when glucose falls to 200 – 300 mg/dl consider reducing rate to 0.02 to 0.05 units/kg/h
+<ul>
+<li>glucose should not fall below 200 mg/dl</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>intravenous glucose
+<ul>
+<li>once serum glucose is 200 – 300 mg/dl i.v dextrose is needed as additional substrate
+<ul>
+<li>consider cutting fluid rate in half and add the same amount of dextrose (e.g. 200 ml/h saline ⇾ 100 ml/h saline + 100 ml/h dextrose 10%)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>continue insulin and i.v dextrose until patient is eating and drinking normally
+<ul>
+<li>patient should have received long acting insulin 1 to 2 hours before stopping</li>
+</ul>
+</li>
+<li>if patient has newly diagnosed diabetes
+<ul>
+<li>start long acting insulin with 0.25 U/kg s.c. daily</li>
+</ul>
+</li>
+</ul>
+<h2 id=additional-links>Additional links</h2>
+<ul>
+<li><a href=https://emcrit.org/ibcc/dka/>DKA in the Internet Book of Critical Care</a></li>
+<li><a href=https://litfl.com/diabetic-ketoacidosis/>DKA on Life in the Fast Lane</a></li>
+<li><a href=https://www.uptodate.com/contents/diabetic-ketoacidosis-and-hyperosmolar-hyperglycemic-state-in-adults-treatment>UpToDate Article on the management of DKA</a></li>
+<li><a href=https://care.diabetesjournals.org/content/diacare/32/7/1335.full.pdf>ADA Guideline</a></li>
+<li><a href=http://guidelines.diabetes.ca/browse/Chapter15>Canadian Guidelines</a></li>
+<li><a href=https://abcd.care/sites/abcd.care/files/site_uploads/JBDS_02%20_DKA_Guideline_amended_v2_June_2021.pdf>JBDS Guidelines (UK), has management charts at the end of the file</a></li>
+<li><a href=https://pediatrics.aappublications.org/content/pediatrics/113/2/e133.full.pdf>European pediatric guidelines</a></li>
+</ul>
+<hr class=m-4>
+<h2 class=border-b id=comments>Comments</h2>
+<p class=text-gray-700>No comments yet...</p>
+<hr class=m-2>
+<form method=post action=https://staticman-medist.herokuapp.com/v3/entry/github/ChrisK91/Checklists/main/comments>
+<input type=hidden name=options[redirect] value=https://medist.org/checklists/dka/#comment-submitted>
+<input type=hidden name=options[entryId] value=c6681375c2ed4e45a5f93abe5f0f7666>
+<div class="grid grid-cols-1 gap-0 md:grid-cols-2 md:gap-2">
+<div>
+<label>Name *</label>
+<input class=w-full name=fields[name] type=text>
+</div>
+<div>
+<label>E-Mail *</label>
+<input class=w-full name=fields[email] type=email>
+</div>
+<div class="col-span-1 md:col-span-2">
+<label>Message *</label>
+<textarea class=w-full name=fields[message]></textarea>
+</div>
+<div class="col-span-1 md:col-span-2">
+<p class="text-sm text-gray-500">*: required fields. You can use Markdown formatting in the message.
+Comments will be reviewed manually before being visible on this page.</p>
+</div>
+<div>
+<button class="relative right-0 items-center block w-full h-10 px-8 text-gray-100 bg-gray-900 border-b-4 border-indigo-500 md:w-auto hover:bg-gray-200 hover:text-gray-900" type=submit>Submit</button>
+</div>
+</div>
+</form>
+<div id=comment-submitted>
+<div class="px-2 py-2 mt-2 border shadow">
+<h4 class="mt-0 border-b">Thank you!</h4>
+<p class="mb-0 text-base text-gray-700">Thank you for your comment! It will be visible after a manual review. This can take a few days.</p>
+</div>
+</div></article>
+</main>
+<main class="flex-1 hidden mx-auto mt-4 md:mx-12 lg:mx-24 sm:mt-16 max-w-prose" id=search-container>
+<h1 class="text-3xl font-bold text-gray-700">search results</h1>
+<p class="my-2 font-light text-gray-500" id=result-text></p>
+<p class="my-2 mb-4 text-xs font-light text-gray-500">Use * as wildcard. If you can't find what you're looking for, there is a search powered by google embedded at the bottom of the page.</p>
+<div id=search-inner>
+</div>
+<div class=gcse-search></div>
+</main><footer class="bottom-0 w-full p-4 text-xs text-center text-gray-400 bg-gray-900">
+<p>made by <a href=https://chrisk91.me class="underline hover:text-blue-400">me</a> &mdash; Page last modified on 12 September 2021 &mdash; Page created on 12 September 2021</p>
+</footer><template id=search-result hidden>
+<article class="p-4 my-2 bg-gray-100 shadow md:my-4">
+<h2 class="text-xl post-title"><span class="text-gray-500 capitalize summary-breadcrumb"></span><span class="font-light text-gray-400"> » </span><a class="p-0 summary-title-link hover:text-blue-500"></a></h2>
+<div class="py-2 summary"></div>
+<div class=read-more-container>
+<a class=read-more-link>Read more »</a>
+</div>
+</article>
+</template>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R39L27N49K"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-R39L27N49K',{anonymize_ip:!1})}</script>
+<script>const searchSource="/search.json",language="en",noResult="Search didn\u0027t find anything... You can try to search in a different language.",oneResult="one result",twoResult="two results",xResult="%number% results"</script><script src=/lunr/lunr.min.js defer></script>
+<script src=/lunr.js></script>
+<script async src="https://cse.google.com/cse.js?cx=459be57b2ce5a0bbe"></script>
+</body>
+</html>
