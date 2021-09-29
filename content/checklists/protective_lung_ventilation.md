@@ -14,7 +14,7 @@ Protective lung ventilation aims for low tidal volume ventilation. A [large stud
 
 ## Ventilation setup and adjustment
 
-- Calculate the predicted body weight (men: 50 + 0.91 (length in cm - 152), women: 45 + 0.91 (length in cm - 152)). A calculator using this *Devin formula* can be found with the [nutrition calculators]({{< relref "calculators/nutrition">}})
+- Calculate the predicted body weight (men: 50 + 0.91 (length in cm - 152), women: 45 + 0.91 (length in cm - 152)). A calculator can be found in the [ventilation calculators]({{< relref "calculators/ventilation">}})
 - Initial tidal volume Vt = 8ml/kg predicted body weight
   - Reduce Vt by 1 ml/kg at intervals up to 2 hours until Vt = 6 ml/kg/PBW
 - set RR (respiratory rate) to baseline ventilation, but not over 35/min
