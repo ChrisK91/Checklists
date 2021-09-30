@@ -2,6 +2,8 @@
 other = 'checklist'
 [checklists]
 other = 'checklists'
+[pocketcard]
+other = 'pocket card'
 [infectiology]
 other = 'infectiology'
 [endocrinology]

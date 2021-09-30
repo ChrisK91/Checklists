@@ -2,10 +2,15 @@
 title: Protective lung ventilation
 date: 2021-09-02
 description: Protective lung ventilation is an established standard for ventilated patients. This checklist outlines settings and management.
-tags: [checklist, general, ventilation]
+tags: [checklist, general, ventilation, pocketcard]
 toc: True
 comments: true
 postid: 39f24a2e3b654b86b163fdbb0e6d1c80
+
+resources:
+- name: pocketcard
+  src: protective_lung_ventilation.pdf
+  title: Protectiv Lung Ventilation Pocketcard
 ---
 
 ## General
@@ -64,3 +69,7 @@ Elevated PaCO₂ can be the result of low volumes and should be tolerated, as lo
 ## Additional links
 
 - [ARDSnet Ventilator card](http://www.ardsnet.org/files/ventilator_protocol_2008-07.pdf)
+
+## Pocket card
+
+{{< downloadcard >}}

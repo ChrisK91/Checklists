@@ -1,0 +1,16 @@
+{{ range .Page.Resources }}
+{{if eq .Name "pocketcard"}}
+<p>The gist of this page is available as pocket card. You can download it via the link below.</p>
+
+<a href="{{.RelPermalink}}" 
+    target="_blank" 
+    class="inline-flex items-center w-full px-4 py-2 font-light text-white no-underline bg-gray-800 hover:bg-indigo-900 hover:shadow-lg"
+    onclick="ga('send', 'event', 'Resources', 'Pocketcard', 'Open', '{{ .Title }}')">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+    </svg>
+
+    <span class="ml-3">Download Pocketcard</span>
+</a>
+{{end}}
+{{end}}
