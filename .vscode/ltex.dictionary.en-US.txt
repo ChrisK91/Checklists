@@ -28,3 +28,4 @@ hypovolemic
 pPlat
 cmH₂O
 PaCO₂
+µg
