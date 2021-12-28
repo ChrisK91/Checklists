@@ -45,6 +45,7 @@ postid: 5ae152f0-3fe2-46ce-92c1-33112cefd533
 ## Enteral Nutrition
 
 - aim for enteral nutrition to reduce risk for catheter associated infections
+  - UpToDate concludes that in well nourished individuals, early parenteral nutrition is _not_ recommended. Parenteral feeding can be delayed up to one to two weeks.
 - if nasogastric/orogastric tube is not feasible, consider PEG
 - Contraindications:
   - disruptions of enteral motility (ileus, etc.)
