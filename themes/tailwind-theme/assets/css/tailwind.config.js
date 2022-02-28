@@ -1,4 +1,11 @@
+const themeDir = __dirname + '/../../';
+
 module.exports = {
+  content: [
+    './hugo_stats.json',
+    themeDir + '/hugo_stats.json',
+    'exampleSite/hugo_stats.json',
+  ],
   important: true,
   theme: {
     fontFamily: {
@@ -16,7 +23,6 @@ module.exports = {
       }
     },
   },
-  variants: {},
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
