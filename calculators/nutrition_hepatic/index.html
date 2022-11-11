@@ -2,14 +2,15 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Acute Kidney Injury
+<title>Parenteral nutrition in liver failure and hepatic encephalopathy
 - medist.org</title>
-<meta name=description content="Diagnostic criteria, diagnostic approaches and a brief overview of the treatment of acute kidney injury (AKI)">
+<meta name=description content="Calculate rates for a multi-component-based parenteral nutrition with liver cirrhosis.">
 <meta name=generator content="Hugo 0.92.2"><link rel=stylesheet href="https://medist.org/css/styles.min.da2d795804608eb9fbff9abd3eb86045921b30b304ab8fa7df8f505c7140d244.css" integrity="sha256-2i15WARgjrn7/5q9PrhgRZIbMLMEq4+n349QXHFA0kQ=">
-<link rel=icon type=image/svg+xml href=/favicon.svg><script src=https://medist.org//alpine.min.js defer></script>
+<link rel=icon type=image/svg+xml href=/favicon.svg>
+<script src=https://medist.org//vue.min.js></script>
+<script src=https://medist.org//alpine.min.js defer></script>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50">
-<div id=toc-bg-div></div>
 <header class="sticky top-0 z-40 w-full px-4 pt-2 pb-2 bg-gray-900 lg:shadow-xl" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" :class="{ 'shadow-lg' : isOpen}">
 <nav class="flex flex-col md:flex-row">
 <div class="flex items-center justify-between flex-1 truncate flex-nowrap">
@@ -22,7 +23,7 @@ medist.org
 </div>
 <div class="flex items-center mx-2 my-0 border-l-2 border-gray-600">
 <p class="flex p-0 mx-2 my-0 text-xl font-light tracking-tight text-gray-200 uppercase sm:text-2xl md:text-4xl lg:tracking-normal">
-Acute Kidney Injury
+Parenteral nutrition in liver failure and hepatic encephalopathy
 </p>
 </div>
 </div>
@@ -53,7 +54,7 @@ Acute Kidney Injury
 <li class="flex-grow visible block lg:hidden">
 <ul class=w-full>
 <li>
-<a class="block p-2 m-2 my-auto border-b-2 border-indigo-500 text-indigo-50 lg:p-0 lg:m-0 hover:text-blue-400" href=https://medist.org/checklists/acute_kidney_injury/>English</a>
+<a class="block p-2 m-2 my-auto border-b-2 border-indigo-500 text-indigo-50 lg:p-0 lg:m-0 hover:text-blue-400" href=https://medist.org/calculators/nutrition_hepatic/>English</a>
 </li>
 </ul>
 </li>
@@ -63,120 +64,121 @@ Acute Kidney Injury
 </button>
 <ul x-cloak x-show=open class="absolute p-2 text-gray-300 bg-gray-700 shadow lg:right-2" x-transition.opacity>
 <li class="box-border self-center p-3 m-2 border-b-2 border-indigo-500 text-indigo-50 sm:p-0 sm:m-0 hover:text-blue-300 focus:outline-none">
-<a class="block m-2 xl:mx-6" href=https://medist.org/checklists/acute_kidney_injury/>English</a>
+<a class="block m-2 xl:mx-6" href=https://medist.org/calculators/nutrition_hepatic/>English</a>
 </li>
 </ul>
 </li>
 </ul>
 </nav>
 </header><main class="flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-6" id=main-content>
-<aside class="box-border fixed invisible w-64 p-4 overflow-y-auto border border-solid rounded shadow-md bg-gray-50 bg-opacity-95 top-28 right-4 2xl:right-11 2xl:w-72 lg:visible">
-<h1 class="mt-0 mb-2 text-xl font-bold text-gray-700 border-b border-gray-500">Content</h1>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#diagnostic-criteria>Diagnostic criteria</a></li>
-<li><a href=#diagnostic-approach>Diagnostic approach</a></li>
-<li><a href=#therapy>Therapy</a></li>
-</ul>
-</nav>
-<a href=#comments class=pl-2>Comments</a>
-</aside>
-<article class="px-6 mx-auto mb-16 prose text-gray-700 lg:ml-auto lg:mr-56 2xl:mx-auto justify-self-center sm:px-4 md:px-0 lg:prose-lg">
-<h1>Acute Kidney Injury</h1>
+<article class="mb-16 text-gray-700 sm:mx-12">
+<h1 class="text-3xl font-bold text-gray-700">Parenteral nutrition in liver failure and hepatic encephalopathy</h1>
 <hr class="mt-2 mb-1">
 <div class="flex my-0">
-<a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded shadow" href=/tags/checklist>checklist</a>
-<a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded shadow" href=/tags/general>general</a>
+<a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded" href=/tags/calculators>calculators</a>
+<a class="px-2 py-1 ml-1 mr-1 text-sm font-light text-center text-indigo-100 no-underline uppercase bg-gray-900 rounded" href=/tags/general>general</a>
 </div>
 <hr class="mt-1 mb-2">
-<p>AKI = acute kidney injury is classified further into prerenal, renal, postrenal</p>
-<h2 id=diagnostic-criteria>Diagnostic criteria</h2>
-<ul>
-<li>RIFLE</li>
-<li>AKIN</li>
-<li>doesn&rsquo;t account for non-oliguric states</li>
+<div id=app>
+<div class="w-full p-2 mx-2 my-4 text-white bg-gray-800">This calculator is a work in progress. Please double check
+the results</div>
+<p class=p-2>The ideal nutrition in decompensated liver cirrhosis and hepatic encephalopathy is a controversial
+topic. The approach here is largely based on a <a href=https://www.dgem.de/sites/default/files/PDFs/Leitlinien/S3-Leitlinien/073-024l_S3_Klinische_Ern%C3%A4hrung_Gastroenerologie_Leber_2014-04.pdf target=_blank>German guideline</a> from 2009, although other guidelines support the suggested protein and
+energy intake.
+This approach here assumes, that you have three components to your parenteral nutrition:</p>
+<ul class="p-2 list-disc list-inside">
+<li>a protein (or amino acid) component</li>
+<li>a lipid component</li>
+<li>a glucose component</li>
 </ul>
-<h2 id=diagnostic-approach>Diagnostic approach</h2>
-<ul>
-<li>Ultrasound
-<ul>
-<li>postrenal obstruction</li>
-<li>prerenal: low volume</li>
-</ul>
-</li>
-<li>Blood
-<ul>
-<li>Na, K (and pH can easily be tested with ABG)</li>
-<li>Creatinine, BUN/Urea</li>
-<li>Cystatin C</li>
-<li>specific antibodies in autoimmune AKI</li>
-<li>&mldr;</li>
-</ul>
-</li>
-<li>Urine
-<ul>
-<li>Urinalysis</li>
-<li>Osmolarity</li>
-<li>Na/Urea, Creatinine
-<ul>
-<li>low Na indicates prerenal cause</li>
-<li>Used to calculate fractional excretion of sodium or urea
-<ul>
-<li>fractional excretion of sodium &lt; 1 %: prerenal, > 2 % renal, cannot be used with diuretics</li>
-<li>fractional excretion of urea &lt; 35 % prerenal, > 50 % renal, not influenced by diuretics</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id=therapy>Therapy</h2>
-<ul>
-<li>improve renal perfusion</li>
-<li>stop nephrotoxic medications
-<ul>
-<li>NSAIDs, aminoglykosides, ACE-inhibitors, AT-receptor blockers, etc.</li>
-</ul>
-</li>
-<li>treat underlying causes</li>
-<li>furosemide does not improve renal function or revert oliguric kidney failure. Can be used to reduce volume/sodium.</li>
-</ul>
-<hr class=m-4>
-<h2 class=border-b id=comments>Comments</h2>
-<p class=text-gray-700>No comments yet...</p>
-<hr class=m-2>
-<form method=post action=https://staticman-medist.herokuapp.com/v3/entry/github/ChrisK91/Checklists/main/comments>
-<input type=hidden name=options[redirect] value=https://medist.org/checklists/acute_kidney_injury/#comment-submitted>
-<input type=hidden name=options[entryId] value=e564a95ded414e74b84854f8c7db5bb1>
-<div class="grid grid-cols-1 gap-0 md:grid-cols-2 md:gap-2">
+<p class=p-2>In order to calculate the correct rates, you might need to adjust the parameters (e.g. energy
+contents or concentrations). Preset are values for an 8 % amino acid component, a 40 % glucose component and a
+2000 kcal/l lipid component</p>
+<form class="p-2 border shadow">
+<h2 class="mb-2 text-xl">Settings</h2>
+<label for=weight>weight (kg)</label>
+<input id=height2 class=w-full type=number placeholder=height v-model.number=weightInKg>
+<div class="md:grid md:grid-cols-2 md:gap-2">
 <div>
-<label>Name *</label>
-<input class=w-full name=fields[name] type=text>
+<label for=weight>concentration of protein/amino acid component (g/l)</label>
+<input id=height2 class=w-full type=number placeholder=height v-model.number=proteinConcentrationGperL>
 </div>
 <div>
-<label>E-Mail *</label>
-<input class=w-full name=fields[email] type=email>
+<label for=weight>energy of protein/amino acid component (kcal/l)</label>
+<input id=height2 class=w-full type=number placeholder=height v-model.number=proteinEnergyKcalPerL>
 </div>
-<div class="col-span-1 md:col-span-2">
-<label>Message *</label>
-<textarea class=w-full name=fields[message]></textarea>
 </div>
-<div class="col-span-1 md:col-span-2">
-<p class="text-sm text-gray-500">*: required fields. You can use Markdown formatting in the message.
-Comments will be reviewed manually before being visible on this page.</p>
+<div class="md:grid md:grid-cols-2 md:gap-2">
+<div>
+<label for=weight>energy of lipid component (kcal/l)</label>
+<input id=height2 class=w-full type=number placeholder=height v-model.number=lipidEnergyKcalPerL>
 </div>
 <div>
-<button class="relative right-0 items-center block w-full h-10 px-8 text-gray-100 bg-gray-900 border-b-4 border-indigo-500 md:w-auto hover:bg-gray-200 hover:text-gray-900" type=submit>Submit</button>
+<label for=weight>energy of glucose component (kcal/l)</label>
+<input id=height2 class=w-full type=number placeholder=height v-model.number=glucoseEnergyKcalPerL>
 </div>
 </div>
+<label for=weight>percentage lipid component for non-protein energy (%)</label>
+<input id=height2 class=w-full type=number placeholder=height v-model.number=percentageLipidEnergy>
 </form>
-<div id=comment-submitted>
-<div class="px-2 py-2 mt-2 border shadow">
-<h4 class="mt-0 border-b">Thank you!</h4>
-<p class="mb-0 text-base text-gray-700">Thank you for your comment! It will be visible after a manual review. This can take a few days.</p>
+<div class="p-2 mt-4 border shadow">
+<h2 class="mb-2 text-xl">Results</h2>
+<table class="m-2 table-auto text-regular">
+<tr>
+<th class=text-right>protein/amino acids:</th>
+<td class=px-2><em>{{ proteinMin.toFixed(2) }} g/d</em> with malnutrition to <em>{{
+proteinMax.toFixed(2) }} g/d</em> in malnutrition</td>
+</tr>
+<tr>
+<th class=text-right>total energy intake:</th>
+<td class=px-2><em>{{ energyMin.toFixed(2) }} kcal/d</em> to <em>{{ energyMax.toFixed(2)}} kcal/d</em>
+</td>
+</tr>
+</table>
+<h2 class="mt-2 mb-2 text-xl">Components</h2>
+<table class="m-2 table-auto text-regular">
+<tr>
+<th rowspan=2 class="p-2 text-gray-200 bg-gray-900">protein/amino acids</th>
+<th class="px-2 text-right">volume:</th>
+<td class=px-2>{{ (proteinMin/proteinConcentrationGperL).toFixed(2)}} l/d to {{
+(proteinMax/proteinConcentrationGperL).toFixed(2) }} l/d</td>
+</tr>
+<tr>
+<th class="px-2 text-right">energy:</th>
+<td class=px-2>{{ ((proteinMin/proteinConcentrationGperL) * proteinEnergyKcalPerL).toFixed(2) }}
+kcal/d to {{
+((proteinMax/proteinConcentrationGperL) * proteinEnergyKcalPerL).toFixed(2) }} kcal/d</td>
+</tr>
+<tr>
+<th rowspan=2 class="p-2 text-gray-200 bg-blue-900">lipids</th>
+<th class="px-2 text-right">volume:</th>
+<td class=px-2>{{ ((remainingEnergyMin * (percentageLipidEnergy/100))/lipidEnergyKcalPerL).toFixed(2)
+}} l/d to
+{{ ((remainingEnergyMax * (percentageLipidEnergy/100))/lipidEnergyKcalPerL).toFixed(2) }} l/d</td>
+</tr>
+<tr>
+<th class="px-2 text-right">energy:</th>
+<td class=px-2>{{ (remainingEnergyMin * (percentageLipidEnergy/100)).toFixed(2) }} kcal/d to
+{{ (remainingEnergyMax * (percentageLipidEnergy/100)).toFixed(2) }} kcal/d</td>
+</tr>
+<tr>
+<th rowspan=2 class="p-2 text-gray-200 bg-green-900">glucose</th>
+<th class="px-2 text-right">volume:</th>
+<td class=px-2>{{ ((remainingEnergyMin *
+(percentageGlucoseEnergy/100))/glucoseEnergyKcalPerL).toFixed(2) }} l/d to
+{{ ((remainingEnergyMax * (percentageGlucoseEnergy/100))/glucoseEnergyKcalPerL).toFixed(2) }} l/d
+</td>
+</tr>
+<tr>
+<th class="px-2 text-right">energy:</th>
+<td class=px-2>{{ (remainingEnergyMin * (percentageGlucoseEnergy/100)).toFixed(2) }} kcal/d to
+{{ (remainingEnergyMax * (percentageGlucoseEnergy/100)).toFixed(2) }} kcal/d</td>
+</tr>
+</table>
 </div>
-</div></article>
+</div>
+<script>new Vue({el:'#app',data:{weightInKg:80,proteinConcentrationGperL:80,proteinEnergyKcalPerL:320,lipidEnergyKcalPerL:2e3,glucoseEnergyKcalPerL:1600,percentageLipidEnergy:40},computed:{proteinMin:function(){return this.weightInKg*1.2},proteinMax:function(){return this.weightInKg*1.5},energyMin:function(){return this.weightInKg*35},energyMax:function(){return this.weightInKg*40},remainingEnergyMin:function(){return this.energyMin-this.proteinMin/this.proteinConcentrationGperL*this.proteinEnergyKcalPerL},remainingEnergyMax:function(){return this.energyMax-this.proteinMax/this.proteinConcentrationGperL*this.proteinEnergyKcalPerL},percentageGlucoseEnergy:function(){return 100-this.percentageLipidEnergy}}})</script>
+</article>
 </main>
 <main class="flex-1 hidden mx-auto mt-4 md:mx-12 lg:mx-24 sm:mt-16 max-w-prose" id=search-container>
 <h1 class="text-3xl font-bold text-gray-700">search results</h1>
@@ -186,7 +188,7 @@ Comments will be reviewed manually before being visible on this page.</p>
 </div>
 <div class=gcse-search></div>
 </main><footer class="bottom-0 w-full p-4 text-xs text-center text-gray-400 bg-gray-900">
-<p>made by <a href=https://chrisk91.me class="underline hover:text-blue-400">me</a> &mdash; Page last modified on 9 September 2021 &mdash; Page created on 17 August 2021</p>
+<p>made by <a href=https://chrisk91.me class="underline hover:text-blue-400">me</a> &mdash; Page last modified on 11 November 2022 &mdash; Page created on 11 November 2022</p>
 </footer><template id=search-result hidden>
 <article class="p-4 my-2 bg-gray-100 shadow md:my-4">
 <h2 class="text-xl post-title"><span class="text-gray-500 capitalize summary-breadcrumb"></span><span class="font-light text-gray-400"> » </span><a class="p-0 summary-title-link hover:text-blue-500"></a></h2>
