@@ -6,6 +6,8 @@ other = 'checklists'
 other = 'pocket card'
 [infectiology]
 other = 'infectiology'
+[neurology]
+other = 'neurology'
 [endocrinology]
 other = 'endocrinology'
 [ventilation]

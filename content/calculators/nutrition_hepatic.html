@@ -1,0 +1,162 @@
+---
+title: Parenteral nutrition in liver failure and hepatic encephalopathy
+date: 2022-11-11
+description: Calculate rates for a multi-component-based parenteral nutrition with liver cirrhosis.
+tags: [calculators, general]
+vue: true
+layout: noprose
+---
+<div id='app'>
+    <div class="w-full p-2 mx-2 my-4 text-white bg-gray-800">This calculator is a work in progress. Please double check
+        the results</div>
+
+    <p class="p-2">The ideal nutrition in decompensated liver cirrhosis and hepatic encephalopathy is a controversial
+        topic. The approach here is largely based on a <a
+            href="https://www.dgem.de/sites/default/files/PDFs/Leitlinien/S3-Leitlinien/073-024l_S3_Klinische_Ern%C3%A4hrung_Gastroenerologie_Leber_2014-04.pdf"
+            target="_blank">German guideline</a> from 2009, although other guidelines support the suggested protein and
+        energy intake.
+        This approach here assumes, that you have three components to your parenteral nutrition:</p>
+    <ul class="p-2 list-disc list-inside">
+        <li>a protein (or amino acid) component</li>
+        <li>a lipid component</li>
+        <li>a glucose component</li>
+    </ul>
+    <p class="p-2">In order to calculate the correct rates, you might need to adjust the parameters (e.g. energy
+        contents or concentrations). Preset are values for an 8 % amino acid component, a 40 % glucose component and a
+        2000 kcal/l lipid component</p>
+
+    <form class="p-2 border shadow">
+        <h2 class="mb-2 text-xl">Settings</h2>
+
+        <label for="weight">weight (kg)</label>
+        <input id="height2" class="w-full" type="number" placeholder="height" v-model.number="weightInKg" />
+
+        <div class="md:grid md:grid-cols-2 md:gap-2">
+            <div>
+                <label for="weight">concentration of protein/amino acid component (g/l)</label>
+                <input id="height2" class="w-full" type="number" placeholder="height"
+                    v-model.number="proteinConcentrationGperL" />
+            </div>
+
+            <div>
+                <label for="weight">energy of protein/amino acid component (kcal/l)</label>
+                <input id="height2" class="w-full" type="number" placeholder="height"
+                    v-model.number="proteinEnergyKcalPerL" />
+            </div>
+        </div>
+
+        <div class="md:grid md:grid-cols-2 md:gap-2">
+            <div>
+                <label for="weight">energy of lipid component (kcal/l)</label>
+                <input id="height2" class="w-full" type="number" placeholder="height"
+                    v-model.number="lipidEnergyKcalPerL" />
+            </div>
+            <div>
+                <label for="weight">energy of glucose component (kcal/l)</label>
+                <input id="height2" class="w-full" type="number" placeholder="height"
+                    v-model.number="glucoseEnergyKcalPerL" />
+            </div>
+        </div>
+        
+        <label for="weight">percentage lipid component for non-protein energy (%)</label>
+        <input id="height2" class="w-full" type="number" placeholder="height" v-model.number="percentageLipidEnergy" />
+    </form>
+
+    <div class="p-2 mt-4 border shadow">
+        <h2 class="mb-2 text-xl">Results</h2>
+        <table class="m-2 table-auto text-regular">
+            <tr>
+                <th class="text-right">protein/amino acids:</th>
+                <td class="px-2"><em>{{ proteinMin.toFixed(2) }} g/d</em> with malnutrition to <em>{{
+                        proteinMax.toFixed(2) }} g/d</em> in malnutrition</td>
+            </tr>
+            <tr>
+                <th class="text-right">total energy intake:</th>
+                <td class="px-2"><em>{{ energyMin.toFixed(2) }} kcal/d</em> to <em>{{ energyMax.toFixed(2)}} kcal/d</em>
+                </td>
+            </tr>
+        </table>
+
+        <h2 class="mt-2 mb-2 text-xl">Components</h2>
+        <table class="m-2 table-auto text-regular">
+            <tr>
+                <th rowspan="2" class="p-2 text-gray-200 bg-gray-900">protein/amino acids</th>
+                <th class="px-2 text-right">volume:</th>
+                <td class="px-2">{{ (proteinMin/proteinConcentrationGperL).toFixed(2)}} l/d to {{
+                    (proteinMax/proteinConcentrationGperL).toFixed(2) }} l/d</td>
+            </tr>
+            <tr>
+                <th class="px-2 text-right">energy:</th>
+                <td class="px-2">{{ ((proteinMin/proteinConcentrationGperL) * proteinEnergyKcalPerL).toFixed(2) }}
+                    kcal/d to {{
+                    ((proteinMax/proteinConcentrationGperL) * proteinEnergyKcalPerL).toFixed(2) }} kcal/d</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2" class="p-2 text-gray-200 bg-blue-900">lipids</th>
+                <th class="px-2 text-right">volume:</th>
+                <td class="px-2">{{ ((remainingEnergyMin * (percentageLipidEnergy/100))/lipidEnergyKcalPerL).toFixed(2)
+                    }} l/d to
+                    {{ ((remainingEnergyMax * (percentageLipidEnergy/100))/lipidEnergyKcalPerL).toFixed(2) }} l/d</td>
+            </tr>
+
+            <tr>
+                <th class="px-2 text-right">energy:</th>
+                <td class="px-2">{{ (remainingEnergyMin * (percentageLipidEnergy/100)).toFixed(2) }} kcal/d to
+                    {{ (remainingEnergyMax * (percentageLipidEnergy/100)).toFixed(2) }} kcal/d</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2" class="p-2 text-gray-200 bg-green-900">glucose</th>
+                <th class="px-2 text-right">volume:</th>
+                <td class="px-2">{{ ((remainingEnergyMin *
+                    (percentageGlucoseEnergy/100))/glucoseEnergyKcalPerL).toFixed(2) }} l/d to
+                    {{ ((remainingEnergyMax * (percentageGlucoseEnergy/100))/glucoseEnergyKcalPerL).toFixed(2) }} l/d
+                </td>
+            </tr>
+
+            <tr>
+                <th class="px-2 text-right">energy:</th>
+                <td class="px-2">{{ (remainingEnergyMin * (percentageGlucoseEnergy/100)).toFixed(2) }} kcal/d to
+                    {{ (remainingEnergyMax * (percentageGlucoseEnergy/100)).toFixed(2) }} kcal/d</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            weightInKg: 80,
+            proteinConcentrationGperL: 80,
+            proteinEnergyKcalPerL: 320,
+            lipidEnergyKcalPerL: 2000,
+            glucoseEnergyKcalPerL: 1600,
+            percentageLipidEnergy: 40
+        },
+        computed: {
+            proteinMin: function () {
+                return this.weightInKg * 1.2;
+            },
+            proteinMax: function () {
+                return this.weightInKg * 1.5;
+            },
+            energyMin: function () {
+                return this.weightInKg * 35;
+            },
+            energyMax: function () {
+                return this.weightInKg * 40;
+            },
+            remainingEnergyMin: function () {
+                return this.energyMin - ((this.proteinMin / this.proteinConcentrationGperL) * this.proteinEnergyKcalPerL);
+            },
+            remainingEnergyMax: function () {
+                return this.energyMax - ((this.proteinMax / this.proteinConcentrationGperL) * this.proteinEnergyKcalPerL);
+            },
+            percentageGlucoseEnergy: function () {
+                return 100 - this.percentageLipidEnergy;
+            }
+        }
+    });
+</script>

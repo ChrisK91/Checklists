@@ -5,7 +5,7 @@ description: Medist ist eine Sammlung von medizinischen Checklisten, Rechnern un
 ---
 <!-- LTeX: language=de-DE -->
 
-Hier sammle ich eine Reihe von Checklisten, die ich im Alltag nutze. Die Informationen kommen von verschiedenen Artikeln, Büchern und praktischer Erfahrung.
+Hier sammle ich eine Reihe von Checklisten und eigene Rechner, die ich im klinischen Alltag nutze. Die Informationen kommen von verschiedenen Artikeln, Büchern und praktischer Erfahrung.
 Natürlich kann die Genauigkeit nicht garantiert werden, weswegen die Listen den Nutzer nicht von seiner Sorgfalt entbinden können.
 Der Quellcode dieser Seite ist auf GitHub über den Button rechts zu erreichen.
 
