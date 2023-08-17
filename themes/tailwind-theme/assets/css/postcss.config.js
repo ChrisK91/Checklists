@@ -6,7 +6,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
         './hugo_stats.json',
         themeDir + '/hugo_stats.json',
         'exampleSite/hugo_stats.json',
-        "../../../../../**/*.{html,html,xml,rss,md}"
+        "./**/*.{html,html,xml,rss,md}",
     ],
     safelist: [
       "[type='checkbox']",
