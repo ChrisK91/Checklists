@@ -5,6 +5,7 @@ module.exports = {
     './hugo_stats.json',
     themeDir + '/hugo_stats.json',
     'exampleSite/hugo_stats.json',
+    "./**/*.{html,html,xml,rss,md}",
   ],
   important: true,
   theme: {

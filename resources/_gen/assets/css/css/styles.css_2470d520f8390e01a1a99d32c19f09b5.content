@@ -1154,6 +1154,10 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
 }
+.my-4 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important;
@@ -2090,6 +2094,9 @@ See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d4
   }
   .lg\:w-auto {
     width: auto !important;
+  }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
   .lg\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0 !important;
