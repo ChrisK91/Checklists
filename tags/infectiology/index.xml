@@ -1,5 +1,484 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>infectiology on medist.org</title><link>https://medist.org/tags/infectiology/</link><description>Recent content in infectiology on medist.org</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 29 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://medist.org/tags/infectiology/index.xml" rel="self" type="application/rss+xml"/><item><title>Pneumonia</title><link>https://medist.org/calculators/pneumonia/</link><pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/pneumonia/</guid><description>Pneumonia Severity Index (PSI) Calculates the PSI-Score based on this article. The PSI-Score can be used to stratify the mortality in community acquired pneumonia.
-Reset Demographic factors age Sex male female Nursing home resident Coexisting illness Neoplastic disease Liver disease Congestive heart failure Cerebrovascular disease Renal disease Physical-examination findings Altered mental status Respiratory rate &amp;ge; 30/min Systolic blood pressure &amp;lt; 90 mmHg Temperature &amp;lt; 35&amp;deg;C or &amp;ge; 40&amp;deg;C Pulse &amp;ge; 125/min Laboratory and radiographic findings Arterial pH &amp;lt; 7.</description></item><item><title>Pneumonia</title><link>https://medist.org/checklists/pneumonia/</link><pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/pneumonia/</guid><description>Classification community-acquired pneumonia (CAP), acquired outside of hospital nosocomial pneumonia, acquired in hospital, further subdivided into hospital-acquired pneumonia (HAP), acquired &amp;gt;= 48 hours after admission ventilator-associated pneumonia (VAP), acquired &amp;gt;= 48 hours after intubation Therapeutic decisions are further guided by immunocompetence, with immunocompromised patients having different potential pathogens, including fungal infections, parasites and uncommon viral/bacterial species.
-Diagnosis history with fever, cough, dyspnea and sputum production vital signs including blood pressure, breathing rate, SpO2, mental state (GCS) calculate qSOFA score laboratory findings leukocytosis, early sign elevated CRP, can lag behind leukocytes elevated PCT is highly specific for bacterial infections urea is needed for CURB-65 score arterial blood gases for respiratory insufficiency auscultation imaging chest X-ray can often identify consolidations/infiltrates/cavitations CT can provide further clarification in inconclusive or negative radiographs ultrasound can identify pleural effusions Microbiological testing blood cultures sputum cultures/stain urinary testing for S.</description></item><item><title>Sepsis</title><link>https://medist.org/checklists/sepsis/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/sepsis/</guid><description>qSOFA high score = high risk
-GCS &amp;lt; 15 breathing frequency &amp;gt;= 22/min systolic bp ≤ 100 mmHg Early management i.v. volume and circulatory support, MAP &amp;gt;= 65 mmHg get samples start empiric antibiotics first doses is a normal dose, even in renal failure aim for application within max. 30 minutes! central venous catheter, arterial catheter treat the focus (change lines/catheter, surgery, etc&amp;hellip;) Volume management Isotonic crystalloids: 30 ml/kg KG in hypotension and lactate &amp;gt;= 4 mmol/l the administration of large amounts of fluid is suggested by various guidelines.</description></item><item><title>Fever checklist</title><link>https://medist.org/checklists/fever/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/fever/</guid><description>Temperature &amp;gt;= 38.3 °C (100.9 °F), in immunocompromised/neutropenia &amp;gt;= 38.0 ° (100.4 °F)
-Patient history respiratory: coughing, dyspnea, pleuritic pain gastrointestinal: vomiting, diarrhea, abdominal pain with location post-surgery: time of surgery, protheses, etc. urinary: dysuria, polyuria previous medications (think drug induced fever) previous antibiotics can influence future therapy previous infections (multiresistant bacteria) rheumatic diseases Diagnostic CRP, Leukocytes, Procalcitonin blood count, if needed differential blood count fever in neutropenia: absolute neutrophil count &amp;lt; 500 to 1.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Infectiology on medist.org</title><link>https://medist.org/tags/infectiology/</link><description>Recent content in Infectiology on medist.org</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 09 Sep 2021 13:04:51 +0200</lastBuildDate><atom:link href="https://medist.org/tags/infectiology/index.xml" rel="self" type="application/rss+xml"/><item><title>Pneumonia</title><link>https://medist.org/calculators/pneumonia/</link><pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/pneumonia/</guid><description>&lt;div id='app'>
+ &lt;h2 class="mt-4 mb-2 text-2xl">Pneumonia Severity Index (PSI)&lt;/h2>
+ &lt;form class="p-2 border shadow">
+ &lt;div class="grid md:grid-cols-2">
+ &lt;div class="p-0 m-2">
+ &lt;p class="m-2 text-gray-600">Calculates the PSI-Score based on &lt;a class="underline" target="_blank"
+ href="https://pubmed.ncbi.nlm.nih.gov/8995086/">this article&lt;/a>. The PSI-Score can be used to stratify the mortality in community acquired pneumonia.&lt;/p>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-end w-full pr-4 m-2">
+ &lt;button
+ class="inline-flex items-center h-10 px-8 text-gray-100 bg-gray-900 border-b-4 border-indigo-500 hover:bg-gray-200 hover:text-gray-900"
+ type="button" v-on:click="resetForm">
+ &lt;span class="mr-2">Reset&lt;/span>
+
+ &lt;svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-400" fill="none"
+ viewBox="0 0 24 24" stroke="currentColor">
+ &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+ d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+ &lt;/svg>
+ &lt;/button>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+ &lt;span class="text-lg text-gray-600 label">Demographic factors&lt;/span>
+
+ &lt;div class="m-2">
+ &lt;label for="age">age&lt;/label>
+ &lt;input class="w-full" id="age" type="number" placeholder="age" v-model.number="age" />
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;span class="label">Sex&lt;/label>
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center">
+ &lt;input type="radio" class="form-radio" name="sex" value="male" checked v-model="sex">
+ &lt;span class="ml-2 text-base font-normal">male&lt;/span>
+ &lt;/label>
+ &lt;label class="inline-flex items-center ml-6">
+ &lt;input type="radio" class="form-radio" name="sex" value="female" v-model="sex">
+ &lt;span class="ml-2 text-base font-normal">female&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="nhr" type="checkbox" v-model="nhr" />
+ &lt;span class="ml-2 text-base font-normal">Nursing home resident&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+ &lt;span class="text-lg text-gray-600 label">Coexisting illness&lt;/span>
+ &lt;div class="m-2">
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="neoplDis" type="checkbox" v-model="neoplDis" />
+ &lt;span class="ml-2 text-base font-normal">Neoplastic disease&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="livDis" type="checkbox" v-model="livDis" />
+ &lt;span class="ml-2 text-base font-normal">Liver disease&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="congHf" type="checkbox" v-model="congHf" />
+ &lt;span class="ml-2 text-base font-normal">Congestive heart failure&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="cerebrDis" type="checkbox" v-model="cerebrDis" />
+ &lt;span class="ml-2 text-base font-normal">Cerebrovascular disease&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="renDis" type="checkbox" v-model="renDis" />
+ &lt;span class="ml-2 text-base font-normal">Renal disease&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+ &lt;span class="text-lg text-gray-600 label">Physical-examination findings&lt;/span>
+
+ &lt;div class="m-2">
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="altGCS" type="checkbox" v-model="altGCS" />
+ &lt;span class="ml-2 text-base font-normal">Altered mental status&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="respRate" type="checkbox" v-model="respRate" />
+ &lt;span class="ml-2 text-base font-normal">Respiratory rate &amp;ge; 30/min&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="sysBp" type="checkbox" v-model="sysBp" />
+ &lt;span class="ml-2 text-base font-normal">Systolic blood pressure &amp;lt; 90 mmHg&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="temp" type="checkbox" v-model="temp" />
+ &lt;span class="ml-2 text-base font-normal">Temperature &amp;lt; 35&amp;deg;C or &amp;ge; 40&amp;deg;C&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="pulse" type="checkbox" v-model="pulse" />
+ &lt;span class="ml-2 text-base font-normal">Pulse &amp;ge; 125/min&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+ &lt;span class="text-lg text-gray-600 label">Laboratory and radiographic findings&lt;/span>
+
+ &lt;div class="m-2">
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="artPh" type="checkbox" v-model="artPh" />
+ &lt;span class="ml-2 text-base font-normal">Arterial pH &amp;lt; 7.35&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-16">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="bun" type="checkbox" v-model="bun" />
+ &lt;span class="ml-2 text-base font-normal">Blood urea nitrogen &amp;ge; 30 mg/dl (11
+ mmol/l)&lt;br>&amp;asymp; Urea &amp;ge; 64,2 mg/dl&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="sodium" type="checkbox" v-model="sodium" />
+ &lt;span class="ml-2 text-base font-normal">Sodium &amp;lt; 130 mmol/l&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="glucose" type="checkbox" v-model="glucose" />
+ &lt;span class="ml-2 text-base font-normal">Glucose &amp;ge; 250 mg/dl (14 mmol/l)&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="hematocrit" type="checkbox" v-model="hematocrit" />
+ &lt;span class="ml-2 text-base font-normal">Hematocrit &amp;lt; 20 %&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="pao2" type="checkbox" v-model="pao2" />
+ &lt;span class="ml-2 text-base font-normal">p&lt;sub>a&lt;/sub>O&lt;sub>2&lt;/sub> &amp;lt; 60 mmHg&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="pleuraleff" type="checkbox" v-model="pleuraleff" />
+ &lt;span class="ml-2 text-base font-normal">Pleural effusion&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="flex w-auto p-0 m-2 bg-gray-200 border">
+ &lt;div class="flex items-center flex-none w-24 h-24 bg-gray-900">
+ &lt;div class="w-full text-center">
+ &lt;span class="text-5xl font-light text-gray-200">{{ psi }}&lt;/span>
+ &lt;/div>
+ &lt;/div>
+ &lt;div class="flex items-center w-full p-2">
+ &lt;span class="font-bold">Risk Class {{ riskClass }}:&amp;nbsp;&lt;/span> {{ riskClassText }}
+ &lt;/div>
+ &lt;/div>
+ &lt;/form>
+&lt;/div>
+
+&lt;script>
+ new Vue({
+ el: '#app',
+ data: {
+ age: 60,
+ sex: "male",
+ nhr: false,
+ neoplDis: false,
+ livDis: false,
+ congHf: false,
+ cerebrDis: false,
+ renDis: false,
+ altGCS: false,
+ respRate: false,
+ sysBp: false,
+ temp: false,
+ pulse: false,
+ artPh: false,
+ bun: false,
+ sodium: false,
+ glucose: false,
+ hematocrit: false,
+ pao2: false,
+ pleuraleff: false
+ },
+ computed: {
+ psi: function () {
+ psiScore = this.age;
+
+ if (this.sex == "female") {
+ psiScore -= 10;
+ }
+
+ if (this.nhr) { psiScore += 10 }
+ if (this.neoplDis) { psiScore += 30 }
+ if (this.livDis) { psiScore += 20 }
+ if (this.congHf) { psiScore += 10 }
+ if (this.cerebrDis) { psiScore += 10 }
+ if (this.renDis) { psiScore += 10 }
+
+ if (this.altGCS) { psiScore += 20 }
+ if (this.respRate) { psiScore += 20 }
+ if (this.sysBp) { psiScore += 20 }
+ if (this.temp) { psiScore += 15 }
+ if (this.pulse) { psiScore += 10 }
+
+ if (this.artPh) { psiScore += 30 }
+ if (this.bun) { psiScore += 20 }
+ if (this.sodium) { psiScore += 20 }
+ if (this.glucose) { psiScore += 10 }
+ if (this.hematocrit) { psiScore += 10 }
+ if (this.pao2) { psiScore += 10 }
+ if (this.pleuraleff) { psiScore += 10 }
+
+ return psiScore;
+ },
+ riskClass: function () {
+ if (this.age &lt;= 50 &amp;&amp;
+ !this.neoplDis &amp;&amp; 
+ !this.livDis &amp;&amp; 
+ !this.congHf &amp;&amp; 
+ !this.cerebrDis &amp;&amp; 
+ !this.renDis &amp;&amp; 
+ !this.altGCS &amp;&amp; 
+ !this.respRate &amp;&amp; 
+ !this.sysBp &amp;&amp; 
+ !this.temp &amp;&amp; 
+ !this.pulse 
+ )
+ {
+ return "I";
+ }
+ else if(this.psi &lt;= 70)
+ {
+ return "II";
+ }
+ else if(this.psi &lt;= 90)
+ {
+ return "III";
+ }
+ else if(this.psi &lt;= 130)
+ {
+ return "IV";
+ }
+ else
+ {
+ return "V";
+ }
+
+ return "Nope";
+ },
+ riskClassText: function () {
+ switch (this.riskClass) {
+ case "I":
+ return "People up to 50 years without complicating disease and a normal examination are assigned to risk class I. Mortality 0.1 – 0.5 %";
+ break;
+
+ case "II":
+ return "Mortality 0.4 – 0.6 %";
+ break;
+ 
+ case "III":
+ return "Mortality 0.9 – 2.8 %. Consider admission.";
+ break;
+ 
+ case "IV":
+ return "Mortality 8.2 – 9.3 %. Consider hospitalization for treatment.";
+ break;
+ 
+ case "V":
+ return "Mortality 27 – 29.2 %. Consider hospitalization for treatment.";
+ break;
+ 
+ default:
+ break;
+ }
+ }
+ },
+ methods: {
+ resetForm: function (event) {
+ this.nhr = false;
+ this.neoplDis = false;
+ this.livDis = false;
+ this.congHf = false;
+ this.cerebrDis = false;
+ this.renDis = false;
+ this.altGCS = false;
+ this.respRate = false;
+ this.sysBp = false;
+ this.temp = false;
+ this.pulse = false;
+ this.artPh = false;
+ this.bun = false;
+ this.sodium = false;
+ this.glucose = false;
+ this.hematocrit = false;
+ this.pao2 = false;
+ this.pleuraleff = false;
+ }
+ }
+ });
+&lt;/script></description></item><item><title>Pneumonia</title><link>https://medist.org/checklists/pneumonia/</link><pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/pneumonia/</guid><description>&lt;h2 id="classification">Classification&lt;/h2>
+&lt;ul>
+&lt;li>community-acquired pneumonia (CAP), acquired outside of hospital&lt;/li>
+&lt;li>nosocomial pneumonia, acquired in hospital, further subdivided into
+&lt;ul>
+&lt;li>hospital-acquired pneumonia (HAP), acquired &amp;gt;= 48 hours after admission&lt;/li>
+&lt;li>ventilator-associated pneumonia (VAP), acquired &amp;gt;= 48 hours after intubation&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Therapeutic decisions are further guided by immunocompetence, with immunocompromised patients having different potential pathogens, including fungal infections, parasites and uncommon viral/bacterial species.&lt;/p>
+&lt;h2 id="diagnosis">Diagnosis&lt;/h2>
+&lt;ul>
+&lt;li>history with fever, cough, dyspnea and sputum production&lt;/li>
+&lt;li>vital signs including blood pressure, breathing rate, SpO2, mental state (GCS)
+&lt;ul>
+&lt;li>calculate &lt;a href="https://medist.org/checklists/sepsis/#qsofa">qSOFA&lt;/a> score&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>laboratory findings
+&lt;ul>
+&lt;li>leukocytosis, early sign&lt;/li>
+&lt;li>elevated CRP, can lag behind leukocytes&lt;/li>
+&lt;li>elevated PCT is highly specific for bacterial infections&lt;/li>
+&lt;li>urea is needed for CURB-65 score&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>arterial blood gases for respiratory insufficiency&lt;/li>
+&lt;li>auscultation&lt;/li>
+&lt;li>imaging
+&lt;ul>
+&lt;li>chest X-ray can often identify consolidations/infiltrates/cavitations&lt;/li>
+&lt;li>CT can provide further clarification in inconclusive or negative radiographs&lt;/li>
+&lt;li>ultrasound can identify pleural effusions&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="microbiological-testing">Microbiological testing&lt;/h3>
+&lt;ul>
+&lt;li>blood cultures&lt;/li>
+&lt;li>sputum cultures/stain&lt;/li>
+&lt;li>urinary testing for S. pneumoniae&lt;/li>
+&lt;li>testing for Legionella spp. (PCR or urinary antigen test)&lt;/li>
+&lt;li>viral testing (SARS-CoV-2, influenza and other seasonal viruses depending on season)&lt;/li>
+&lt;li>&lt;em>severe pneumonia:&lt;/em> bronchoscopic samples&lt;/li>
+&lt;li>tuberculosis and fungi in cavitary pneumonia&lt;/li>
+&lt;li>&lt;em>consider extended spectrum of pathogens (including fungi, uncommon viruses, Pneumocystis jirovecii, etc.) in immunocompromised patients&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h2 id="further-management">Further management&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>CURB-65 score&lt;/p></description></item><item><title>Sepsis</title><link>https://medist.org/checklists/sepsis/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/sepsis/</guid><description>&lt;h2 id="qsofa">qSOFA&lt;/h2>
+&lt;p>high score = high risk&lt;/p>
+&lt;ul>
+&lt;li>GCS &amp;lt; 15&lt;/li>
+&lt;li>breathing frequency &amp;gt;= 22/min&lt;/li>
+&lt;li>systolic bp ≤ 100 mmHg&lt;/li>
+&lt;/ul>
+&lt;h2 id="early-management">Early management&lt;/h2>
+&lt;ul>
+&lt;li>i.v. volume and circulatory support, MAP &amp;gt;= 65 mmHg&lt;/li>
+&lt;li>get samples&lt;/li>
+&lt;li>start empiric antibiotics
+&lt;ul>
+&lt;li>first doses is a normal dose, even in renal failure&lt;/li>
+&lt;li>aim for application within max. 30 minutes!&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>central venous catheter, arterial catheter&lt;/li>
+&lt;li>treat the focus (change lines/catheter, surgery, etc&amp;hellip;)&lt;/li>
+&lt;/ul>
+&lt;h2 id="volume-management">Volume management&lt;/h2>
+&lt;ul>
+&lt;li>Isotonic crystalloids:
+&lt;ul>
+&lt;li>30 ml/kg KG in hypotension and lactate &amp;gt;= 4 mmol/l
+&lt;ul>
+&lt;li>the administration of large amounts of fluid is suggested by various guidelines. There are however studies showing increased mortality. &lt;a href="https://litfl.com/fluid-bolus-therapy/">This article on litfl&lt;/a> has an overview on some studies.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>careful administration in heart failure&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Circulatory support
+&lt;ul>
+&lt;li>Noradrenaline: first choice, the maximum rate of 1.5 mg/h is sometimes exceeded&lt;/li>
+&lt;li>Vasopressin: higher risk for ischemia, common dose 0.03 units/h&lt;/li>
+&lt;li>Dobutamine: inotropic, consider in heart failure, 150 - 600 µg/kg weight/h&lt;/li>
+&lt;li>Adrenaline: inotropic&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="further-considerations">Further considerations&lt;/h2>
+&lt;ul>
+&lt;li>consider steroids if high circulatory support is needed
+&lt;ul>
+&lt;li>e.g. 200 mg hydrocortisone&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>dialysis in acute renal failure&lt;/li>
+&lt;li>intubation with sedation in respiratory failure&lt;/li>
+&lt;li>transfusion with Hb &amp;lt; 7 g/dl&lt;/li>
+&lt;li>nutrition
+&lt;ul>
+&lt;li>start when hemodynamic stability is reached&lt;/li>
+&lt;li>don&amp;rsquo;t lower blood glucose too aggressively, aim for 140 - 180 mg/dl,&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>Fever checklist</title><link>https://medist.org/checklists/fever/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/fever/</guid><description>&lt;p>Temperature &amp;gt;= 38.3 °C (100.9 °F), in immunocompromised/neutropenia &amp;gt;= 38.0 ° (100.4 °F)&lt;/p>
+&lt;h2 id="patient-history">Patient history&lt;/h2>
+&lt;ul>
+&lt;li>respiratory: coughing, dyspnea, pleuritic pain&lt;/li>
+&lt;li>gastrointestinal: vomiting, diarrhea, abdominal pain with location&lt;/li>
+&lt;li>post-surgery: time of surgery, protheses, etc.&lt;/li>
+&lt;li>urinary: dysuria, polyuria&lt;/li>
+&lt;li>previous medications (think drug induced fever)
+&lt;ul>
+&lt;li>previous antibiotics can influence future therapy&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>previous infections (multiresistant bacteria)&lt;/li>
+&lt;li>rheumatic diseases&lt;/li>
+&lt;/ul>
+&lt;h2 id="diagnostic">Diagnostic&lt;/h2>
+&lt;ul>
+&lt;li>CRP, Leukocytes, Procalcitonin&lt;/li>
+&lt;li>blood count, if needed differential blood count
+&lt;ul>
+&lt;li>fever in neutropenia: absolute neutrophil count &amp;lt; 500 to 1.000/µl (= neutrophils (%) * leukocytes count)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Blood cultures (two pairs from to sites)&lt;/li>
+&lt;li>Urine sample, sputum samples, swabs&lt;/li>
+&lt;li>Ultrasound, X-Ray if CT is planned&lt;/li>
+&lt;/ul>
+&lt;h2 id="therapy">Therapy&lt;/h2>
+&lt;ul>
+&lt;li>Paracetamol&lt;/li>
+&lt;li>Antibiotics depending on focus&lt;/li>
+&lt;/ul></description></item></channel></rss>

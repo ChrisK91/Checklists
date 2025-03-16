@@ -1,2 +1,110 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pocketcard on medist.org</title><link>https://medist.org/tags/pocketcard/</link><description>Recent content in pocketcard on medist.org</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 02 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://medist.org/tags/pocketcard/index.xml" rel="self" type="application/rss+xml"/><item><title>Protective lung ventilation</title><link>https://medist.org/checklists/protective_lung_ventilation/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/protective_lung_ventilation/</guid><description>General Protective lung ventilation aims for low tidal volume ventilation. A large study has shown a decrease in mortality, when patients with acute lung injury/ARDS were ventilated with low tidal volumes. Today, the protective lung ventilation algorithm by the ARDS network provides a reasonable default approach for mechanically ventilated patients, especially those at risk for developing ARDS
-Ventilation setup and adjustment Calculate the predicted body weight (men: 50 + 0.91 (length in cm - 152), women: 45 + 0.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pocketcard on medist.org</title><link>https://medist.org/tags/pocketcard/</link><description>Recent content in Pocketcard on medist.org</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 12 Oct 2021 11:45:34 +0200</lastBuildDate><atom:link href="https://medist.org/tags/pocketcard/index.xml" rel="self" type="application/rss+xml"/><item><title>Protective lung ventilation</title><link>https://medist.org/checklists/protective_lung_ventilation/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/protective_lung_ventilation/</guid><description>&lt;h2 id="general">General&lt;/h2>
+&lt;p>Protective lung ventilation aims for low tidal volume ventilation. A &lt;a href="https://www.nejm.org/doi/full/10.1056/NEJM200005043421801">large study&lt;/a> has shown a decrease in mortality, when patients with acute lung injury/ARDS were ventilated with low tidal volumes. Today, the protective lung ventilation algorithm by the ARDS network provides a reasonable default approach for mechanically ventilated patients, especially those at risk for developing ARDS&lt;/p>
+&lt;h2 id="ventilation-setup-and-adjustment">Ventilation setup and adjustment&lt;/h2>
+&lt;ul>
+&lt;li>Calculate the predicted body weight (men: 50 + 0.91 (length in cm - 152), women: 45 + 0.91 (length in cm - 152)). A calculator can be found in the &lt;a href="https://medist.org/calculators/ventilation/">ventilation calculators&lt;/a>&lt;/li>
+&lt;li>Initial tidal volume Vt = 8ml/kg predicted body weight
+&lt;ul>
+&lt;li>Reduce Vt by 1 ml/kg at intervals up to 2 hours until Vt = 6 ml/kg/PBW&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>set RR (respiratory rate) to baseline ventilation, but not over 35/min&lt;/li>
+&lt;li>adjust Vt and RR to achieve pH and plateau pressure goal&lt;/li>
+&lt;/ul>
+&lt;h2 id="oxygenation-goal">Oxygenation Goal&lt;/h2>
+&lt;ul>
+&lt;li>Goal: paO₂ 55 – 88 mmHg or SpO₂ 88 – 95 %&lt;/li>
+&lt;li>use PEEP minimum 5 cmH₂O&lt;/li>
+&lt;li>consider using FiO2/PEEP table:&lt;/li>
+&lt;/ul>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">FiO₂&lt;/th>
+ &lt;th style="text-align: center">low PEEP&lt;/th>
+ &lt;th style="text-align: center">high PEEP&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">0.3&lt;/td>
+ &lt;td style="text-align: center">5&lt;/td>
+ &lt;td style="text-align: center">5 – 14&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.4&lt;/td>
+ &lt;td style="text-align: center">5 – 8&lt;/td>
+ &lt;td style="text-align: center">14 – 16&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.5&lt;/td>
+ &lt;td style="text-align: center">8 – 10&lt;/td>
+ &lt;td style="text-align: center">16 – 20&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.6&lt;/td>
+ &lt;td style="text-align: center">10&lt;/td>
+ &lt;td style="text-align: center">20&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.7&lt;/td>
+ &lt;td style="text-align: center">10 – 14&lt;/td>
+ &lt;td style="text-align: center">20&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.8&lt;/td>
+ &lt;td style="text-align: center">14&lt;/td>
+ &lt;td style="text-align: center">20 – 22&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.9&lt;/td>
+ &lt;td style="text-align: center">14 – 18&lt;/td>
+ &lt;td style="text-align: center">22&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">1.0&lt;/td>
+ &lt;td style="text-align: center">18 – 24&lt;/td>
+ &lt;td style="text-align: center">22 – 24&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="plateau-pressure">Plateau pressure&lt;/h2>
+&lt;ul>
+&lt;li>Goal: plateau pressure ≤ 30 cmH₂O&lt;/li>
+&lt;li>if pPlat &amp;gt; 30 cmH₂O
+&lt;ul>
+&lt;li>decrease Vt by 1 ml/kg until minimum Vt 4 ml/kg is reached&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>if pPlat &amp;lt; 25 cmH₂O and Vt &amp;lt; 6 ml/kg
+&lt;ul>
+&lt;li>increase Vt by 1 ml/kg until pPlat &amp;gt; 25 cmH₂O or Vt = 6 ml/kg&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="ph">pH&lt;/h2>
+&lt;ul>
+&lt;li>Goal: pH 7.3 – 7.45&lt;/li>
+&lt;li>Acidosis:
+&lt;ul>
+&lt;li>pH &amp;lt; 7.3: Increase RR until pH &amp;gt; 7.3 or PaCO₂ &amp;lt; 25 mmHg
+&lt;ul>
+&lt;li>maximum RR 35/min&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>pH &amp;lt; 7.15: Increase RR to 35/min
+&lt;ul>
+&lt;li>if pH remains &amp;lt; 7.15: increase Vt in 1 ml/kg steps until pH &amp;gt; 7.15 (target of 30 cmH₂O max be exceeded)&lt;/li>
+&lt;li>consider NaHCO₃&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Alkalosis
+&lt;ul>
+&lt;li>pH &amp;gt; 7.45: Decrease RR if possible&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="permissive-hypercapnia">Permissive hypercapnia&lt;/h2>
+&lt;p>Elevated PaCO₂ can be the result of low volumes and should be tolerated, as long as the pH is manageable. The articles I&amp;rsquo;ve come across so far suggest an pH &amp;gt; 7.1 or &amp;gt; 7.2 as tolerable.&lt;/p></description></item></channel></rss>

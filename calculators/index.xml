@@ -1,8 +1,537 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Calculators on medist.org</title><link>https://medist.org/calculators/</link><description>Recent content in Calculators on medist.org</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://medist.org/calculators/index.xml" rel="self" type="application/rss+xml"/><item><title>Parenteral nutrition in liver failure and hepatic encephalopathy</title><link>https://medist.org/calculators/nutrition_hepatic/</link><pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/nutrition_hepatic/</guid><description>This calculator is a work in progress. Please double check the results The ideal nutrition in decompensated liver cirrhosis and hepatic encephalopathy is a controversial topic. The approach here is largely based on a German guideline from 2009, although other guidelines support the suggested protein and energy intake. This approach here assumes, that you have three components to your parenteral nutrition:
-a protein (or amino acid) component a lipid component a glucose component In order to calculate the correct rates, you might need to adjust the parameters (e.</description></item><item><title>Ventilation Calculators</title><link>https://medist.org/calculators/ventilation/</link><pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/ventilation/</guid><description> Tidal volume calculator Calculates the ideal weight, based on the Devine formula 50 kg (female 45.5 kg) + 0.9 kg * (height - 152 cm). The result is used to calculate Vt.
-height (cm) Sex male female weight (kg) initial Vt (8ml/kg) goal Vt (6ml/kg)</description></item><item><title>Pneumonia</title><link>https://medist.org/calculators/pneumonia/</link><pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/pneumonia/</guid><description>Pneumonia Severity Index (PSI) Calculates the PSI-Score based on this article. The PSI-Score can be used to stratify the mortality in community acquired pneumonia.
-Reset Demographic factors age Sex male female Nursing home resident Coexisting illness Neoplastic disease Liver disease Congestive heart failure Cerebrovascular disease Renal disease Physical-examination findings Altered mental status Respiratory rate &amp;ge; 30/min Systolic blood pressure &amp;lt; 90 mmHg Temperature &amp;lt; 35&amp;deg;C or &amp;ge; 40&amp;deg;C Pulse &amp;ge; 125/min Laboratory and radiographic findings Arterial pH &amp;lt; 7.</description></item><item><title>ABG Calculators</title><link>https://medist.org/calculators/abg/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/abg/</guid><description>Expected secondary responses Calculates the expected secondary responses in paCO2 and HCO3- based on this paper
-paCO2 Reference: 36 – 44 HCO3- Reference: 22 – 26 Primary change Secondary reaction Metabolic acidosis Expected paCO2 of {{ metAcidosisResultingPCO2 }} mmHg
-40 − [(24 − HCO3-) × 1.2] Metabolic alkalosis Expected paCO2 of {{ metAlkalosisResultingPCO2 }} mmHg
-40 + [(HCO3- − 24) × 0.7] Acute respiratory acidosis Expected HCO3- of {{ acRespAcidosisResultingHCO3 }} mmHg</description></item><item><title>Nutrition Calculators</title><link>https://medist.org/calculators/nutrition/</link><pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/nutrition/</guid><description>Ideal weight Calculate the ideal weight, based on the formula 48,4 + 77 * (height - 150 cm) (German Society for Nutrition). The conversion to lb uses the factor 1 kg = 2.2 lb.
-height (cm) weight (kg) weight (lb) Calculates the ideal weight, based on the Devine formula 50 kg (female 45.5 kg) + 0.9 kg * (height - 152 cm). The conversion to lb uses the factor 1 kg = 2.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Calculators on medist.org</title><link>https://medist.org/calculators/</link><description>Recent content in Calculators on medist.org</description><generator>Hugo</generator><language>en</language><atom:link href="https://medist.org/calculators/index.xml" rel="self" type="application/rss+xml"/><item><title>Parenteral nutrition in liver failure and hepatic encephalopathy</title><link>https://medist.org/calculators/nutrition_hepatic/</link><pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/nutrition_hepatic/</guid><description>&lt;div id='app'>
+ &lt;div class="w-full p-2 mx-2 my-4 text-white bg-gray-800">This calculator is a work in progress. Please double check
+ the results&lt;/div>
+
+ &lt;p class="p-2">The ideal nutrition in decompensated liver cirrhosis and hepatic encephalopathy is a controversial
+ topic. The approach here is largely based on a &lt;a
+ href="https://www.dgem.de/sites/default/files/PDFs/Leitlinien/S3-Leitlinien/073-024l_S3_Klinische_Ern%C3%A4hrung_Gastroenerologie_Leber_2014-04.pdf"
+ target="_blank">German guideline&lt;/a> from 2009, although other guidelines support the suggested protein and
+ energy intake.
+ This approach here assumes, that you have three components to your parenteral nutrition:&lt;/p>
+ &lt;ul class="p-2 list-disc list-inside">
+ &lt;li>a protein (or amino acid) component&lt;/li>
+ &lt;li>a lipid component&lt;/li>
+ &lt;li>a glucose component&lt;/li>
+ &lt;/ul>
+ &lt;p class="p-2">In order to calculate the correct rates, you might need to adjust the parameters (e.g. energy
+ contents or concentrations). Preset are values for an 8 % amino acid component, a 40 % glucose component and a
+ 2000 kcal/l lipid component&lt;/p></description></item><item><title>Ventilation Calculators</title><link>https://medist.org/calculators/ventilation/</link><pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/ventilation/</guid><description>&lt;div id='app'>
+ &lt;h2 class="mt-4 mb-2 text-2xl">Tidal volume calculator&lt;/h2>
+ &lt;form class="p-2 mt-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Calculates the ideal weight, based on the Devine formula &lt;i>50 kg (female 45.5 kg) + 0.9 kg * (height - 152 cm)&lt;/i>. The result is used to calculate Vt.&lt;/p>
+ &lt;div class="md:grid md:grid-cols-3 xl:grid-cols-3">
+ &lt;div class="m-2">
+ &lt;label for="height2">height (cm)&lt;/label>
+ &lt;input class="w-full" id="heigth2" type="number" placeholder="height" v-model.number="height" />
+ &lt;/div>
+ &lt;div class="m-2">
+ &lt;span class="label">Sex&lt;/label>
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center">
+ &lt;input type="radio" class="form-radio" name="sex" value="male" checked v-model="sex">
+ &lt;span class="ml-2 text-base font-normal">male&lt;/span>
+ &lt;/label>
+ &lt;label class="inline-flex items-center ml-6">
+ &lt;input type="radio" class="form-radio" name="sex" value="female" v-model="sex">
+ &lt;span class="ml-2 text-base font-normal">female&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="weightKg2">weight (kg)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightKg2" type="number" placeholder="weight" v-model.number="weightDevineKg" disabled />
+ &lt;/div>
+ &lt;/div>
+
+ &lt;hr class="mx-2 mt-6 mb-4">
+
+ &lt;div class="md:grid md:grid-cols-2">
+ &lt;div class="m-2">
+ &lt;label for="weightKg2">initial Vt (8ml/kg)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightKg2" type="text" placeholder="weight" v-model="initialVt" disabled />
+ &lt;/div>
+ &lt;div class="m-2">
+ &lt;label for="weightKg2">goal Vt (6ml/kg)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightKg2" type="text" placeholder="weight" v-model="goalVt" disabled />
+ &lt;/div>
+ &lt;/div>
+ &lt;/form>
+&lt;/div>
+
+&lt;script>
+new Vue({
+ el:'#app',
+ data : {
+ height : 165,
+ sex : "male"
+ },
+ computed: {
+ weightDevineKg: function(){
+ // male: 50 kg + 0.9 kg * (height - 152 cm)
+ // female: 45.5 kilograms + 0.9 kilograms × (height − 152)
+ val = 0;
+
+ switch (this.sex) {
+ case "male": 
+ val = (50 + 0.9 * (this.height - 152)).toFixed(2);
+ break;
+ case "female": 
+ val = (45.5 + 0.9 * (this.height - 152)).toFixed(2);
+ break;
+ default:
+ break;
+ }
+ return val;
+ },
+ initialVt: function(){
+ return (this.weightDevineKg * 8).toFixed(2).toString() + " ml";
+ },
+ goalVt: function(){
+ return (this.weightDevineKg * 6).toFixed(2).toString() + " ml";
+ }
+ }
+});
+&lt;/script></description></item><item><title>Pneumonia</title><link>https://medist.org/calculators/pneumonia/</link><pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/pneumonia/</guid><description>&lt;div id='app'>
+ &lt;h2 class="mt-4 mb-2 text-2xl">Pneumonia Severity Index (PSI)&lt;/h2>
+ &lt;form class="p-2 border shadow">
+ &lt;div class="grid md:grid-cols-2">
+ &lt;div class="p-0 m-2">
+ &lt;p class="m-2 text-gray-600">Calculates the PSI-Score based on &lt;a class="underline" target="_blank"
+ href="https://pubmed.ncbi.nlm.nih.gov/8995086/">this article&lt;/a>. The PSI-Score can be used to stratify the mortality in community acquired pneumonia.&lt;/p>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-end w-full pr-4 m-2">
+ &lt;button
+ class="inline-flex items-center h-10 px-8 text-gray-100 bg-gray-900 border-b-4 border-indigo-500 hover:bg-gray-200 hover:text-gray-900"
+ type="button" v-on:click="resetForm">
+ &lt;span class="mr-2">Reset&lt;/span>
+
+ &lt;svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-400" fill="none"
+ viewBox="0 0 24 24" stroke="currentColor">
+ &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+ d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+ &lt;/svg>
+ &lt;/button>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+ &lt;span class="text-lg text-gray-600 label">Demographic factors&lt;/span>
+
+ &lt;div class="m-2">
+ &lt;label for="age">age&lt;/label>
+ &lt;input class="w-full" id="age" type="number" placeholder="age" v-model.number="age" />
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;span class="label">Sex&lt;/label>
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center">
+ &lt;input type="radio" class="form-radio" name="sex" value="male" checked v-model="sex">
+ &lt;span class="ml-2 text-base font-normal">male&lt;/span>
+ &lt;/label>
+ &lt;label class="inline-flex items-center ml-6">
+ &lt;input type="radio" class="form-radio" name="sex" value="female" v-model="sex">
+ &lt;span class="ml-2 text-base font-normal">female&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="nhr" type="checkbox" v-model="nhr" />
+ &lt;span class="ml-2 text-base font-normal">Nursing home resident&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+ &lt;span class="text-lg text-gray-600 label">Coexisting illness&lt;/span>
+ &lt;div class="m-2">
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="neoplDis" type="checkbox" v-model="neoplDis" />
+ &lt;span class="ml-2 text-base font-normal">Neoplastic disease&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="livDis" type="checkbox" v-model="livDis" />
+ &lt;span class="ml-2 text-base font-normal">Liver disease&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="congHf" type="checkbox" v-model="congHf" />
+ &lt;span class="ml-2 text-base font-normal">Congestive heart failure&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="cerebrDis" type="checkbox" v-model="cerebrDis" />
+ &lt;span class="ml-2 text-base font-normal">Cerebrovascular disease&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="renDis" type="checkbox" v-model="renDis" />
+ &lt;span class="ml-2 text-base font-normal">Renal disease&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+ &lt;span class="text-lg text-gray-600 label">Physical-examination findings&lt;/span>
+
+ &lt;div class="m-2">
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="altGCS" type="checkbox" v-model="altGCS" />
+ &lt;span class="ml-2 text-base font-normal">Altered mental status&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="respRate" type="checkbox" v-model="respRate" />
+ &lt;span class="ml-2 text-base font-normal">Respiratory rate &amp;ge; 30/min&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="sysBp" type="checkbox" v-model="sysBp" />
+ &lt;span class="ml-2 text-base font-normal">Systolic blood pressure &amp;lt; 90 mmHg&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="temp" type="checkbox" v-model="temp" />
+ &lt;span class="ml-2 text-base font-normal">Temperature &amp;lt; 35&amp;deg;C or &amp;ge; 40&amp;deg;C&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="pulse" type="checkbox" v-model="pulse" />
+ &lt;span class="ml-2 text-base font-normal">Pulse &amp;ge; 125/min&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="flex flex-col items-stretch p-2 m-2 border border-gray-200 border-solid">
+ &lt;span class="text-lg text-gray-600 label">Laboratory and radiographic findings&lt;/span>
+
+ &lt;div class="m-2">
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="artPh" type="checkbox" v-model="artPh" />
+ &lt;span class="ml-2 text-base font-normal">Arterial pH &amp;lt; 7.35&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-16">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="bun" type="checkbox" v-model="bun" />
+ &lt;span class="ml-2 text-base font-normal">Blood urea nitrogen &amp;ge; 30 mg/dl (11
+ mmol/l)&lt;br>&amp;asymp; Urea &amp;ge; 64,2 mg/dl&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="sodium" type="checkbox" v-model="sodium" />
+ &lt;span class="ml-2 text-base font-normal">Sodium &amp;lt; 130 mmol/l&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="glucose" type="checkbox" v-model="glucose" />
+ &lt;span class="ml-2 text-base font-normal">Glucose &amp;ge; 250 mg/dl (14 mmol/l)&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="hematocrit" type="checkbox" v-model="hematocrit" />
+ &lt;span class="ml-2 text-base font-normal">Hematocrit &amp;lt; 20 %&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="pao2" type="checkbox" v-model="pao2" />
+ &lt;span class="ml-2 text-base font-normal">p&lt;sub>a&lt;/sub>O&lt;sub>2&lt;/sub> &amp;lt; 60 mmHg&lt;/span>
+ &lt;/label>
+ &lt;/div>
+
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center ml-0">
+ &lt;input id="pleuraleff" type="checkbox" v-model="pleuraleff" />
+ &lt;span class="ml-2 text-base font-normal">Pleural effusion&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="flex w-auto p-0 m-2 bg-gray-200 border">
+ &lt;div class="flex items-center flex-none w-24 h-24 bg-gray-900">
+ &lt;div class="w-full text-center">
+ &lt;span class="text-5xl font-light text-gray-200">{{ psi }}&lt;/span>
+ &lt;/div>
+ &lt;/div>
+ &lt;div class="flex items-center w-full p-2">
+ &lt;span class="font-bold">Risk Class {{ riskClass }}:&amp;nbsp;&lt;/span> {{ riskClassText }}
+ &lt;/div>
+ &lt;/div>
+ &lt;/form>
+&lt;/div>
+
+&lt;script>
+ new Vue({
+ el: '#app',
+ data: {
+ age: 60,
+ sex: "male",
+ nhr: false,
+ neoplDis: false,
+ livDis: false,
+ congHf: false,
+ cerebrDis: false,
+ renDis: false,
+ altGCS: false,
+ respRate: false,
+ sysBp: false,
+ temp: false,
+ pulse: false,
+ artPh: false,
+ bun: false,
+ sodium: false,
+ glucose: false,
+ hematocrit: false,
+ pao2: false,
+ pleuraleff: false
+ },
+ computed: {
+ psi: function () {
+ psiScore = this.age;
+
+ if (this.sex == "female") {
+ psiScore -= 10;
+ }
+
+ if (this.nhr) { psiScore += 10 }
+ if (this.neoplDis) { psiScore += 30 }
+ if (this.livDis) { psiScore += 20 }
+ if (this.congHf) { psiScore += 10 }
+ if (this.cerebrDis) { psiScore += 10 }
+ if (this.renDis) { psiScore += 10 }
+
+ if (this.altGCS) { psiScore += 20 }
+ if (this.respRate) { psiScore += 20 }
+ if (this.sysBp) { psiScore += 20 }
+ if (this.temp) { psiScore += 15 }
+ if (this.pulse) { psiScore += 10 }
+
+ if (this.artPh) { psiScore += 30 }
+ if (this.bun) { psiScore += 20 }
+ if (this.sodium) { psiScore += 20 }
+ if (this.glucose) { psiScore += 10 }
+ if (this.hematocrit) { psiScore += 10 }
+ if (this.pao2) { psiScore += 10 }
+ if (this.pleuraleff) { psiScore += 10 }
+
+ return psiScore;
+ },
+ riskClass: function () {
+ if (this.age &lt;= 50 &amp;&amp;
+ !this.neoplDis &amp;&amp; 
+ !this.livDis &amp;&amp; 
+ !this.congHf &amp;&amp; 
+ !this.cerebrDis &amp;&amp; 
+ !this.renDis &amp;&amp; 
+ !this.altGCS &amp;&amp; 
+ !this.respRate &amp;&amp; 
+ !this.sysBp &amp;&amp; 
+ !this.temp &amp;&amp; 
+ !this.pulse 
+ )
+ {
+ return "I";
+ }
+ else if(this.psi &lt;= 70)
+ {
+ return "II";
+ }
+ else if(this.psi &lt;= 90)
+ {
+ return "III";
+ }
+ else if(this.psi &lt;= 130)
+ {
+ return "IV";
+ }
+ else
+ {
+ return "V";
+ }
+
+ return "Nope";
+ },
+ riskClassText: function () {
+ switch (this.riskClass) {
+ case "I":
+ return "People up to 50 years without complicating disease and a normal examination are assigned to risk class I. Mortality 0.1 – 0.5 %";
+ break;
+
+ case "II":
+ return "Mortality 0.4 – 0.6 %";
+ break;
+ 
+ case "III":
+ return "Mortality 0.9 – 2.8 %. Consider admission.";
+ break;
+ 
+ case "IV":
+ return "Mortality 8.2 – 9.3 %. Consider hospitalization for treatment.";
+ break;
+ 
+ case "V":
+ return "Mortality 27 – 29.2 %. Consider hospitalization for treatment.";
+ break;
+ 
+ default:
+ break;
+ }
+ }
+ },
+ methods: {
+ resetForm: function (event) {
+ this.nhr = false;
+ this.neoplDis = false;
+ this.livDis = false;
+ this.congHf = false;
+ this.cerebrDis = false;
+ this.renDis = false;
+ this.altGCS = false;
+ this.respRate = false;
+ this.sysBp = false;
+ this.temp = false;
+ this.pulse = false;
+ this.artPh = false;
+ this.bun = false;
+ this.sodium = false;
+ this.glucose = false;
+ this.hematocrit = false;
+ this.pao2 = false;
+ this.pleuraleff = false;
+ }
+ }
+ });
+&lt;/script></description></item><item><title>ABG Calculators</title><link>https://medist.org/calculators/abg/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/abg/</guid><description>&lt;div id='app'>
+ &lt;h2 class="mt-4 mb-2 text-2xl">Expected secondary responses&lt;/h2>
+ &lt;form class="p-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Calculates the expected secondary responses in p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> and HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> based on &lt;a class="underline" target="_blank" href="https://doi.org/10.1681/ASN.2009121211">this paper&lt;/a>&lt;/p>
+ &lt;div class="grid md:grid-cols-2">
+ &lt;div class="m-2">
+ &lt;label for="paco2">p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub>&lt;/label>
+ &lt;input class="w-full" id="paco2" type="number" placeholder="paCO2" v-model.number="pCO2" />
+ &lt;span class="text-xs text-gray-600">Reference: 36 – 44&lt;/span>
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="hco3">HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup>&lt;/label>
+ &lt;input class="w-full" id="hco3" type="number" placeholder="HCO3" v-model.number="HCO3" />
+ &lt;span class="text-xs text-gray-600">Reference: 22 – 26&lt;/span>
+ &lt;/div>
+ &lt;/div>
+ &lt;hr>
+ &lt;table class="w-full m-2 mx-auto text-left border-gray-300 table-fixed">
+ &lt;tr class="bg-gray-200 border-b-2 border-gray-300">
+ &lt;th class="w-1/3 px-2 py-2">Primary change&lt;/th>
+ &lt;th class="w-2/3 px-2 py-2">Secondary reaction&lt;/th>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-100 border-gray-200 hover:bg-indigo-100 border-b-1">
+ &lt;td class="px-2 py-2">Metabolic acidosis&lt;/td>
+ &lt;td class="px-2 py-2">
+ Expected p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> of &lt;span class="font-bold">{{ metAcidosisResultingPCO2 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-sm text-gray-400 text-light hover:text-black">40 − [(24 − HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup>) × 1.2]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="border-gray-200 bg-gray-50 hover:bg-indigo-100 border-b-1">
+ &lt;td class="px-2 py-2">Metabolic alkalosis&lt;/td>
+ &lt;td class="px-2 py-2">
+ Expected p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> of &lt;span class="font-bold">{{ metAlkalosisResultingPCO2 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-sm text-gray-400 text-light hover:text-black">40 + [(HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> − 24) × 0.7]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-100 border-gray-200 hover:bg-indigo-100 border-b-1">
+ &lt;td class="px-2 py-2">Acute respiratory acidosis&lt;/td>
+ &lt;td class="px-2 py-2">
+ Expected HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> of &lt;span class="font-bold">{{ acRespAcidosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-sm text-gray-400 text-light hover:text-black">24 + [(p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> − 40) × 0.1]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="border-gray-200 bg-gray-50 hover:bg-indigo-100 border-b-1">
+ &lt;td class="px-2 py-2">Chronic respiratory acidosis&lt;/td>
+ &lt;td class="px-2 py-2">
+ Expected HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> of &lt;span class="font-bold">{{ chRespAcidosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-sm text-gray-400 text-light hover:text-black">24 + [(p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> − 40) × 0.35]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-100 border-gray-200 hover:bg-indigo-100 border-b-1">
+ &lt;td class="px-2 py-2">Acute respiratory alkalosis&lt;/td>
+ &lt;td class="px-2 py-2">
+ Expected HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> of &lt;span class="font-bold">{{ acRespAlkalosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-sm text-gray-400 text-light hover:text-black">24 − [(40 − p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub>) × 0.2]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="border-b-2 border-gray-300 bg-gray-50 hover:bg-indigo-100">
+ &lt;td class="px-2 py-2">Chronic respiratory alkalosis&lt;/td>
+ &lt;td class="px-2 py-2">
+ Expected HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> of &lt;span class="font-bold">{{ chRespAlkalosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-sm text-gray-400 text-light hover:text-black">24 − [(40 − p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub>) × 0.4]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+ &lt;/table>
+ &lt;/form>
+
+ &lt;h2 class="mt-4 mb-2 text-2xl">Gaps&lt;/h2>
+ &lt;form class="p-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Calculates the anionic gap and delta-ratio&lt;/p></description></item><item><title>Nutrition Calculators</title><link>https://medist.org/calculators/nutrition/</link><pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/nutrition/</guid><description>&lt;div id='app'>
+ &lt;h2 class="mt-4 mb-2 text-2xl">Ideal weight&lt;/h2>
+ &lt;form class="p-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Calculate the ideal weight, based on the formula &lt;i>48,4 + 77 * (height - 150 cm)&lt;/i> (German Society for Nutrition). The conversion to lb uses the factor &lt;i>1 kg = 2.2 lb&lt;/i>.&lt;/p>
+ &lt;div class="md:grid md:grid-cols-2 xl:grid-cols-3">
+ &lt;div class="m-2 md:col-span-2 xl:col-span-1">
+ &lt;label for="height">height (cm)&lt;/label>
+ &lt;input class="w-full" id="heigth" type="number" placeholder="height" v-model.number="height" />
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="weightKg">weight (kg)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightKg" type="number" placeholder="weight" v-model="weightKg" disabled />
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="weightLb">weight (lb)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightLb" type="number" placeholder="weight in lb" v-model="weightLb" disabled />
+ &lt;/div>
+ &lt;/div>
+ &lt;/form>
+ &lt;form class="p-2 mt-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Calculates the ideal weight, based on the Devine formula &lt;i>50 kg (female 45.5 kg) + 0.9 kg * (height - 152 cm)&lt;/i>. The conversion to lb uses the factor &lt;i>1 kg = 2.2 lb&lt;/i>.&lt;/p></description></item></channel></rss>

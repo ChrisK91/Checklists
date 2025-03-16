@@ -1,7 +1,99 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>calculators on medist.org</title><link>https://medist.org/de/tags/calculators/</link><description>Recent content in calculators on medist.org</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://medist.org/de/tags/calculators/index.xml" rel="self" type="application/rss+xml"/><item><title>BGA Rechner</title><link>https://medist.org/de/calculators/abg/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/calculators/abg/</guid><description>Erwartete Sekundärantwort Berechnet das erwartetete paCO2 und HCO3- basierend auf diesem Artikel
-paCO2 Referenz: 36 - 44 HCO3- Referenz: 22 - 26 Primäre Änderung Sekundäre Reaktion metabolische Azidose erwartetes paCO2 von {{ metAcidosisResultingPCO2 }} mmHg
-40 − [(24 − HCO3-) × 1.2] metabolische Alkalose erwartetes paCO2 von {{ metAlkalosisResultingPCO2 }} mmHg
-40 + [(HCO3- − 24) × 0.7] akute respiratorische Azidose erwartetes HCO3- von {{ acRespAcidosisResultingHCO3 }} mmHg
-24 + [(paCO2 − 40) × 0.</description></item><item><title>Rechner Ernährung</title><link>https://medist.org/de/calculators/nutrition/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/calculators/nutrition/</guid><description>Idealgewicht Berechnet das Idealgewicht mit der Formel 48,4 + 77 * (height - 150 cm). (Deutsche Gesellschaft für Ernährung) Die Umrechnung von lb in kg nutzt 1 kg = 2.2 lb.
-Größe (cm) Gewicht (kg) Gewicht (lb) Berechnet das Idealgewicht nach der Devine-Formel 50 kg (weiblich 45.5 kg) + 0.9 kg * (height - 152 cm).
-Größe (cm) Geschlecht männlich weiblich Gewicht (kg) Gewicht (lb) Kalorienbedarf (Akutphase) Berechnet den Kalorienbedarf für die Gewählte Größe und Gewicht, basierend auf dem BMI.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Calculators on medist.org</title><link>https://medist.org/de/tags/calculators/</link><description>Recent content in Calculators on medist.org</description><generator>Hugo</generator><language>de</language><lastBuildDate>Mon, 06 Sep 2021 17:07:31 +0200</lastBuildDate><atom:link href="https://medist.org/de/tags/calculators/index.xml" rel="self" type="application/rss+xml"/><item><title>BGA Rechner</title><link>https://medist.org/de/calculators/abg/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/calculators/abg/</guid><description>&lt;div id='app'>
+ &lt;h2 class="text-2xl mb-2 mt-4">Erwartete Sekundärantwort&lt;/h2>
+ &lt;form class="border p-2 shadow">
+ &lt;p class="m-2 text-gray-600">Berechnet das erwartetete p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> und HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> basierend auf &lt;a class="underline" target="_blank" href="https://doi.org/10.1681/ASN.2009121211">diesem Artikel&lt;/a>&lt;/p>
+ &lt;div class="grid md:grid-cols-2">
+ &lt;div class="m-2">
+ &lt;label for="paco2">p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub>&lt;/label>
+ &lt;input class="w-full" id="paco2" type="number" placeholder="paCO2" v-model.number="pCO2" />
+ &lt;span class="text-xs text-gray-600">Referenz: 36 - 44&lt;/span>
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="hco3">HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup>&lt;/label>
+ &lt;input class="w-full" id="hco3" type="number" placeholder="HCO3" v-model.number="HCO3" />
+ &lt;span class="text-xs text-gray-600">Referenz: 22 - 26&lt;/span>
+ &lt;/div>
+ &lt;/div>
+ &lt;hr class="m-2">
+ &lt;table class="border-gray-300 m-2 mx-auto w-full text-left table-fixed">
+ &lt;tr class="bg-gray-200 border-b-2 border-gray-300">
+ &lt;th class="px-2 py-2 w-1/3">Primäre Änderung&lt;/th>
+ &lt;th class="px-2 py-2 w-2/3">Sekundäre Reaktion&lt;/th>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-100 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">metabolische Azidose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> von &lt;span class="font-bold">{{ metAcidosisResultingPCO2 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">40 − [(24 − HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup>) × 1.2]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-50 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">metabolische Alkalose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> von &lt;span class="font-bold">{{ metAlkalosisResultingPCO2 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">40 + [(HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> − 24) × 0.7]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-100 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">akute respiratorische Azidose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> von &lt;span class="font-bold">{{ acRespAcidosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">24 + [(p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> − 40) × 0.1]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-50 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">chronische respiratorische Azidose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> von &lt;span class="font-bold">{{ chRespAcidosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">24 + [(p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> − 40) × 0.35]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-100 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">akute respiratorische Alkalose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> von &lt;span class="font-bold">{{ acRespAlkalosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">24 − [(40 − p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub>) × 0.2]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-50 hover:bg-indigo-100 border-b-2 border-gray-300">
+ &lt;td class="px-2 py-2">chronische respiratorische Alkalose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> von &lt;span class="font-bold">{{ chRespAlkalosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">24 − [(40 − p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub>) × 0.4]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+ &lt;/table>
+ &lt;/form>
+
+ &lt;h2 class="text-2xl mb-2 mt-4">Lücken&lt;/h2>
+ &lt;form class="border p-2 shadow">
+ &lt;p class="m-2 text-gray-600">Berechnet die Anionenlücke und das Delta-Ratio&lt;/p></description></item><item><title>Rechner Ernährung</title><link>https://medist.org/de/calculators/nutrition/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/calculators/nutrition/</guid><description>&lt;div id='app'>
+ &lt;h2 class="mt-4 mb-2 text-2xl">Idealgewicht&lt;/h2>
+ &lt;form class="p-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Berechnet das Idealgewicht mit der Formel &lt;i>48,4 + 77 * (height - 150 cm)&lt;/i>. (Deutsche Gesellschaft für Ernährung) Die Umrechnung von lb in kg nutzt &lt;i>1 kg = 2.2 lb&lt;/i>.&lt;/p>
+ &lt;div class="md:grid md:grid-cols-2 xl:grid-cols-3">
+ &lt;div class="m-2 md:col-span-2 xl:col-span-1">
+ &lt;label for="height">Größe (cm)&lt;/label>
+ &lt;input class="w-full" id="heigth" type="number" placeholder="height" v-model.number="height" />
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="weightKg">Gewicht (kg)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightKg" type="number" placeholder="weight" v-model="weightKg" disabled />
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="weightLb">Gewicht (lb)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightLb" type="number" placeholder="weight in lb" v-model="weightLb" disabled />
+ &lt;/div>
+ &lt;/div>
+ &lt;/form>
+ &lt;form class="p-2 mt-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Berechnet das Idealgewicht nach der Devine-Formel &lt;i>50 kg (weiblich 45.5 kg) + 0.9 kg * (height - 152 cm)&lt;/i>.&lt;/p></description></item></channel></rss>

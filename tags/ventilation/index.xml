@@ -1,3 +1,233 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ventilation on medist.org</title><link>https://medist.org/tags/ventilation/</link><description>Recent content in ventilation on medist.org</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 29 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://medist.org/tags/ventilation/index.xml" rel="self" type="application/rss+xml"/><item><title>Ventilation Calculators</title><link>https://medist.org/calculators/ventilation/</link><pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/ventilation/</guid><description> Tidal volume calculator Calculates the ideal weight, based on the Devine formula 50 kg (female 45.5 kg) + 0.9 kg * (height - 152 cm). The result is used to calculate Vt.
-height (cm) Sex male female weight (kg) initial Vt (8ml/kg) goal Vt (6ml/kg)</description></item><item><title>Protective lung ventilation</title><link>https://medist.org/checklists/protective_lung_ventilation/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/protective_lung_ventilation/</guid><description>General Protective lung ventilation aims for low tidal volume ventilation. A large study has shown a decrease in mortality, when patients with acute lung injury/ARDS were ventilated with low tidal volumes. Today, the protective lung ventilation algorithm by the ARDS network provides a reasonable default approach for mechanically ventilated patients, especially those at risk for developing ARDS
-Ventilation setup and adjustment Calculate the predicted body weight (men: 50 + 0.91 (length in cm - 152), women: 45 + 0.</description></item><item><title>NIV Checklist</title><link>https://medist.org/checklists/niv/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/niv/</guid><description>Contraindications Missing spontaneous breathing Gasping Obstructed airway Gastrointestinal bleeding Ileus Non-hypercapnic coma Relative contraindications Hypercapnic coma Agitation Interface incompatibility/not tolerated by patient/anatomical difficulties Severe hypoxemia Severe acidosis (pH &amp;lt; 7,1) Success criteria Dyspnea reduced Consciousness improved Breathing frequency reduced pCO2 reduced pH normalizing arterial SaO2 &amp;gt; 85% Heart frequency normalizing Settings initial PEEP 5 - 8 mbar Below 5: re-check indication Increase up to 10 mbar, depending on need Pinsp below 20 - 25 mbar driving pressure &amp;lt; 15 mbar Tidal volume 6 - 8 ml/kg Rule of thumb: 400 - 500 ml Dyspnea might cause initial high volumes backup frequency 10 - 15 fIO: aim for SpO2 &amp;gt;= 90 %, usually fIO 30-35 % I:E 1:2 to 1:25</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ventilation on medist.org</title><link>https://medist.org/tags/ventilation/</link><description>Recent content in Ventilation on medist.org</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 12 Oct 2021 11:45:34 +0200</lastBuildDate><atom:link href="https://medist.org/tags/ventilation/index.xml" rel="self" type="application/rss+xml"/><item><title>Ventilation Calculators</title><link>https://medist.org/calculators/ventilation/</link><pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate><guid>https://medist.org/calculators/ventilation/</guid><description>&lt;div id='app'>
+ &lt;h2 class="mt-4 mb-2 text-2xl">Tidal volume calculator&lt;/h2>
+ &lt;form class="p-2 mt-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Calculates the ideal weight, based on the Devine formula &lt;i>50 kg (female 45.5 kg) + 0.9 kg * (height - 152 cm)&lt;/i>. The result is used to calculate Vt.&lt;/p>
+ &lt;div class="md:grid md:grid-cols-3 xl:grid-cols-3">
+ &lt;div class="m-2">
+ &lt;label for="height2">height (cm)&lt;/label>
+ &lt;input class="w-full" id="heigth2" type="number" placeholder="height" v-model.number="height" />
+ &lt;/div>
+ &lt;div class="m-2">
+ &lt;span class="label">Sex&lt;/label>
+ &lt;div class="flex content-center w-full h-12">
+ &lt;label class="inline-flex items-center">
+ &lt;input type="radio" class="form-radio" name="sex" value="male" checked v-model="sex">
+ &lt;span class="ml-2 text-base font-normal">male&lt;/span>
+ &lt;/label>
+ &lt;label class="inline-flex items-center ml-6">
+ &lt;input type="radio" class="form-radio" name="sex" value="female" v-model="sex">
+ &lt;span class="ml-2 text-base font-normal">female&lt;/span>
+ &lt;/label>
+ &lt;/div>
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="weightKg2">weight (kg)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightKg2" type="number" placeholder="weight" v-model.number="weightDevineKg" disabled />
+ &lt;/div>
+ &lt;/div>
+
+ &lt;hr class="mx-2 mt-6 mb-4">
+
+ &lt;div class="md:grid md:grid-cols-2">
+ &lt;div class="m-2">
+ &lt;label for="weightKg2">initial Vt (8ml/kg)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightKg2" type="text" placeholder="weight" v-model="initialVt" disabled />
+ &lt;/div>
+ &lt;div class="m-2">
+ &lt;label for="weightKg2">goal Vt (6ml/kg)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightKg2" type="text" placeholder="weight" v-model="goalVt" disabled />
+ &lt;/div>
+ &lt;/div>
+ &lt;/form>
+&lt;/div>
+
+&lt;script>
+new Vue({
+ el:'#app',
+ data : {
+ height : 165,
+ sex : "male"
+ },
+ computed: {
+ weightDevineKg: function(){
+ // male: 50 kg + 0.9 kg * (height - 152 cm)
+ // female: 45.5 kilograms + 0.9 kilograms × (height − 152)
+ val = 0;
+
+ switch (this.sex) {
+ case "male": 
+ val = (50 + 0.9 * (this.height - 152)).toFixed(2);
+ break;
+ case "female": 
+ val = (45.5 + 0.9 * (this.height - 152)).toFixed(2);
+ break;
+ default:
+ break;
+ }
+ return val;
+ },
+ initialVt: function(){
+ return (this.weightDevineKg * 8).toFixed(2).toString() + " ml";
+ },
+ goalVt: function(){
+ return (this.weightDevineKg * 6).toFixed(2).toString() + " ml";
+ }
+ }
+});
+&lt;/script></description></item><item><title>Protective lung ventilation</title><link>https://medist.org/checklists/protective_lung_ventilation/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/protective_lung_ventilation/</guid><description>&lt;h2 id="general">General&lt;/h2>
+&lt;p>Protective lung ventilation aims for low tidal volume ventilation. A &lt;a href="https://www.nejm.org/doi/full/10.1056/NEJM200005043421801">large study&lt;/a> has shown a decrease in mortality, when patients with acute lung injury/ARDS were ventilated with low tidal volumes. Today, the protective lung ventilation algorithm by the ARDS network provides a reasonable default approach for mechanically ventilated patients, especially those at risk for developing ARDS&lt;/p>
+&lt;h2 id="ventilation-setup-and-adjustment">Ventilation setup and adjustment&lt;/h2>
+&lt;ul>
+&lt;li>Calculate the predicted body weight (men: 50 + 0.91 (length in cm - 152), women: 45 + 0.91 (length in cm - 152)). A calculator can be found in the &lt;a href="https://medist.org/calculators/ventilation/">ventilation calculators&lt;/a>&lt;/li>
+&lt;li>Initial tidal volume Vt = 8ml/kg predicted body weight
+&lt;ul>
+&lt;li>Reduce Vt by 1 ml/kg at intervals up to 2 hours until Vt = 6 ml/kg/PBW&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>set RR (respiratory rate) to baseline ventilation, but not over 35/min&lt;/li>
+&lt;li>adjust Vt and RR to achieve pH and plateau pressure goal&lt;/li>
+&lt;/ul>
+&lt;h2 id="oxygenation-goal">Oxygenation Goal&lt;/h2>
+&lt;ul>
+&lt;li>Goal: paO₂ 55 – 88 mmHg or SpO₂ 88 – 95 %&lt;/li>
+&lt;li>use PEEP minimum 5 cmH₂O&lt;/li>
+&lt;li>consider using FiO2/PEEP table:&lt;/li>
+&lt;/ul>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">FiO₂&lt;/th>
+ &lt;th style="text-align: center">low PEEP&lt;/th>
+ &lt;th style="text-align: center">high PEEP&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">0.3&lt;/td>
+ &lt;td style="text-align: center">5&lt;/td>
+ &lt;td style="text-align: center">5 – 14&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.4&lt;/td>
+ &lt;td style="text-align: center">5 – 8&lt;/td>
+ &lt;td style="text-align: center">14 – 16&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.5&lt;/td>
+ &lt;td style="text-align: center">8 – 10&lt;/td>
+ &lt;td style="text-align: center">16 – 20&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.6&lt;/td>
+ &lt;td style="text-align: center">10&lt;/td>
+ &lt;td style="text-align: center">20&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.7&lt;/td>
+ &lt;td style="text-align: center">10 – 14&lt;/td>
+ &lt;td style="text-align: center">20&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.8&lt;/td>
+ &lt;td style="text-align: center">14&lt;/td>
+ &lt;td style="text-align: center">20 – 22&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">0.9&lt;/td>
+ &lt;td style="text-align: center">14 – 18&lt;/td>
+ &lt;td style="text-align: center">22&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">1.0&lt;/td>
+ &lt;td style="text-align: center">18 – 24&lt;/td>
+ &lt;td style="text-align: center">22 – 24&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="plateau-pressure">Plateau pressure&lt;/h2>
+&lt;ul>
+&lt;li>Goal: plateau pressure ≤ 30 cmH₂O&lt;/li>
+&lt;li>if pPlat &amp;gt; 30 cmH₂O
+&lt;ul>
+&lt;li>decrease Vt by 1 ml/kg until minimum Vt 4 ml/kg is reached&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>if pPlat &amp;lt; 25 cmH₂O and Vt &amp;lt; 6 ml/kg
+&lt;ul>
+&lt;li>increase Vt by 1 ml/kg until pPlat &amp;gt; 25 cmH₂O or Vt = 6 ml/kg&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="ph">pH&lt;/h2>
+&lt;ul>
+&lt;li>Goal: pH 7.3 – 7.45&lt;/li>
+&lt;li>Acidosis:
+&lt;ul>
+&lt;li>pH &amp;lt; 7.3: Increase RR until pH &amp;gt; 7.3 or PaCO₂ &amp;lt; 25 mmHg
+&lt;ul>
+&lt;li>maximum RR 35/min&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>pH &amp;lt; 7.15: Increase RR to 35/min
+&lt;ul>
+&lt;li>if pH remains &amp;lt; 7.15: increase Vt in 1 ml/kg steps until pH &amp;gt; 7.15 (target of 30 cmH₂O max be exceeded)&lt;/li>
+&lt;li>consider NaHCO₃&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Alkalosis
+&lt;ul>
+&lt;li>pH &amp;gt; 7.45: Decrease RR if possible&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="permissive-hypercapnia">Permissive hypercapnia&lt;/h2>
+&lt;p>Elevated PaCO₂ can be the result of low volumes and should be tolerated, as long as the pH is manageable. The articles I&amp;rsquo;ve come across so far suggest an pH &amp;gt; 7.1 or &amp;gt; 7.2 as tolerable.&lt;/p></description></item><item><title>NIV Checklist</title><link>https://medist.org/checklists/niv/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/checklists/niv/</guid><description>&lt;h2 id="contraindications">Contraindications&lt;/h2>
+&lt;ul>
+&lt;li>Missing spontaneous breathing&lt;/li>
+&lt;li>Gasping&lt;/li>
+&lt;li>Obstructed airway&lt;/li>
+&lt;li>Gastrointestinal bleeding&lt;/li>
+&lt;li>Ileus&lt;/li>
+&lt;li>Non-hypercapnic coma&lt;/li>
+&lt;/ul>
+&lt;h2 id="relative-contraindications">Relative contraindications&lt;/h2>
+&lt;ul>
+&lt;li>Hypercapnic coma&lt;/li>
+&lt;li>Agitation&lt;/li>
+&lt;li>Interface incompatibility/not tolerated by patient/anatomical difficulties&lt;/li>
+&lt;li>Severe hypoxemia&lt;/li>
+&lt;li>Severe acidosis (pH &amp;lt; 7,1)&lt;/li>
+&lt;/ul>
+&lt;h2 id="success-criteria">Success criteria&lt;/h2>
+&lt;ul>
+&lt;li>Dyspnea reduced&lt;/li>
+&lt;li>Consciousness improved&lt;/li>
+&lt;li>Breathing frequency reduced&lt;/li>
+&lt;li>pCO2 reduced&lt;/li>
+&lt;li>pH normalizing&lt;/li>
+&lt;li>arterial SaO2 &amp;gt; 85%&lt;/li>
+&lt;li>Heart frequency normalizing&lt;/li>
+&lt;/ul>
+&lt;h2 id="settings">Settings&lt;/h2>
+&lt;ul>
+&lt;li>initial PEEP 5 - 8 mbar
+&lt;ul>
+&lt;li>Below 5: re-check indication&lt;/li>
+&lt;li>Increase up to 10 mbar, depending on need&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Pinsp below 20 - 25 mbar&lt;/li>
+&lt;li>driving pressure &amp;lt; 15 mbar&lt;/li>
+&lt;li>Tidal volume 6 - 8 ml/kg
+&lt;ul>
+&lt;li>Rule of thumb: 400 - 500 ml&lt;/li>
+&lt;li>Dyspnea might cause initial high volumes&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>backup frequency 10 - 15&lt;/li>
+&lt;li>fIO: aim for SpO2 &amp;gt;= 90 %, usually fIO 30-35 %&lt;/li>
+&lt;li>I:E 1:2 to 1:25&lt;/li>
+&lt;/ul></description></item></channel></rss>

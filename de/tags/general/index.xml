@@ -1,12 +1,206 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>general on medist.org</title><link>https://medist.org/de/tags/general/</link><description>Recent content in general on medist.org</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Thu, 17 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://medist.org/de/tags/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Ziel-INR für mechanischen Klappenersatz</title><link>https://medist.org/de/checklists/inr-mechanical-valves/</link><pubDate>Thu, 17 Aug 2023 00:00:00 +0000</pubDate><guid>https://medist.org/de/checklists/inr-mechanical-valves/</guid><description>Die 2021 ESC/EACTS Guidelines for the management of valvular heart disease geben eine Übersicht über den Ziel-INR für verschiedene Patientengruppen mit mechanischem Klappenersatz, wobei ein &amp;ldquo;Median-INR&amp;rdquo; erreicht werden sollte, anstatt eines Zielbereiches.
-Bei Mitral- oder Trikuspidalersatz als &amp;ldquo;Risikofaktor&amp;rdquo; gilt das höhere INR-Ziel.
-Thrombogenität Riskofaktoren:
-Mitral- oder Trikuspdialersatz; frühere Thromboembolie; Vorhofflimmern; Mitralklappenstenose jeglichen Grades; LVEF &amp;lt;35%. Keine &amp;ge;1 Risikofaktor Niedrig
-Carbomedics, Medtronic Hall, ATS, Medtronic Open-Pivot, St Jude Medical, Sorin Bicarbon 2.</description></item><item><title>BGA Rechner</title><link>https://medist.org/de/calculators/abg/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/calculators/abg/</guid><description>Erwartete Sekundärantwort Berechnet das erwartetete paCO2 und HCO3- basierend auf diesem Artikel
-paCO2 Referenz: 36 - 44 HCO3- Referenz: 22 - 26 Primäre Änderung Sekundäre Reaktion metabolische Azidose erwartetes paCO2 von {{ metAcidosisResultingPCO2 }} mmHg
-40 − [(24 − HCO3-) × 1.2] metabolische Alkalose erwartetes paCO2 von {{ metAlkalosisResultingPCO2 }} mmHg
-40 + [(HCO3- − 24) × 0.7] akute respiratorische Azidose erwartetes HCO3- von {{ acRespAcidosisResultingHCO3 }} mmHg
-24 + [(paCO2 − 40) × 0.</description></item><item><title>Rechner Ernährung</title><link>https://medist.org/de/calculators/nutrition/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/calculators/nutrition/</guid><description>Idealgewicht Berechnet das Idealgewicht mit der Formel 48,4 + 77 * (height - 150 cm). (Deutsche Gesellschaft für Ernährung) Die Umrechnung von lb in kg nutzt 1 kg = 2.2 lb.
-Größe (cm) Gewicht (kg) Gewicht (lb) Berechnet das Idealgewicht nach der Devine-Formel 50 kg (weiblich 45.5 kg) + 0.9 kg * (height - 152 cm).
-Größe (cm) Geschlecht männlich weiblich Gewicht (kg) Gewicht (lb) Kalorienbedarf (Akutphase) Berechnet den Kalorienbedarf für die Gewählte Größe und Gewicht, basierend auf dem BMI.</description></item><item><title>Fieber Checkliste</title><link>https://medist.org/de/checklists/fever/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/checklists/fever/</guid><description> Temperatur &amp;gt;= 38,3 °C, bei Immunkompromittierung/Neutropenie &amp;gt;= 38,0 °C
-Anamnese respiratorisch: Husten, Luftnot, Pleuraschmerzen gastrointestinal: Erbrechen, Durchfall, Bauchschmerzen postoperativ: vorherige Operationen, vorhandene Prothesen, etc. Harnwege: Dysurie, Pollakisurie Medikation (drug induced fever) vorherige Antibiosen können eine geplante antibiotische Therapie beeinflussen frühere Infektionen (multiresistente Erreger) rheumatische Erkrankungen Diagnostik Anamnese: Infektzeichen, postoperatives Fieber, Arzneimittelfiever CRP, Leukozyten, ggf. Procalcitonin Blutbild, ggf. diff. Blutbild Fieber in Neutropenie: Absolute Leukozyten &amp;lt; 500 bis 1.000/µl (= Neutrophile (%) * Leukozytenzahl) Blutkulturen (zwei Paar an unterschiedlichen Abnahmestellen) U-Status, Sputum, Abstriche Sonografie, Röntgen/CT Therapie Paracetamol Antibiotika nach vermutetem Fokus</description></item><item><title>NIV Checkliste</title><link>https://medist.org/de/checklists/niv/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/checklists/niv/</guid><description> Kontraindikationen fehlende Spontanatmung Schnappatmung verlegte Atemwege gastrointestinale Blutung, Ileus nicht-hyperkapnisches Koma Relative Kontraindikationen hyperkapnisches Koma Agitation unpassendes Interface/schlechte Toleranz/anatomische EInschränkungen schwere Hypoxämie schwere Azidose (pH &amp;lt; 7,1) Erfolgskriterien Reduktion der Atemnot Verbesserung des Bewusstseins Verbesserung der Atemfrequenz Absinken des pCO2 Normalisierung des pH arterielle SaO2 &amp;gt; 85 % Normalisierung der Herzfrequenz Einstellungen initialer PEEP 5 - 8 mbar &amp;lt; 5: Indikation überprüfen Erhöhung auf bis zu 10 mbar, nach Bedarf Pinsp unter 20 - 25 mbar driving pressure &amp;lt; 15 mbar Tidalvolumen 6 - 8 ml/kg Daumenregel: 400 - 500 ml Dyspnoe kann initial hohe Tidalvolumina verursachen Backup-Frequenz 10 - 15 fIO: Ziel-SpO2 &amp;gt;= 90 %, gewöhnlich bei fIO 30-35 % I:E 1:2 bis 1:25</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>General on medist.org</title><link>https://medist.org/de/tags/general/</link><description>Recent content in General on medist.org</description><generator>Hugo</generator><language>de</language><lastBuildDate>Thu, 17 Aug 2023 19:34:49 +0200</lastBuildDate><atom:link href="https://medist.org/de/tags/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Ziel-INR für mechanischen Klappenersatz</title><link>https://medist.org/de/checklists/inr-mechanical-valves/</link><pubDate>Thu, 17 Aug 2023 00:00:00 +0000</pubDate><guid>https://medist.org/de/checklists/inr-mechanical-valves/</guid><description>&lt;p>Die &lt;a href="https://academic.oup.com/eurheartj/article/43/7/561/6358470#364291515">2021 ESC/EACTS Guidelines for the management of valvular heart disease&lt;/a> geben eine Übersicht über den Ziel-INR für verschiedene Patientengruppen mit mechanischem Klappenersatz, wobei ein &amp;ldquo;Median-INR&amp;rdquo; erreicht werden sollte, anstatt eines Zielbereiches.&lt;/p>
+&lt;p>Bei &lt;strong>Mitral- oder Trikuspidalersatz&lt;/strong> als &amp;ldquo;Risikofaktor&amp;rdquo; gilt das höhere INR-Ziel.&lt;/p>
+
+&lt;table class="table-auto not-prose">
+&lt;thead>
+&lt;tr>
+ &lt;th rowspan="2" class="font-normal border-r border-r-gray-300 px-2 align-middle">&lt;b>Thrombogenität&lt;/b>&lt;/th>
+ &lt;th colspan="2" class="font-normal px-2">&lt;b>Riskofaktoren:&lt;/b>&lt;br />&lt;small class="text-gray-500 tracking-tighter">Mitral- oder Trikuspdialersatz; frühere Thromboembolie; Vorhofflimmern; Mitralklappenstenose jeglichen Grades; LVEF &amp;lt;35%.&lt;/small>&lt;/th>
+&lt;/tr>
+&lt;tr>
+ &lt;th class="px-2 text-center">Keine&lt;/th>
+ &lt;th class="px-2 text-center">&amp;ge;1 Risikofaktor&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr class="hover:bg-gray-200">
+ &lt;td class="max-w-[200px] border-r border-r-gray-300 px-2">&lt;b>Niedrig&lt;/b>&lt;br />&lt;small class="text-gray-500 text-xs tracking-tighter">Carbomedics, Medtronic Hall, ATS, Medtronic Open-Pivot, St Jude Medical, Sorin Bicarbon&lt;/small>&lt;/td>
+ &lt;td class="px-2 text-center">2.5&lt;/td>
+ &lt;td class="px-2 text-center">3.0&lt;/td>
+&lt;/tr>
+&lt;tr class="hover:bg-gray-200">
+ &lt;td class="max-w-[200px] border-r border-r-gray-300 px-2">&lt;b>Mittel&lt;/b>&lt;br />&lt;small class="text-gray-500 text-xs tracking-tighter">Andere Zweiflügelklappen mit fehlenden Daten&lt;/small>&lt;/td>
+ &lt;td class="px-2 text-center">3.0&lt;/td>
+ &lt;td class="px-2 text-center">3.5&lt;/td>
+&lt;/tr>
+&lt;tr class="hover:bg-gray-200">
+ &lt;td class="max-w-[200px] border-r border-r-gray-300 px-2">&lt;b>Hoch&lt;/b>&lt;br />&lt;small class="text-gray-500 text-xs tracking-tighter">Lillehei-Kaster, Omniscience, Starr-Edwards (ball-cage), Bjork-Shiley und andere "tilting-disc" Klappen.&lt;/small>&lt;/td>
+ &lt;td class="px-2 text-center">3.5&lt;/td>
+ &lt;td class="px-2 text-center">4.0&lt;/td>
+&lt;/tr>
+&lt;/table></description></item><item><title>BGA Rechner</title><link>https://medist.org/de/calculators/abg/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/calculators/abg/</guid><description>&lt;div id='app'>
+ &lt;h2 class="text-2xl mb-2 mt-4">Erwartete Sekundärantwort&lt;/h2>
+ &lt;form class="border p-2 shadow">
+ &lt;p class="m-2 text-gray-600">Berechnet das erwartetete p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> und HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> basierend auf &lt;a class="underline" target="_blank" href="https://doi.org/10.1681/ASN.2009121211">diesem Artikel&lt;/a>&lt;/p>
+ &lt;div class="grid md:grid-cols-2">
+ &lt;div class="m-2">
+ &lt;label for="paco2">p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub>&lt;/label>
+ &lt;input class="w-full" id="paco2" type="number" placeholder="paCO2" v-model.number="pCO2" />
+ &lt;span class="text-xs text-gray-600">Referenz: 36 - 44&lt;/span>
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="hco3">HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup>&lt;/label>
+ &lt;input class="w-full" id="hco3" type="number" placeholder="HCO3" v-model.number="HCO3" />
+ &lt;span class="text-xs text-gray-600">Referenz: 22 - 26&lt;/span>
+ &lt;/div>
+ &lt;/div>
+ &lt;hr class="m-2">
+ &lt;table class="border-gray-300 m-2 mx-auto w-full text-left table-fixed">
+ &lt;tr class="bg-gray-200 border-b-2 border-gray-300">
+ &lt;th class="px-2 py-2 w-1/3">Primäre Änderung&lt;/th>
+ &lt;th class="px-2 py-2 w-2/3">Sekundäre Reaktion&lt;/th>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-100 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">metabolische Azidose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> von &lt;span class="font-bold">{{ metAcidosisResultingPCO2 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">40 − [(24 − HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup>) × 1.2]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-50 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">metabolische Alkalose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> von &lt;span class="font-bold">{{ metAlkalosisResultingPCO2 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">40 + [(HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> − 24) × 0.7]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-100 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">akute respiratorische Azidose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> von &lt;span class="font-bold">{{ acRespAcidosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">24 + [(p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> − 40) × 0.1]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-50 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">chronische respiratorische Azidose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> von &lt;span class="font-bold">{{ chRespAcidosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">24 + [(p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub> − 40) × 0.35]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-100 hover:bg-indigo-100 border-b-1 border-gray-200">
+ &lt;td class="px-2 py-2">akute respiratorische Alkalose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> von &lt;span class="font-bold">{{ acRespAlkalosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">24 − [(40 − p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub>) × 0.2]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+
+ &lt;tr class="bg-gray-50 hover:bg-indigo-100 border-b-2 border-gray-300">
+ &lt;td class="px-2 py-2">chronische respiratorische Alkalose&lt;/td>
+ &lt;td class="px-2 py-2">
+ erwartetes HCO&lt;sub>3&lt;/sub>&lt;sup>-&lt;/sup> von &lt;span class="font-bold">{{ chRespAlkalosisResultingHCO3 }}&lt;/span> mmHg&lt;br>
+ &lt;span class="text-light text-sm text-gray-400 hover:text-black">24 − [(40 − p&lt;sub>a&lt;/sub>CO&lt;sub>2&lt;/sub>) × 0.4]&lt;/span>
+ &lt;/td>
+ &lt;/tr>
+ &lt;/table>
+ &lt;/form>
+
+ &lt;h2 class="text-2xl mb-2 mt-4">Lücken&lt;/h2>
+ &lt;form class="border p-2 shadow">
+ &lt;p class="m-2 text-gray-600">Berechnet die Anionenlücke und das Delta-Ratio&lt;/p></description></item><item><title>Rechner Ernährung</title><link>https://medist.org/de/calculators/nutrition/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/calculators/nutrition/</guid><description>&lt;div id='app'>
+ &lt;h2 class="mt-4 mb-2 text-2xl">Idealgewicht&lt;/h2>
+ &lt;form class="p-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Berechnet das Idealgewicht mit der Formel &lt;i>48,4 + 77 * (height - 150 cm)&lt;/i>. (Deutsche Gesellschaft für Ernährung) Die Umrechnung von lb in kg nutzt &lt;i>1 kg = 2.2 lb&lt;/i>.&lt;/p>
+ &lt;div class="md:grid md:grid-cols-2 xl:grid-cols-3">
+ &lt;div class="m-2 md:col-span-2 xl:col-span-1">
+ &lt;label for="height">Größe (cm)&lt;/label>
+ &lt;input class="w-full" id="heigth" type="number" placeholder="height" v-model.number="height" />
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="weightKg">Gewicht (kg)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightKg" type="number" placeholder="weight" v-model="weightKg" disabled />
+ &lt;/div>
+
+ &lt;div class="m-2">
+ &lt;label for="weightLb">Gewicht (lb)&lt;/label>
+ &lt;input class="w-full bg-indigo-200" id="weightLb" type="number" placeholder="weight in lb" v-model="weightLb" disabled />
+ &lt;/div>
+ &lt;/div>
+ &lt;/form>
+ &lt;form class="p-2 mt-2 border shadow">
+ &lt;p class="m-2 text-gray-600">Berechnet das Idealgewicht nach der Devine-Formel &lt;i>50 kg (weiblich 45.5 kg) + 0.9 kg * (height - 152 cm)&lt;/i>.&lt;/p></description></item><item><title>Fieber Checkliste</title><link>https://medist.org/de/checklists/fever/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/checklists/fever/</guid><description>&lt;p>Temperatur &amp;gt;= 38,3 °C, bei Immunkompromittierung/Neutropenie &amp;gt;= 38,0 °C&lt;/p>
+&lt;h2 id="anamnese">Anamnese&lt;/h2>
+&lt;ul>
+&lt;li>respiratorisch: Husten, Luftnot, Pleuraschmerzen&lt;/li>
+&lt;li>gastrointestinal: Erbrechen, Durchfall, Bauchschmerzen&lt;/li>
+&lt;li>postoperativ: vorherige Operationen, vorhandene Prothesen, etc.&lt;/li>
+&lt;li>Harnwege: Dysurie, Pollakisurie&lt;/li>
+&lt;li>Medikation (drug induced fever)
+&lt;ul>
+&lt;li>vorherige Antibiosen können eine geplante antibiotische Therapie beeinflussen&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>frühere Infektionen (multiresistente Erreger)&lt;/li>
+&lt;li>rheumatische Erkrankungen&lt;/li>
+&lt;/ul>
+&lt;h2 id="diagnostik">Diagnostik&lt;/h2>
+&lt;ul>
+&lt;li>Anamnese: Infektzeichen, postoperatives Fieber, Arzneimittelfiever&lt;/li>
+&lt;li>CRP, Leukozyten, ggf. Procalcitonin&lt;/li>
+&lt;li>Blutbild, ggf. diff. Blutbild
+&lt;ul>
+&lt;li>Fieber in Neutropenie: Absolute Leukozyten &amp;lt; 500 bis 1.000/µl (= Neutrophile (%) * Leukozytenzahl)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Blutkulturen (zwei Paar an unterschiedlichen Abnahmestellen)&lt;/li>
+&lt;li>U-Status, Sputum, Abstriche&lt;/li>
+&lt;li>Sonografie, Röntgen/CT&lt;/li>
+&lt;/ul>
+&lt;h2 id="therapie">Therapie&lt;/h2>
+&lt;ul>
+&lt;li>Paracetamol&lt;/li>
+&lt;li>Antibiotika nach vermutetem Fokus&lt;/li>
+&lt;/ul></description></item><item><title>NIV Checkliste</title><link>https://medist.org/de/checklists/niv/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://medist.org/de/checklists/niv/</guid><description>&lt;h2 id="kontraindikationen">Kontraindikationen&lt;/h2>
+&lt;ul>
+&lt;li>fehlende Spontanatmung&lt;/li>
+&lt;li>Schnappatmung&lt;/li>
+&lt;li>verlegte Atemwege&lt;/li>
+&lt;li>gastrointestinale Blutung, Ileus&lt;/li>
+&lt;li>nicht-hyperkapnisches Koma&lt;/li>
+&lt;/ul>
+&lt;h2 id="relative-kontraindikationen">Relative Kontraindikationen&lt;/h2>
+&lt;ul>
+&lt;li>hyperkapnisches Koma&lt;/li>
+&lt;li>Agitation&lt;/li>
+&lt;li>unpassendes Interface/schlechte Toleranz/anatomische EInschränkungen&lt;/li>
+&lt;li>schwere Hypoxämie&lt;/li>
+&lt;li>schwere Azidose (pH &amp;lt; 7,1)&lt;/li>
+&lt;/ul>
+&lt;h2 id="erfolgskriterien">Erfolgskriterien&lt;/h2>
+&lt;ul>
+&lt;li>Reduktion der Atemnot&lt;/li>
+&lt;li>Verbesserung des Bewusstseins&lt;/li>
+&lt;li>Verbesserung der Atemfrequenz&lt;/li>
+&lt;li>Absinken des pCO2&lt;/li>
+&lt;li>Normalisierung des pH&lt;/li>
+&lt;li>arterielle SaO2 &amp;gt; 85 %&lt;/li>
+&lt;li>Normalisierung der Herzfrequenz&lt;/li>
+&lt;/ul>
+&lt;h2 id="einstellungen">Einstellungen&lt;/h2>
+&lt;ul>
+&lt;li>initialer PEEP 5 - 8 mbar
+&lt;ul>
+&lt;li>&amp;lt; 5: Indikation überprüfen&lt;/li>
+&lt;li>Erhöhung auf bis zu 10 mbar, nach Bedarf&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Pinsp unter 20 - 25 mbar&lt;/li>
+&lt;li>driving pressure &amp;lt; 15 mbar&lt;/li>
+&lt;li>Tidalvolumen 6 - 8 ml/kg
+&lt;ul>
+&lt;li>Daumenregel: 400 - 500 ml&lt;/li>
+&lt;li>Dyspnoe kann initial hohe Tidalvolumina verursachen&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Backup-Frequenz 10 - 15&lt;/li>
+&lt;li>fIO: Ziel-SpO2 &amp;gt;= 90 %, gewöhnlich bei fIO 30-35 %&lt;/li>
+&lt;li>I:E 1:2 bis 1:25&lt;/li>
+&lt;/ul></description></item></channel></rss>
