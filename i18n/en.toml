@@ -73,3 +73,5 @@ other = 'Message'
 other = 'Submit'
 [browse]
 other = 'Browse'
+[perfurate]
+other = 'PerfuRate App'

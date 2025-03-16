@@ -22,7 +22,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.116.1'
+          hugo-version: '0.145.0'
           extended: true
 
       - name: Setup Node
@@ -47,8 +47,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           cname: medist.org
-
-      - name: 'Ping search engines'
-        uses: atymic/sitemap-ping-action@master
-        with:
-          sitemap-url: 'https://medist.org/sitemap.xml'

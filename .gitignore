@@ -1,6 +1,7 @@
 node_modules
 
 resources/_gen/*/*
+/public/*
 
 # 2 testing comments that will not be commited
 data/comments/39f24a2e3b654b86b163fdbb0e6d1c80/a2bd2dac-98a8-4558-a1e1-0cc83301c208.json

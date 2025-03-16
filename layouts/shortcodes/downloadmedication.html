@@ -1,14 +1,8 @@
-{{ range .Page.Resources }}
-{{if eq .Name "pocketcard"}}
-<p>The gist of this page is available as pocket card. You can download it via the link below.</p>
-
-<a href="{{.RelPermalink}}" 
+<a href="/MedistData.json" 
     target="_blank" 
     class="inline-flex items-center w-full px-4 py-2 font-light text-white no-underline bg-gray-800 hover:bg-indigo-900 hover:shadow-lg"
-    onclick="ga('send', 'event', 'Content', 'Pocketcard', 'Open', '{{ .Title }}')">
+    onclick="ga('send', 'event', 'Content', 'MedicationJson', 'Open', '')">
     <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.25 20.5a.75.75 0 1 1 0 1.5l-13 .004a.75.75 0 1 1 0-1.5l13-.004ZM11.648 2.012l.102-.007a.75.75 0 0 1 .743.648l.007.102-.001 13.685 3.722-3.72a.75.75 0 0 1 .976-.073l.085.073a.75.75 0 0 1 .072.976l-.073.084-4.997 4.997a.75.75 0 0 1-.976.073l-.085-.073-5.003-4.996a.75.75 0 0 1 .976-1.134l.084.072 3.719 3.714L11 2.755a.75.75 0 0 1 .648-.743l.102-.007-.102.007Z" fill="#ffffff"/></svg>
 
-    <span class="ml-3">Download Pocketcard</span>
+    <span class="ml-3">MedistData.json</span>
 </a>
-{{end}}
-{{end}}
